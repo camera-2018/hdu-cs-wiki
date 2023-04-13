@@ -4,22 +4,22 @@ layout: home
 
 hero:
   name: "srt-wiki"
-  text: "srt-wiki"
-  tagline: My great project tagline
+  text: "HDU计算机科学讲义"
+  # tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 开始
+      link: /简介
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 😎速通杭电！
+    details: 速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！
+  - title: 🤧速通杭电！
+    details: 速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！
+  - title: 😭速通杭电！
+    details: 速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！速通杭电！
 ---
 
