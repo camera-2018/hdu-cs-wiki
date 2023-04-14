@@ -133,6 +133,61 @@ export default defineConfig({
               },
             ]
           },
+          {
+            text: '3.5git与github',
+            collapsed: true,
+            items: [
+              { text: '3.5git与github', link: '/3.编程思维体系构建/3.5git与github' },
+            ]
+          },
+          {
+            text: '3.6Python（灵巧的胶水）',
+            collapsed: true,
+            items: [
+              { text: '3.6Python（灵巧的胶水）', link: '/3.编程思维体系构建/3.6Python（灵巧的胶水）' },
+              { text: '3.6.1从CS61A看编程语言学习', link: '/3.编程思维体系构建/3.6.1从CS61A看编程语言学习' },
+              { text: '3.6.2环境配置', link: '/3.编程思维体系构建/3.6.2环境配置' },
+              { text: '3.6.3安装python', link: '/3.编程思维体系构建/3.6.3安装python' },
+              {
+                text: '3.6.4Python for fun',
+                collapsed: true,
+                items: [
+                  { text: '3.6.4Python for fun', link: '/3.编程思维体系构建/3.6.4Python for fun' },
+                  { text: '3.6.4.0阶段零：Python解释器', link: '/3.编程思维体系构建/3.6.4.0阶段零：Python解释器' },
+                  { text: '3.6.4.1阶段一：熟悉语句', link: '/3.编程思维体系构建/3.6.4.1阶段一：熟悉语句' },
+                  { text: '3.6.4.2阶段二：递归操作', link: '/3.编程思维体系构建/3.6.4.2阶段二：递归操作' },
+                  { text: '3.6.4.3阶段三：数据抽象', link: '/3.编程思维体系构建/3.6.4.3阶段三：数据抽象' },
+                  { text: '3.6.4.4阶段四：高阶函数', link: '/3.编程思维体系构建/3.6.4.4阶段四：高阶函数' },
+                  { text: '3.6.4.5阶段五：迭代生成', link: '/3.编程思维体系构建/3.6.4.5阶段五：迭代生成' },
+                  { text: '3.6.4.6结语', link: '/3.编程思维体系构建/3.6.4.6结语' },
+                  { text: '', link: '/3.编程思维体系构建/' },
+                  { text: '', link: '/3.编程思维体系构建/' },
+                  { text: '', link: '/3.编程思维体系构建/' },
+                ]
+              },
+              {
+                text: '3.6.5关于CS61A',
+                collapsed: true,
+                items: [
+                  { text: '3.6.5关于CS61A', link: '/3.编程思维体系构建/3.6.5关于CS61A' },
+                  { text: '3.6.5.1lab00：让我们开始吧', link: '/3.编程思维体系构建/3.6.5.1lab00：让我们开始吧' },
+                ]
+              },
+              { text: '3.X 聊聊设计模式和程序设计', link: '/3.编程思维体系构建/3.X 聊聊设计模式和程序设计' },
+              {
+                text: '3.Y 附加模块：Linux',
+                collapsed: true,
+                items: [
+                  { text: '3.Y 附加模块：Linux', link: '/3.编程思维体系构建/3.Y 附加模块：Linux' },
+                  { text: '3.Y.1VMware的安装与安装Ubuntu22.04系统', link: '/3.编程思维体系构建/3.Y.1VMware的安装与安装Ubuntu22.04系统' },
+                  { text: '3.Y.2WSL的安装', link: '/3.编程思维体系构建/3.Y.2WSL的安装' },
+                  { text: '3.Y.3Linux初探索', link: '/3.编程思维体系构建/3.Y.3Linux初探索' },
+                  { text: '3.Y.4Vim初探索', link: '/3.编程思维体系构建/3.Y.4Vim初探索' },
+                  { text: '3.Y.5linux小任务', link: '/3.编程思维体系构建/3.Y.5linux小任务' },
+                ]
+              }
+            ]
+          }
         ]
       }
     ],
