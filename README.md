@@ -1,6 +1,6 @@
 <h1 align="center"> HDU计算机科学讲义</h1>
 <p align="center">
-  <a href="https://github.com/camera-2018/hdu-cs-wiki/blob/main/LICENSE">
+  <a href="https://github.com/camera-2018/hdu-cs-wiki/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/camera-2018/hdu-cs-wiki?color=red" alt="license">
   </a>
   <a href="https://github.com/camera-2018/hdu-cs-wiki/releases">
