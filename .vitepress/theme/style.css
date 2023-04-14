@@ -2,12 +2,13 @@
  * Customize default theme styling by overriding CSS variables:
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
-
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC&display=swap');
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+Mono&display=swap');
 /**
  * Colors
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-brand: #646cff;
   --vp-c-brand-light: #747bff;
   --vp-c-brand-lighter: #9499ff;
@@ -15,6 +16,11 @@
   --vp-c-brand-dark: #535bf2;
   --vp-c-brand-darker: #454ce1;
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+:root {
+  --vp-font-family-base: 'Noto Sans SC', sans-serif;
+  --vp-font-family-mono: 'Noto Sans Mono', sans-serif, monospace, consolas;
 }
 
 /**
