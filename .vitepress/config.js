@@ -2,12 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "srt-wiki",
-  description: "srt-wiki",
+  lang: 'zh-CN',
+  title: "HDU-CS-WIKI",
+  description: "HDU计算机科学讲义",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '首页', link: '/' },
     ],
 
     sidebar: [
@@ -189,11 +191,26 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: 'Contributors',
+        link: '/contributors'
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+      { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023-present Evan You && HDU 计算机科协 && ALL 协作者'
+    },
+    lastUpdatedText: '上次更改',
+    docFooter: {
+      prev: '上一小节',
+      next: '下一小节'
+    },
+    // localSearch: true, # 尚未发布的本地搜索，撅撅子
+  },
+
 })
 
