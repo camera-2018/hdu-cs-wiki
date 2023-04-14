@@ -3,16 +3,19 @@
 layout: home
 
 hero:
-  name: "srt-wiki"
-  text: "HDU计算机科学讲义"
+  name: HDU-CS-WIKI
+  text: HDU计算机科学讲义
   # tagline: My great project tagline
+  image:
+    src: https://picxyxsw.oss-cn-hangzhou.aliyuncs.com/kita.gif
+    alt: 暂时的占位图
   actions:
     - theme: brand
       text: 开始
       link: /简介
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: GitHub
+      link: https://github.com/camera-2018/hdu-cs-wiki
 
 features:
   - title: 😎速通杭电！
