@@ -1,4 +1,4 @@
-# HDU计算机科学讲义
+<h1 align="center"> HDU计算机科学讲义</h1>
 <p align="center">
   <a href="https://github.com/camera-2018/hdu-cs-wiki/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/camera-2018/hdu-cs-wiki?color=red" alt="license">
@@ -16,6 +16,7 @@
     <img src="https://api.netlify.com/api/v1/badges/92121c47-e608-4736-bffa-c0958e570348/deploy-status">
   </a>
 </p>
+
 ## 序言
 
 初入大学，大家都会十分迷茫，尤其是计算机相关的同学们。
