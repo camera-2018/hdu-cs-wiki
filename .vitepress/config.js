@@ -126,6 +126,12 @@ export default defineConfig({
                   { text: '3.4.6.15.赋予明暗', link: '/3.编程思维体系构建/3.4.6.15.赋予明暗' },
                   { text: '3.4.6.16.结语：你终将自由', link: '/3.编程思维体系构建/3.4.6.16.结语：你终将自由' },
                   { text: '3.4.7C基础知识杂谈', link: '/3.编程思维体系构建/3.4.7C基础知识杂谈' },
+                ]
+              },
+              {
+                text: '3.4.7.1GDB初探索（编程可阅览）',
+                collapsed: true,
+                items: [
                   { text: '3.4.7.1GDB初探索（编程可阅览）', link: '/3.编程思维体系构建/3.4.7.1GDB初探索（编程可阅览）' },
                   { text: '3.4.7.1.1调试理论', link: '/3.编程思维体系构建/3.4.7.1.1调试理论' },
                   { text: '3.4.7.2C的历史问题：undefined behavior', link: '/3.编程思维体系构建/3.4.7.2C的历史问题：undefined behavior' },
@@ -162,9 +168,6 @@ export default defineConfig({
                   { text: '3.6.4.4阶段四：高阶函数', link: '/3.编程思维体系构建/3.6.4.4阶段四：高阶函数' },
                   { text: '3.6.4.5阶段五：迭代生成', link: '/3.编程思维体系构建/3.6.4.5阶段五：迭代生成' },
                   { text: '3.6.4.6结语', link: '/3.编程思维体系构建/3.6.4.6结语' },
-                  { text: '', link: '/3.编程思维体系构建/' },
-                  { text: '', link: '/3.编程思维体系构建/' },
-                  { text: '', link: '/3.编程思维体系构建/' },
                 ]
               },
               {
@@ -175,19 +178,19 @@ export default defineConfig({
                   { text: '3.6.5.1lab00：让我们开始吧', link: '/3.编程思维体系构建/3.6.5.1lab00：让我们开始吧' },
                 ]
               },
-              { text: '3.X 聊聊设计模式和程序设计', link: '/3.编程思维体系构建/3.X 聊聊设计模式和程序设计' },
-              {
-                text: '3.Y 附加模块：Linux',
-                collapsed: true,
-                items: [
-                  { text: '3.Y 附加模块：Linux', link: '/3.编程思维体系构建/3.Y 附加模块：Linux' },
-                  { text: '3.Y.1VMware的安装与安装Ubuntu22.04系统', link: '/3.编程思维体系构建/3.Y.1VMware的安装与安装Ubuntu22.04系统' },
-                  { text: '3.Y.2WSL的安装', link: '/3.编程思维体系构建/3.Y.2WSL的安装' },
-                  { text: '3.Y.3Linux初探索', link: '/3.编程思维体系构建/3.Y.3Linux初探索' },
-                  { text: '3.Y.4Vim初探索', link: '/3.编程思维体系构建/3.Y.4Vim初探索' },
-                  { text: '3.Y.5linux小任务', link: '/3.编程思维体系构建/3.Y.5linux小任务' },
-                ]
-              }
+            ]
+          },
+          { text: '3.X 聊聊设计模式和程序设计', link: '/3.编程思维体系构建/3.X 聊聊设计模式和程序设计' },
+          {
+            text: '3.Y 附加模块：Linux',
+            collapsed: true,
+            items: [
+              { text: '3.Y 附加模块：Linux', link: '/3.编程思维体系构建/3.Y 附加模块：Linux' },
+              { text: '3.Y.1VMware的安装与安装Ubuntu22.04系统', link: '/3.编程思维体系构建/3.Y.1VMware的安装与安装Ubuntu22.04系统' },
+              { text: '3.Y.2WSL的安装', link: '/3.编程思维体系构建/3.Y.2WSL的安装' },
+              { text: '3.Y.3Linux初探索', link: '/3.编程思维体系构建/3.Y.3Linux初探索' },
+              { text: '3.Y.4Vim初探索', link: '/3.编程思维体系构建/3.Y.4Vim初探索' },
+              { text: '3.Y.5linux小任务', link: '/3.编程思维体系构建/3.Y.5linux小任务' },
             ]
           }
         ]
