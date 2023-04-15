@@ -212,7 +212,7 @@ export default defineConfig({
       prev: '上一小节',
       next: '下一小节'
     },
-    // localSearch: true, # 尚未发布的本地搜索，撅撅子
+    localSearch: true,
   },
 
 })
