@@ -7,8 +7,8 @@ hero:
   text: HDU计算机科学讲义
   # tagline: My great project tagline
   image:
-    src: https://picxyxsw.oss-cn-hangzhou.aliyuncs.com/kita.gif
-    alt: 暂时的占位图
+    src: hdu-cs-wiki.svg
+    alt: HDU-CS-WIKI
   actions:
     - theme: brand
       text: 开始
