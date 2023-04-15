@@ -14,9 +14,6 @@ const members = [
     avatar: 'https://www.github.com/HanWu311.png',
     name: 'ZZM',
     title: 'Maintainer',
-    links: [
-      { icon: 'github', link: 'https://github.com/HanWu311' },
-    ]
   },
 ]
 </script>
