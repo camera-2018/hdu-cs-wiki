@@ -97,3 +97,7 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+mjx-container {
+  display: inline-block;
+  margin: auto;
+}
