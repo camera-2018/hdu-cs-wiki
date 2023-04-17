@@ -233,13 +233,7 @@ export default defineConfig({
               },
             ]
           },
-          {
-            text: '3.5git与github',
-            collapsed: true,
-            items: [
-              { text: '3.5git与github', link: '/3.编程思维体系构建/3.5git与github' },
-            ]
-          },
+          { text: '3.5git与github', link: '/3.编程思维体系构建/3.5git与github' },
           {
             text: '3.6Python（灵巧的胶水）',
             collapsed: true,
