@@ -5,14 +5,13 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 import './style.css'
 import './rainbow.css'
 
-let homePageStyle
+let homePageStyle = undefined
 
 
 export default {
   ...DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-
     })
   },
   enhanceApp({ app, router, siteData }) {
@@ -38,12 +37,12 @@ if (typeof window !== 'undefined') {
     document.documentElement.classList.add('browser-safari')
 }
 
-// Speed up the rainbow animation on home page
 function updateHomePageStyle(value) {
+  console.log(homePageStyle)
+  console.log(value)
   if (value) {
     if (homePageStyle)
       return
-
     homePageStyle = document.createElement('style')
     homePageStyle.innerHTML = `
     :root {
@@ -54,8 +53,9 @@ function updateHomePageStyle(value) {
   else {
     if (!homePageStyle)
       return
-
-    homePageStyle.remove()
-    homePageStyle = undefined
+    else {
+      homePageStyle.remove()
+      homePageStyle = undefined
+    }
   }
 }
