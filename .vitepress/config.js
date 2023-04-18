@@ -126,6 +126,7 @@ export default defineConfig({
           { text: '1.8转专业二三事', link: '/1.杭电生存指南/1.8转专业二三事' },
           { text: '1.9问题专题：好想进入实验室', link: '/1.杭电生存指南/1.9问题专题：好想进入实验室' },
           { text: '1.10如何读论文', link: '/1.杭电生存指南/1.10如何读论文' },
+          { text: '1.11陷入虚无主义？进来看看吧', link: '/1.杭电生存指南/1.11陷入虚无主义？进来看看吧' },
         ]
       },
       {
@@ -482,12 +483,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '8.外行社科',
+        text: '8.基础学科',
         collapsed: true,
         items: [
-          { text: '8.外行社科', link: '/8.外行社科/8.外行社科' },
-          { text: '8.1经济学科普Part1', link: '/8.外行社科/8.1经济学科普Part1' },
-          { text: '8.2陷入虚无主义？进来看看吧', link: '/8.外行社科/8.2陷入虚无主义？进来看看吧' },
+          { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
+          { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
+          { text: '8.2定积分', link: '/8.基础学科/8.2定积分' },
         ]
       },
       {
@@ -499,7 +500,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
     ],
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Made with ❤️ by HDU 计算机科协 && ALL 协作者',
       copyright: 'Copyright © 2023-present Evan You && HDU 计算机科协 && ALL 协作者'
     },
     lastUpdatedText: '上次更改',
