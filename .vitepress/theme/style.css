@@ -105,7 +105,7 @@ mjx-container {
 
 .VPHero .image-bg {
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 1s ease;
 }
 
@@ -143,6 +143,8 @@ mjx-container {
 
 /* Safari has a very bad performance on gradient and filter */
 .browser-safari, .browser-firefox {
+  --vp-home-hero-name-color: var(--vp-c-brand);
+  --vp-home-hero-name-background: transparent;
   --vp-home-hero-image-background-image: transparent;
   --vp-home-hero-image-filter: '';
 }
