@@ -38,8 +38,6 @@ if (typeof window !== 'undefined') {
 }
 
 function updateHomePageStyle(value) {
-  console.log(homePageStyle)
-  console.log(value)
   if (value) {
     if (homePageStyle)
       return
