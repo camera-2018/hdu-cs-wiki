@@ -20,7 +20,7 @@ export default {
 
     watch(
       () => router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/'),
+      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors.html'),
       { immediate: true },
     )
   },
