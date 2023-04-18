@@ -110,6 +110,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '简介', link: '/简介' },
+          { text: '使用指南', link: '/使用指南' },
         ]
       },
       {
