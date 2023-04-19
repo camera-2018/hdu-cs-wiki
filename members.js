@@ -11,11 +11,11 @@ export const members = [
     avatar: 'https://www.github.com/HanWu311.png',
     name: 'ZZM',
     title: 'Maintainer',
-     links: [
+    links: [
       { icon: 'github', link: 'https://github.com/HanWu311' },
     ]
   },
-    {
+  {
     avatar: 'https://github.com/aFlyBird0.png',
     name: '爱飞的鸟',
     title: 'Contributer',
@@ -39,7 +39,7 @@ export const members = [
       { icon: 'github', link: 'https://github.com/creammmmmmmmmmmmmmmm' },
     ]
   },
-   {
+  {
     avatar: 'https://github.com/renhaofan.png',
     name: '任浩帆',
     title: 'Contributer',
