@@ -20,4 +20,12 @@ export const members = [
       { icon: 'github', link: 'https://github.com/aFlyBird0' },
     ]
   },
+  {
+    avatar: 'https://github.com/creammmmmmmmmmmmmmmm.png',
+    name: '可可',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/creammmmmmmmmmmmmmmm' },
+    ]
+  },
 ]
