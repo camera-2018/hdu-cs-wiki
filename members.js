@@ -15,8 +15,9 @@ export const members = [
     {
     avatar: 'https://github.com/aFlyBird0.png',
     name: '爱飞的鸟',
+    title: 'Contributer',
     links: [
       { icon: 'github', link: 'https://github.com/aFlyBird0' },
-    title: 'Contributer',
+    ]
   },
 ]
