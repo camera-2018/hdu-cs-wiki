@@ -12,4 +12,11 @@ export const members = [
     name: 'ZZM',
     title: 'Maintainer',
   },
+    {
+    avatar: 'https://github.com/aFlyBird0.png',
+    name: '爱飞的鸟',
+    links: [
+      { icon: 'github', link: 'https://github.com/aFlyBird0' },
+    title: 'Maintainer',
+  },
 ]
