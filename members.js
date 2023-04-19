@@ -24,6 +24,14 @@ export const members = [
     ]
   },
   {
+    avatar: 'https://github.com/MarleneJiang.png',
+    name: 'Marlene',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/MarleneJiang' },
+    ]
+  },
+  {
     avatar: 'https://github.com/creammmmmmmmmmmmmmmm.png',
     name: '可可',
     title: 'Contributer',
