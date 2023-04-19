@@ -98,7 +98,7 @@ export default defineConfig({
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",
   lastUpdated: true,
-  head: [['script async', { src: 'http://107.174.93.210:3000/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301" }]],
+  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -512,7 +512,11 @@ export default defineConfig({
     },
     search: {
       provider: 'local'
-    }
+    },
+    editLink: {
+      pattern: 'https://github.com/camera-2018/hdu-cs-wiki/edit/master/:path',
+      text: '在 GitHub 上修改此页'
+    },
   },
   markdown: {
     config: (md) => {
