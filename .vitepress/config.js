@@ -98,6 +98,7 @@ export default defineConfig({
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",
   lastUpdated: true,
+  head: [['script async', { src: 'http://107.174.93.210:3000/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
