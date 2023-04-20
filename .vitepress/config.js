@@ -98,6 +98,7 @@ export default defineConfig({
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",
   lastUpdated: true,
+  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -324,39 +325,39 @@ export default defineConfig({
                   { text: '4.6.5计算机视觉（CV）', link: '/4.人工智能/4.6.5计算机视觉（CV）' },
                   { text: '4.6.5.1CV领域任务(研究目标)', link: '/4.人工智能/4.6.5.1CV领域任务(研究目标)' },
                   {
-                    text: '4.6.5.2经典网络',
+                    text: '4.6.5.2CV中的数据预处理（torchvision）',
                     collapsed: true,
                     items: [
-                      { text: '4.6.5.2经典网络', link: '/4.人工智能/4.6.5.2经典网络' },
-                      { text: '4.6.5.2.1AlexNet', link: '/4.人工智能/4.6.5.2.1AlexNet' },
-                      { text: '4.6.5.2.2FCN', link: '/4.人工智能/4.6.5.2.2FCN' },
-                      { text: '4.6.5.2.3ResNet', link: '/4.人工智能/4.6.5计算机视觉（CV）' },
-                      { text: '4.6.5.2.4UNet', link: '/4.人工智能/4.6.5.2.4UNet' },
-                      { text: '4.6.5.2.5GAN', link: '/4.人工智能/4.6.5.2.5GAN' },
-                      { text: '4.6.5.2.6思考题参考', link: '/4.人工智能/4.6.5.2.6思考题参考' },
-                      { text: '4.6.5.2.7还要学更多？', link: '/4.人工智能/4.6.5.2.7还要学更多？' },
+                      { text: '4.6.5.2CV中的数据预处理（torchvision）', link: '/4.人工智能/4.6.5.2CV中的数据预处理（torchvision）' },
+                      { text: '4.6.5.2.1数据读取', link: '/4.人工智能/4.6.5.2.1数据读取' },
+                      { text: '4.6.5.2.2数据增强', link: '/4.人工智能/4.6.5.2.2数据增强' },
                     ]
                   },
                   {
-                    text: '4.6.5.3神经辐射场(NeRF)',
+                    text: '4.6.5.3CV中的经典网络',
                     collapsed: true,
                     items: [
-                      { text: '4.6.5.3神经辐射场(NeRF)', link: '/4.人工智能/4.6.5.3神经辐射场(NeRF)' },
-                      { text: '4.6.5.3.1NeRF', link: '/4.人工智能/4.6.5.3.1NeRF' },
-                      { text: '4.6.5.3.2NeRF的改进方向', link: '/4.人工智能/4.6.5.3.2NeRF的改进方向' },
-                      { text: '4.6.5.3.3自制数据集的工具COLMAP', link: '/4.人工智能/4.6.5.3.3自制数据集的工具COLMAP' },
+                      { text: '4.6.5.3CV中的经典网络', link: '/4.人工智能/4.6.5.3CV中的经典网络' },
+                      { text: '4.6.5.3.1AlexNet', link: '/4.人工智能/4.6.5.3.1AlexNet' },
+                      { text: '4.6.5.3.2FCN', link: '/4.人工智能/4.6.5.3.2FCN' },
+                      { text: '4.6.5.3.3ResNet', link: '/4.人工智能/4.6.5.3.3ResNet' },
+                      { text: '4.6.5.3.4UNet', link: '/4.人工智能/4.6.5.3.4UNet' },
+                      { text: '4.6.5.3.5GAN', link: '/4.人工智能/4.6.5.3.5GAN' },
+                      { text: '4.6.5.3.6思考题参考', link: '/4.人工智能/4.6.5.3.6思考题参考' },
+                      { text: '4.6.5.3.7还要学更多？', link: '/4.人工智能/4.6.5.3.7还要学更多？' },
                     ]
                   },
                   {
-                    text: '4.6.5.4数据预处理（torchvision）',
+                    text: '4.6.5.4神经辐射场(NeRF)',
                     collapsed: true,
                     items: [
-                      { text: '4.6.5.4数据预处理（torchvision）', link: '/4.人工智能/4.6.5.4数据预处理（torchvision）' },
-                      { text: '4.6.5.4.1数据读取', link: '/4.人工智能/4.6.5.4.1数据读取' },
-                      { text: '4.6.5.4.2数据增强', link: '/4.人工智能/4.6.5.4.2数据增强' },
-                      { text: '4.6.5.4.3其他功能', link: '/4.人工智能/4.6.5.4.3其他功能' },
+                      { text: '4.6.5.4神经辐射场(NeRF)', link: '/4.人工智能/4.6.5.4神经辐射场(NeRF)' },
+                      { text: '4.6.5.4.1NeRF', link: '/4.人工智能/4.6.5.4.1NeRF' },
+                      { text: '4.6.5.4.2NeRF的改进方向', link: '/4.人工智能/4.6.5.4.2NeRF的改进方向' },
+                      { text: '4.6.5.4.3自制数据集的工具COLMAP', link: '/4.人工智能/4.6.5.4.3自制数据集的工具COLMAP' },
                     ]
                   },
+                  
                 ]
               },
               {
@@ -419,8 +420,9 @@ export default defineConfig({
           { text: '4.7数据分析', link: '/4.人工智能/4.7数据分析' },
           { text: '4.8如何做研究', link: '/4.人工智能/4.8如何做研究' },
           { text: '4.9科研论文写作', link: '/4.人工智能/4.9科研论文写作' },
-          { text: '4.10相关资料', link: '/4.人工智能/4.10相关资料' },
-          { text: '4.11本章节内容的局限性', link: '/4.人工智能/4.11本章节内容的局限性' },
+          { text: '4.10从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.10从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
+          { text: '4.11图网络略述（intro&GCN）', link: '/4.人工智能/4.11图网络略述（intro&GCN）' },
+          { text: '4.12本章节内容的局限性', link: '/4.人工智能/4.12本章节内容的局限性' },
         ]
       },
       {
@@ -511,7 +513,11 @@ export default defineConfig({
     },
     search: {
       provider: 'local'
-    }
+    },
+    editLink: {
+      pattern: 'https://github.com/camera-2018/hdu-cs-wiki/edit/master/:path',
+      text: '在 GitHub 上修改此页'
+    },
   },
   markdown: {
     config: (md) => {

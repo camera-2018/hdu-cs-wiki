@@ -14,12 +14,13 @@ export default {
     return h(DefaultTheme.Layout, null, {
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp(ctx) {
+    DefaultTheme.enhanceApp(ctx)
     if (typeof window === 'undefined')
       return
 
     watch(
-      () => router.route.data.relativePath,
+      () => ctx.router.route.data.relativePath,
       () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors.html'),
       { immediate: true },
     )
