@@ -325,19 +325,19 @@ export default defineConfig({
                   { text: '4.6.5计算机视觉（CV）', link: '/4.人工智能/4.6.5计算机视觉（CV）' },
                   { text: '4.6.5.1CV领域任务(研究目标)', link: '/4.人工智能/4.6.5.1CV领域任务(研究目标)' },
                   {
-                    text: '4.6.5.2数据预处理（torchvision）',
+                    text: '4.6.5.2CV中的数据预处理（torchvision）',
                     collapsed: true,
                     items: [
-                      { text: '4.6.5.2数据预处理（torchvision）', link: '/4.人工智能/4.6.5.2数据预处理（torchvision）' },
+                      { text: '4.6.5.2CV中的数据预处理（torchvision）', link: '/4.人工智能/4.6.5.2CV中的数据预处理（torchvision）' },
                       { text: '4.6.5.2.1数据读取', link: '/4.人工智能/4.6.5.2.1数据读取' },
                       { text: '4.6.5.2.2数据增强', link: '/4.人工智能/4.6.5.2.2数据增强' },
                     ]
                   },
                   {
-                    text: '4.6.5.3经典网络',
+                    text: '4.6.5.3CV中的经典网络',
                     collapsed: true,
                     items: [
-                      { text: '4.6.5.3经典网络', link: '/4.人工智能/4.6.5.3经典网络' },
+                      { text: '4.6.5.3CV中的经典网络', link: '/4.人工智能/4.6.5.3CV中的经典网络' },
                       { text: '4.6.5.3.1AlexNet', link: '/4.人工智能/4.6.5.3.1AlexNet' },
                       { text: '4.6.5.3.2FCN', link: '/4.人工智能/4.6.5.3.2FCN' },
                       { text: '4.6.5.3.3ResNet', link: '/4.人工智能/4.6.5.3.3ResNet' },
