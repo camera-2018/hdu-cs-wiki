@@ -331,7 +331,7 @@ export default defineConfig({
                       { text: '4.6.5.2经典网络', link: '/4.人工智能/4.6.5.2经典网络' },
                       { text: '4.6.5.2.1AlexNet', link: '/4.人工智能/4.6.5.2.1AlexNet' },
                       { text: '4.6.5.2.2FCN', link: '/4.人工智能/4.6.5.2.2FCN' },
-                      { text: '4.6.5.2.3ResNet', link: '/4.人工智能/4.6.5计算机视觉（CV）' },
+                      { text: '4.6.5.2.3ResNet', link: '/4.人工智能/4.6.5.2.3ResNet' },
                       { text: '4.6.5.2.4UNet', link: '/4.人工智能/4.6.5.2.4UNet' },
                       { text: '4.6.5.2.5GAN', link: '/4.人工智能/4.6.5.2.5GAN' },
                       { text: '4.6.5.2.6思考题参考', link: '/4.人工智能/4.6.5.2.6思考题参考' },
