@@ -20,6 +20,22 @@
 - 网站页面设计
 - 在各种媒体、博客文章、群内宣传 HDU-CS-WIKI
 
+## 文档风格
+1. 使用 Markdown 编写文档，文档格式参考 [Markdown 语法]()。
+2. 一个页面只有一个1级标题（H1，一个#），其他标题从2级开始（H2，##）。
+3. 英文与中文之间用空格分开。
+   ```markdown
+    AI 与人工智能，AGI 的发展方向。
+   ```
+4. 标题内的英文单词首字母大写。
+5. 代码块使用 ` ``` ` 包裹，并标注常见的语言标识符，如 ` ```python `。
+
+## 项目配置指南
+
+修改新添加或移动位置的 md 文件需要在 `.vitepress/config.js` 中的 `sidebar` 中添加或修改对应的配置。
+
+详见 [VitePress 官方文档](https://vitepress.dev/reference/default-theme-sidebar)
+
 ## 如何使用 Git 和 Github
 
 详见 [3.5 Git和Github](https://hdu-cs.wiki/3.%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E4%BD%93%E7%B3%BB%E6%9E%84%E5%BB%BA/3.5git%E4%B8%8Egithub.html)
@@ -60,3 +76,4 @@ subject为commit概述
 
 ## Pull Request 流程与指南
 Fork 本仓库，然后在你的仓库中进行修改，修改完成后在本仓库创建 NEW Pull Request ，选择 compare across forks 提交 pr 并评论上你修改的具体信息即可，我们会第一时间审阅并合并。
+
