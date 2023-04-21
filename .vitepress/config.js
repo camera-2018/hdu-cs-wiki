@@ -356,7 +356,13 @@ export default defineConfig({
                       { text: '4.6.5.4.3自制数据集的工具COLMAP', link: '/4.人工智能/4.6.5.4.3自制数据集的工具COLMAP' },
                     ]
                   },
-
+                  {
+                    text: '4.6.5.5行人重识别(ReID)',
+                    collapsed: true,
+                    items: [
+                      { text: '4.6.5.5行人重识别(ReID)', link: '/4.人工智能/4.6.5.5行人重识别(ReID)' },
+                    ]
+                  },
                 ]
               },
               {
