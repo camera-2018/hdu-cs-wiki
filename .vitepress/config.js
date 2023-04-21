@@ -497,6 +497,10 @@ export default defineConfig({
       {
         text: 'Contributors',
         link: '/contributors'
+      },
+      {
+        text: '贡献指南',
+        link: '/CONTRIBUTING'
       }
     ],
     socialLinks: [
