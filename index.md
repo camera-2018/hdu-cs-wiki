@@ -28,3 +28,4 @@ features:
     details: 还有非常多的内容尚未更新完毕，我们期待着你的反馈和加入！
 ---
 
+<meta name="baidu-site-verification" content="codeva-GDehy1VQ6d" />
