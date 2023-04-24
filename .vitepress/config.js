@@ -520,6 +520,10 @@ export default defineConfig({
       {
         text: '贡献指南',
         link: '/CONTRIBUTING'
+      },
+      {
+        text: 'notebook测试',
+        link: '/notebook'
       }
     ],
     socialLinks: [
