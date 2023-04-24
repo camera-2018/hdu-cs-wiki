@@ -30,6 +30,22 @@
 4. 标题内的英文单词首字母大写。
 5. 代码块使用 ` ``` ` 包裹，并标注常见的语言标识符，如 ` ```python `。
 
+
+## 项目构建指南
+
+需要 nodejs v16.14.0 及以上版本
+
+使用包管理器 npm
+
+```bash
+npm install 
+npm run docs:dev  #运行预览环境
+```
+```bash
+npm run docs:bulid    #编译线上环境
+npm run docs:preview  #预览线上环境
+```
+
 ## 项目配置指南
 
 修改新添加或移动位置的 md 文件需要在 `.vitepress/config.js` 中的 `sidebar` 中添加或修改对应的配置。
