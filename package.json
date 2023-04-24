@@ -4,6 +4,13 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
+  "dependencies": {
+    "@codemirror/lang-python": "^6.1.2",
+    "@codemirror/lang-sql": "^6.4.1",
+    "@jupyterlab/mathjax2": "^3.6.3",
+    "@jupyterlab/theme-light-extension": "^3.6.3",
+    "markdown-it": "^13.0.1"
+  },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.0.0-alpha.73"

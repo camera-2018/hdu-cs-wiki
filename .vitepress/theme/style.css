@@ -151,3 +151,28 @@ mjx-container {
   --vp-home-hero-image-background-image: transparent;
   --vp-home-hero-image-filter: '';
 }
+
+.jp-MarkdownOutput{
+  color: #3c3c43 !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
+
+.dark .jp-MarkdownOutput{
+  color: #dfdfd7 !important;
+  font-family: 'Noto Sans SC', 'Noto Color Emoji', sans-serif !important;
+}
+
+.jp-InputArea-editor{
+  border-radius: 8px !important;
+}
+
+.cm-content{
+  font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
+  background-color: #f6f6f7 !important;
+}
+
+.dark .cm-content{
+  font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
+  /* background-color: #161618 !important; */
+}
