@@ -1,7 +1,7 @@
 <template>
   <div ref="NotebookFragment" class="notebook-fragment">
     <div ref="loading" id="loading">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" id="loadingsvg">
         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
           <path stroke-dasharray="2 4" stroke-dashoffset="6"
             d="M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3">
@@ -19,7 +19,7 @@
           </path>
         </g>
       </svg>
-      本页面包含 Jupyter NoteBook , 正在渲染中... ...
+      <div>本页面包含 Jupyter NoteBook , 正在渲染中... ...</div>
     </div>
   </div>
 </template>
@@ -44,5 +44,16 @@ onMounted(async () => {
 #loading {
   font-size: 1.5rem;
   text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: rainbow 10s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite !important;
+}
+
+#loadingsvg {
+  width: 5rem;
+  height: 5rem;
 }
 </style>
