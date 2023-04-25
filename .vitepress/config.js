@@ -394,7 +394,7 @@ export default defineConfig({
                       { text: '4.6.6.2.3序列化推荐', link: '/4.人工智能/4.6.6.2.3序列化推荐' },
                     ]
                   },
-                  { text: '4.6.6.3知识图谱', link: '/4.人工智能/4.6.6.3知识图谱' }
+                  { text: '4.6.6.3知识图谱', link: '/4.人工智能/4.6.6.3知识图谱' },
                 ]
               },
               {
@@ -441,6 +441,114 @@ export default defineConfig({
           { text: '4.10科研论文写作', link: '/4.人工智能/4.10科研论文写作' },
           { text: '4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
           { text: '4.12本章节内容的局限性', link: '/4.人工智能/4.12本章节内容的局限性' },
+          {
+            text: 'FunRec',
+            collapsed: true,
+            items: [
+              { text: 'FunRec概述', link: '/4.人工智能/FunRec概述' },
+              {
+                text: '推荐系统概述',
+                collapsed: true,
+                items: [
+                  { text: '推荐系统的意义', link: '/4.人工智能/ch01/ch1.1.md' },
+                  { text: '推荐系统架构', link: '/4.人工智能/ch01/ch1.2.md' },
+                  { text: '推荐系统技术栈', link: '/4.人工智能/ch01/ch1.3.md' },
+                ]
+              },
+              {
+                text: '推荐系统算法基础',
+                collapsed: true,
+                items: [
+                  {
+                    text: '经典召回模型',
+                    collapsed: true,
+                    items: [
+                      {
+                        text: '基于协同过滤的召回', collapsed: true, items: [
+                          { text: 'UserCF', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/usercf.md' },
+                          { text: 'ItemCF', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/itemcf.md' },
+                          { text: 'Swing', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/Swing.md' },
+                          { text: '矩阵分解', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/mf.md' },
+                        ]
+                      },
+                      { text: 'FM召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/FM.md' },
+                      {
+                        text: 'item2vec召回系列', collapsed: true, items: [
+                          { text: 'word2vec原理', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/word2vec.md' },
+                          { text: 'item2vec召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/item2vec.md' },
+                          { text: 'Airbnb召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/Airbnb.md' },
+                        ]
+                      },
+                      { text: 'YoutubeDNN召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/YoutubeDNN.md' },
+                      {
+                        text: '双塔召回', collapsed: true, items: [
+                          { text: '经典双塔', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/DSSM.md' },
+                          { text: 'Youtube双塔', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/YoutubeTwoTower.md' },
+                        ]
+                      },
+                      {
+                        text: '图召回', collapsed: true, items: [
+                          { text: 'EGES', link: '/4.人工智能/ch02/ch2.1/ch2.1.3/EGES.md' },
+                          { text: 'PinSAGE', link: '/4.人工智能/ch02/ch2.1/ch2.1.3/PinSage.md' },
+                        ]
+                      },
+                      {
+                        text: '序列召回', collapsed: true, items: [
+                          { text: 'MIND', link: '/4.人工智能/ch02/ch2.1/ch2.1.4/MIND.md' },
+                          { text: 'SDM', link: '/4.人工智能/ch02/ch2.1/ch2.1.4/SDM.md' },
+                        ]
+                      },
+                      {
+                        text: '树模型召回', collapsed: true, items: [
+                          { text: 'TDM', link: '/4.人工智能/ch02/ch2.1/ch2.1.5/TDM.md' },
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    text: '经典排序模型',
+                    collapsed: true,
+                    items: [
+                      { text: 'GBDT+LR', link: '/4.人工智能/ch02/ch2.2/ch2.2.1.md' },
+                      {
+                        text: '特征交叉', collapsed: true, items: [
+                          { text: 'FM', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/FM.md' },
+                          { text: 'PNN', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/PNN.md' },
+                          { text: 'DCN', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/DCN.md' },
+                          { text: 'AutoInt', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/AutoInt.md' },
+                          { text: 'FiBiNET', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/FiBiNet.md' },
+                        ]
+                      },
+                      {
+                        text: 'WideNDeep系列', collapsed: true, items: [
+                          { text: 'Wide&Deep', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/WideNDeep.md' },
+                          { text: 'NFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/NFM.md' },
+                          { text: 'AFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/AFM.md' },
+                          { text: 'DeepFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/DeepFM.md' },
+                          { text: 'xDeepFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/xDeepFM.md' },
+                        ]
+                      },
+                      {
+                        text: '序列模型', collapsed: true, items: [
+                          { text: 'DIN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DIN.md' },
+                          { text: 'DIEN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DIEN.md' },
+                          { text: 'DSIN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DSIN.md' },
+                        ]
+                      },
+                      {
+                        text: '多任务学习', collapsed: true, items: [
+                          { text: '多任务学习概述', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/2.2.5.0.md' },
+                          { text: 'ESMM', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/ESMM.md' },
+                          { text: 'MMOE', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/MMOE.md' },
+                          { text: 'PLE', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/PLE.md' },
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
