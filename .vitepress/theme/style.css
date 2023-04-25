@@ -176,3 +176,7 @@ mjx-container {
   font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
   /* background-color: #161618 !important; */
 }
+
+.jp-RenderedHTMLCommon :not(pre) > code {
+  background-color: var(--vp-c-mute) !important;
+}
