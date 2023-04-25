@@ -55,9 +55,9 @@ one-hot向量的维度是词汇表的大小（如：500，000）
 ## dense word vectors表达单词
 如果我们可以使用某种方法为每个单词构建一个合适的dense vector，如下图，那么通过点积等数学计算就可以获得单词之间的某种联系
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片1.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片1.png" /> 
+
 
 # Word2vec
 
@@ -70,9 +70,9 @@ one-hot向量的维度是词汇表的大小（如：500，000）
 
 我们先引入上下文context的概念：当单词 w 出现在文本中时，其**上下文context**是出现在w附近的一组单词（在固定大小的窗口内），如下图
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片2.png" alt="在这里插入图片描述" style="zoom:60%;" />
-</div> 
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片2.png" />
+ 
 
 这些上下文单词context words决定了banking的意义
 
@@ -96,15 +96,15 @@ Word2vec包含两个模型，**Skip-gram与CBOW**。下面，我们先讲**Skip-
 
 下图展示了以“into”为中心词，窗口大小为2的情况下它的上下文词。以及相对应的$P(o|c)$
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片3.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片3.png" /> 
+
 
 我们滑动窗口，再以banking为中心词
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片4.png"在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片4.png"在这里插入图片描述"  /> 
+
 
 那么，如果我们在整个语料库上不断地滑动窗口，我们可以得到所有位置的$P(o|c)$，我们希望在所有位置上**最大化单词o在单词c周围出现了这一事实**，由极大似然法，可得：
 
@@ -114,15 +114,15 @@ $$
 
 此式还可以依图3写为：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片5.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片5.png" /> 
+
 
 加log,加负号，缩放大小可得：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片7.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片7.png" /> 
+
 
 上式即为**skip-gram的损失函数**，最小化损失函数，就可以得到合适的词向量
 
@@ -140,9 +140,9 @@ $$
 
 又P(o|c)是一个概率，所以我们在整个语料库上使用**softmax**将点积的值映射到概率，如图6
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片6.png" alt="在这里插入图片描述" style="zoom:70%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片6.png" /> 
+
 
 注：注意到上图，中心词词向量为$v_{c}$,而上下文词词向量为$u_{o}$。也就是说每个词会对应两个词向量，**在词w做中心词时，使用$v_{w}$作为词向量，而在它做上下文词时，使用$u_{w}$作为词向量**。这样做的原因是为了求导等操作时计算上的简便。当整个模型训练完成后，我们既可以使用$v_{w}$作为词w的词向量，也可以使用$u_{w}$作为词w的词向量，亦或是将二者平均。在下一部分的模型结构中，我们将更清楚地看到两个词向量究竟在模型的哪个位置。
 
@@ -152,9 +152,9 @@ $$
 
 ## Word2vec模型结构
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片8.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片8.png" /> 
+
 
 如图八所示，这是一个输入为1 X V维的one-hot向量（V为整个词汇表的长度，这个向量只有一个1值，其余为0值表示一个词），单隐藏层（**隐藏层的维度为N，这里是一个超参数，这个参数由我们定义，也就是词向量的维度**），输出为1 X V维的softmax层的模型。
 
@@ -174,15 +174,15 @@ $W^{I}$为V X N的参数矩阵，$W^{O}$为N X V的参数矩阵。
 
 如上文所述，Skip-gram为给定中心词，预测周围的词，即求P(o|c)，如下图所示：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220424105817437.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220424105817437.png" /> 
+
 
 而CBOW为给定周围的词，预测中心词，即求P(c|o),如下图所示：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片10.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片10.png" /> 
+
 
 
 注意：在使用CBOW时，上文所给出的模型结构并没有变，在这里，我们输入多个上下文词o，在隐藏层，**将这多个上下文词经过第一个参数矩阵的计算得到的词向量相加作为隐藏单元的值**。其余均不变，$W^{O}$中的每一列依然为为词汇表中的每一个单词的词向量u。
@@ -193,9 +193,9 @@ $W^{I}$为V X N的参数矩阵，$W^{O}$为N X V的参数矩阵。
 
 我们再看一眼，通过softmax得到的$P(o|c)$，如图：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220424105958191.png" alt="在这里插入图片描述" style="zoom:50%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220424105958191.png" /> 
+
 
 
 可以看到，$P(o|c)$的分母需要在整个单词表上做乘积和exp运算，这无疑是非常消耗计算资源的，Word2vec的作者针对这个问题，做出了改进。
@@ -208,9 +208,9 @@ $W^{I}$为V X N的参数矩阵，$W^{O}$为N X V的参数矩阵。
 
 我们首先给出负采样的损失函数：
 
-<div align=center>
-<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片12.png" alt="在这里插入图片描述" style="zoom:40%;" /> 
-</div>
+
+<img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片12.png" /> 
+
 
 
 其中$\sigma$为sigmoid函数$1/(1+e^{-x})$, $u_{o}$为实际样本中的上下文词的词向量，而$u_{k}$为我们在单词表中随机选出（按一定的规则随机选出，具体可参阅参考资料）的K个单词。

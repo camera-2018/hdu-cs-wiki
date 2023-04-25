@@ -162,7 +162,7 @@ def DIEN(feature_columns, behavior_feature_list, behavior_seq_feature_list, neg_
 
 > 下面这个图失效了
 <div align=center>
-<img src="C:\Users\ryl\Desktop\DW_Rec\组队学习内容\代码\imgs\DIEN.png" alt="image-20210218180755462" style="zoom:70%;" />
+此处无图
 </div>
 
 ## 思考

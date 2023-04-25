@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress dev",
+    "docs:build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress build",
+    "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
   },
   "dependencies": {
     "@codemirror/lang-python": "^6.1.2",
@@ -12,6 +12,7 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.0.0-alpha.73"
   }

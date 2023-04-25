@@ -150,6 +150,6 @@ def DCN(linear_feature_columns, dnn_feature_columns):
 **参考资料**
 * 《深度学习推荐系统》 --- 王喆
 *  [Deep&Cross模型原论文](https://arxiv.org/abs/1708.05123)
-* [AI上推荐 之 Wide&Deep与Deep&Cross模型(记忆与泛化并存的华丽转身）]()
-* [Wide&Deep模型的进阶---Cross&Deep模型](https://mp.weixin.qq.com/s/DkoaMaXhlgQv1NhZHF-7og)
+*  AI上推荐 之 Wide&Deep与Deep&Cross模型（记忆与泛化并存的华丽转身）
+*  [Wide&Deep模型的进阶---Cross&Deep模型](https://mp.weixin.qq.com/s/DkoaMaXhlgQv1NhZHF-7og)
 
