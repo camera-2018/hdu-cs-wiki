@@ -26,7 +26,7 @@
 
 <script setup>
 import { Notebook } from "../utils/index";
-import { defineProps, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 const props = defineProps({
   notebook: { required: true, type: Object },
 });
