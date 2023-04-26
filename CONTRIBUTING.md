@@ -42,9 +42,21 @@ npm install
 npm run docs:dev  #运行预览环境
 ```
 ```bash
-npm run docs:bulid    #编译线上环境
+npm run docs:build    #编译线上环境
 npm run docs:preview  #预览线上环境
 ```
+
+## 图片放置指南
+
+图片放置在当前大章节的 `static` 目录下，然后在 md 文件中使用相对路径引用。
+
+```markdown
+![](static/xxx.png)
+```
+
+注意尽量不要使用 `img` 标签，因为经前端构建解析后路径会不正确。
+
+后续会统一放置到 oss 存储桶中。
 
 ## 项目配置指南
 
