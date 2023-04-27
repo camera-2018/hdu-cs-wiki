@@ -14,6 +14,6 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.0.0-alpha.73"
+    "vitepress": "^1.0.0-alpha.74"
   }
 }
