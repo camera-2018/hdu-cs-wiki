@@ -1,4 +1,14 @@
-export const members = [
+type Member = {
+  avatar: string
+  name: string
+  title: string
+  links: {
+    icon: string
+    link: string
+  }[]
+}[]
+
+export const members: Member = [
   {
     avatar: 'https://www.github.com/camera-2018.png',
     name: 'camera-2018',
