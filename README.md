@@ -17,6 +17,12 @@
   </a>
 </p>
 
+<div align="center">喜欢本项目可以点点右上角 star 🎇</div>
+<br/>
+<p align="center">
+  <a href="https://hdu-cs.wiki/" target="_blank">📚在线阅读</a> 
+</p>
+
 ## 序言
 
 初入大学，大家都会十分迷茫，尤其是计算机相关的同学们。
@@ -35,8 +41,11 @@
 
 zzm花费了一年的时间动员了大伙对讲义进行修缮和完备，不得不说这确实不是一个小的工作，不过在2023年3月，在计院领导的支持下，计算机学院科协成立了。我们将在学院的支持下继续完善这个内容，同时也欢迎大伙加入我们，共同参与到讲义的学习与撰写中来！
 
-![](hdu-cs-qq.png)
-<center>欢迎加群669895692</center>
+<div align="center">
+  <img src="hdu-cs-qq.png">
+</div>
+
+<p align="center">欢迎加群669895692</p>
 
 ## 学习原则
 
@@ -62,6 +71,6 @@ zzm花费了一年的时间动员了大伙对讲义进行修缮和完备，不�
 
 ## **许可协议**
 
-本作品采用`知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆`许可协议进行许可. 要查看该许可协议, 可访问[这里](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/), 或者写信到 Creative Commons, PO Box 1866, Mountain View, CA 94042, USA
+本作品采用 `知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆` 许可协议进行许可. 要查看该许可协议, 可访问 [这里](http://creativecommons.org/licenses/by-nc-sa/3.0/cn/) , 或者写信到 Creative Commons, PO Box 1866, Mountain View, CA 94042, USA
 
 © 2022. 此文章采用 **CC BY-NC-SA 3.0 CN** 许可授权。
