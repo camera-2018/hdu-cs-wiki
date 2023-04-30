@@ -9,12 +9,12 @@ type Member = {
 }[]
 
 // 写了个走 CF 的代理，为了让头像加载快点儿
-// 格式暂时为：https://avatars-gh-fast.2907618001.workers.dev/ + github 用户名（不是昵称）（不加png）
-// https://avatars-gh-fast.2907618001.workers.dev/camera-2018
+// 格式暂时为：https://avatars.hdu-cs.wiki/ + github 用户名（不是昵称）（不加png）
+// https://avatars.hdu-cs.wiki/camera-2018
 
 export const members: Member = [
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/camera-2018',
+    avatar: 'https://avatars.hdu-cs.wiki/camera-2018',
     name: 'camera-2018',
     title: 'Maintainer',
     links: [
@@ -22,7 +22,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/HanWu311',
+    avatar: 'https://avatars.hdu-cs.wiki/HanWu311',
     name: 'ZZM',
     title: 'Maintainer',
     links: [
@@ -30,7 +30,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/aFlyBird0',
+    avatar: 'https://avatars.hdu-cs.wiki/aFlyBird0',
     name: '爱飞的鸟',
     title: 'Contributer',
     links: [
@@ -38,7 +38,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/MarleneJiang',
+    avatar: 'https://avatars.hdu-cs.wiki/MarleneJiang',
     name: 'Marlene',
     title: 'Contributer',
     links: [
@@ -46,7 +46,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/creammmmmmmmmmmmmmmm',
+    avatar: 'https://avatars.hdu-cs.wiki/creammmmmmmmmmmmmmmm',
     name: '可可',
     title: 'Contributer',
     links: [
@@ -54,7 +54,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/renhaofan',
+    avatar: 'https://avatars.hdu-cs.wiki/renhaofan',
     name: '任浩帆',
     title: 'Contributer',
     links: [
@@ -62,7 +62,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/ZhouXiinlei',
+    avatar: 'https://avatars.hdu-cs.wiki/ZhouXiinlei',
     name: 'Xinlei_Zhou',
     title: 'Contributer',
     links: [
@@ -70,7 +70,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/46135621',
+    avatar: 'https://avatars.hdu-cs.wiki/46135621',
     name: '46135621',
     title: 'Contributer',
     links: [
@@ -78,7 +78,7 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars-gh-fast.2907618001.workers.dev/buwyi',
+    avatar: 'https://avatars.hdu-cs.wiki/buwyi',
     name: 'buwyi',
     title: 'Contributer',
     links: [
