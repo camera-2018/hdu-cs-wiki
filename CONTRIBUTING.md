@@ -76,6 +76,13 @@ npm run docs:preview  #预览线上环境
 
 ## Commit Message 规范
 
+::: tip 🐒
+本项目没有强制使用 [commitlint](https://github.com/conventional-changelog/commitlint) ，但是建议遵循以下规范。
+> commitlint : 一个提交检查插件 ，可以在提交前检查 commit message 是否符合规范。
+
+本项目选用的规范为 [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)（基于 [Angular](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines) 约定）
+:::
+
 本项目遵循以下 commit message 规范：
 
 ```bash
