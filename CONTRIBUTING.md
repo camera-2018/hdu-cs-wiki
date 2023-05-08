@@ -108,6 +108,10 @@ subject为commit概述
 注意 冒号和subject之间要加空格
 ```
 
+其中详细内容可以参照 [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+
 ## Pull Request 流程与指南
 Fork 本仓库，然后在你的仓库中进行修改，修改完成后在本仓库创建 NEW Pull Request ，选择 compare across forks 提交 pr 并评论上你修改的具体信息即可，我们会第一时间审阅并合并。
 

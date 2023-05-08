@@ -15,6 +15,9 @@
   <a href="https://app.netlify.com/sites/hdu-cs-wiki/deploys">
     <img src="https://api.netlify.com/api/v1/badges/92121c47-e608-4736-bffa-c0958e570348/deploy-status">
   </a>
+  <a href="https://conventionalcommits.org">
+    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white">
+  </a>
 </p>
 
 <div align="center">喜欢本项目可以点点右上角 star 🎇</div>
