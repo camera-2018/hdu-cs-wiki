@@ -46,11 +46,11 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/creammmmmmmmmmmmmmmm',
+    avatar: 'https://avatars.hdu-cs.wiki/creamm-kk',
     name: '可可',
     title: 'Contributer',
     links: [
-      { icon: 'github', link: 'https://github.com/creammmmmmmmmmmmmmmm' },
+      { icon: 'github', link: 'https://github.com/creamm-kk' },
     ]
   },
   {
