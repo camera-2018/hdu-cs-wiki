@@ -669,6 +669,7 @@ export default defineConfig({
       pattern: 'https://github.com/camera-2018/hdu-cs-wiki/edit/master/:path',
       text: '在 GitHub 上修改此页'
     },
+    externalLinkIcon: true,
   },
   markdown: {
     config: (md) => {

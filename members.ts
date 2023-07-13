@@ -85,4 +85,44 @@ export const members: Member = [
       { icon: 'github', link: 'https://github.com/buwyi' },
     ]
   },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/E1PsyCongroo',
+    name: 'E1PsyCongroo',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/E1PsyCongroo' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/w31r4',
+    name: 'w31r4',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/w31r4' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/axiomofchoice-hjt',
+    name: 'Axiomofchoice',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/axiomofchoice-hjt' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/ek1ng',
+    name: 'ek1ng',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/ek1ng' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/Plumbiu',
+    name: 'Guo Xingjun',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/Plumbiu' },
+    ]
+  },
 ]
