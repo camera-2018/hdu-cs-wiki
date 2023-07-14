@@ -13,8 +13,11 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-mindmap": "^9.3.0",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.0.0-beta.5"
+    "mermaid": "^10.2.4",
+    "vitepress": "^1.0.0-beta.5",
+    "vitepress-plugin-mermaid": "^2.0.13"
   }
 }

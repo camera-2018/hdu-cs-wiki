@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitepress'
-
+// import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
 
 const customElements = [
@@ -93,7 +93,7 @@ const customElements = [
 ];
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   lang: 'zh-CN',
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",

@@ -72,7 +72,7 @@ npm run docs:preview  #预览线上环境
 
 ## 如何使用 Git 和 Github
 
-详见 [3.5 Git和Github](https://hdu-cs.wiki/3.%E7%BC%96%E7%A8%8B%E6%80%9D%E7%BB%B4%E4%BD%93%E7%B3%BB%E6%9E%84%E5%BB%BA/3.5git%E4%B8%8Egithub.html)
+详见 [3.5 Git和Github](./3.编程思维体系构建/3.5git与github.md)
 
 ## Commit Message 规范
 
@@ -122,3 +122,40 @@ subject为commit概述
 ## Pull Request 流程与指南
 Fork 本仓库，然后在你的仓库中进行修改，修改完成后在本仓库创建 NEW Pull Request ，选择 compare across forks 提交 pr 并评论上你修改的具体信息即可，我们会第一时间审阅并合并。
 
+## Feature
+
+1. Markdown 内支持Latex公式，格式为单行公式双dollar符号、单行公式单dollar符号。（单行公式需要换行才能解析）例如：
+    ```latex
+    $行内公式\arccos{a}$
+    ```
+    会渲染成 $\arccos{a}$
+    ```latex
+    $$单行公式\arcsin{b}$$
+    ```
+    会渲染成
+    $$\arcsin{b}$$
+    ::: tip
+    Latex语法在线编辑器 https://www.latexlive.com
+    :::
+
+2. 支持Mermaid流程图，格式如下
+    ```text
+        ```mermaid
+        graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+        ``` 
+    ```
+    会渲染成
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        C-->D;
+    ```
+    :::tip
+    语法自查 https://mermaid.js.org
+    :::
