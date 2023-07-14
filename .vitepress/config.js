@@ -98,7 +98,7 @@ export default defineConfig({
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",
   lastUpdated: true,
-  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains":"wiki.xyxsw.site,hdu-cs.wiki" }]],
+  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -601,31 +601,38 @@ export default defineConfig({
         ]
       },
       {
-        text: '7.Web开发入门',
+        text: '7.网络应用开发',
         collapsed: true,
         items: [
-          { text: '7.Web开发入门', link: '/7.Web开发入门/7.Web开发入门' },
+          { text: '7.网络应用开发入门', link: '/7.网络应用开发/7.网络应用开发入门' },
           {
-            text: '7.1前端部分',
+            text: '7.1WEB开发入门',
             collapsed: true,
             items: [
-              { text: '7.1前端部分', link: '/7.Web开发入门/7.1前端部分' },
-              { text: '7.1.1基础部分', link: '/7.Web开发入门/7.1.1基础部分' },
-              { text: '7.1.2进阶部分', link: '/7.Web开发入门/7.1.2进阶部分' },
-              { text: '7.1.3附录1：前端介绍（详细版）', link: '/7.Web开发入门/7.1.3附录1：前端介绍（详细版）' },
-              { text: '7.1.4附录2：大前端开发', link: '/7.Web开发入门/7.1.4附录2：大前端开发' },
-              { text: '7.1.5附录3：跨端开发', link: '/7.Web开发入门/7.1.5附录3：跨端开发' },
+              { text: '7.1WEB开发入门', link: '/7.网络应用开发/7.1WEB开发入门' },
+              {
+                text: '7.1.1前端部分',
+                collapsed: true,
+                items: [
+                  { text: '7.1.1前端部分', link: '/7.网络应用开发/7.1.1前端部分' },
+                  { text: '7.1.1.1基础部分', link: '/7.网络应用开发/7.1.1.1基础部分' },
+                  { text: '7.1.1.2进阶部分', link: '/7.网络应用开发/7.1.1.2进阶部分' },
+                  { text: '7.1.1.3附录1：前端介绍（详细版）', link: '/7.网络应用开发/7.1.1.3附录1：前端介绍（详细版）' },
+                  { text: '7.1.1.4附录2：大前端开发', link: '/7.网络应用开发/7.1.1.4附录2：大前端开发' },
+                  { text: '7.1.1.5附录3：跨端开发', link: '/7.网络应用开发/7.1.1.5附录3：跨端开发' },
+                ]
+              },
+              {
+                text: '7.1.2后端部分',
+                collapsed: true,
+                items: [
+                  { text: '7.1.2后端部分', link: '/7.网络应用开发/7.1.2后端部分' },
+                  { text: '7.1.2.1基础部分', link: '/7.网络应用开发/7.1.2.1基础部分' },
+                  { text: '7.1.2.2进阶部分', link: '/7.网络应用开发/7.1.2.2进阶部分' },
+                ]
+              },
             ]
           },
-          {
-            text: '7.2后端部分',
-            collapsed: true,
-            items: [
-              { text: '7.2后端部分', link: '/7.Web开发入门/7.2后端部分' },
-              { text: '7.2.1基础部分', link: '/7.Web开发入门/7.2.1基础部分' },
-              { text: '7.2.2进阶部分', link: '/7.Web开发入门/7.2.2进阶部分' },
-            ]
-          }
         ]
       },
       {
@@ -634,7 +641,6 @@ export default defineConfig({
         items: [
           { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
           { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
-          { text: '8.2定积分', link: '/8.基础学科/8.2定积分' },
         ]
       },
       {
