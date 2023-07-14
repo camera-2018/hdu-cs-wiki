@@ -453,6 +453,7 @@ export default defineConfig({
           { text: '4.10科研论文写作', link: '/4.人工智能/4.10科研论文写作' },
           { text: '4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
           { text: '4.12本章节内容的局限性', link: '/4.人工智能/4.12本章节内容的局限性' },
+          { text: 'SRT社团介绍', link: '/4.人工智能/SRT.md' },
           {
             text: 'FunRec',
             collapsed: true,
