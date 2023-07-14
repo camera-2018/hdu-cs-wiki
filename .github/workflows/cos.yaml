@@ -30,7 +30,7 @@ jobs:
         BUCKET: hdu-cs-wiki-1307923872
         REGION: ap-shanghai
       run: |
-        coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+        coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 30 -p 10
         tccli configure set secretId $SECRET_ID
         tccli configure set secretKey $SECRET_KEY
         tccli configure set region $REGION
