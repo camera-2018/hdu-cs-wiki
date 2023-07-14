@@ -98,7 +98,7 @@ export default defineConfig({
   title: "HDU-CS-WIKI",
   description: "HDU计算机科学讲义",
   lastUpdated: true,
-  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301" }]],
+  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -130,6 +130,7 @@ export default defineConfig({
           { text: '1.10如何读论文', link: '/1.杭电生存指南/1.10如何读论文' },
           { text: '1.11陷入虚无主义？进来看看吧', link: '/1.杭电生存指南/1.11陷入虚无主义？进来看看吧' },
           { text: '1.12程序员如何活久一点', link: '/1.杭电生存指南/1.12程序员如何活久一点' },
+          { text: '1.13选课原则与抢课技巧', link: '/1.杭电生存指南/1.13选课原则与抢课技巧' },
         ]
       },
       {
@@ -580,51 +581,59 @@ export default defineConfig({
         items: [
           { text: '6.计算机安全', link: '/6.计算机安全/6.计算机安全' },
           {
-            text: '6.2WEB安全',
+            text: '6.1Web安全',
             collapsed: true,
             items: [
-              { text: '6.2WEB安全', link: '/6.计算机安全/6.2Web安全' },
-              { text: '6.2.1SQL 注入', link: '/6.计算机安全/6.2.1SQL 注入' },
+              { text: '6.1Web安全', link: '/6.计算机安全/6.1Web安全' },
+              { text: '6.1.1SQL 注入', link: '/6.计算机安全/6.1.1SQL 注入' },
             ]
           },
           {
-            text: '6.3二进制安全',
+            text: '6.2二进制安全',
             collapsed: true,
             items: [
-              { text: '6.3二进制安全', link: '/6.计算机安全/6.3二进制安全' },
-              { text: '6.3.1基础工具的使用', link: '/6.计算机安全/6.3.1基础工具的使用' },
-              { text: '6.3.2软件破解、软件加固', link: '/6.计算机安全/6.3.2软件破解、软件加固' },
+              { text: '6.2二进制安全', link: '/6.计算机安全/6.2二进制安全' },
+              { text: '6.2.1基础工具的使用', link: '/6.计算机安全/6.2.1基础工具的使用' },
+              { text: '6.2.2软件破解、软件加固', link: '/6.计算机安全/6.2.2软件破解、软件加固' },
             ]
           },
-          { text: '6.4密码学', link: '/6.计算机安全/6.4密码学' },
+          { text: '6.3密码学', link: '/6.计算机安全/6.3密码学' },
+          { text: '6.4安全杂项', link: '/6.计算机安全/6.4安全杂项' },
         ]
       },
       {
-        text: '7.Web开发入门',
+        text: '7.网络应用开发',
         collapsed: true,
         items: [
-          { text: '7.Web开发入门', link: '/7.Web开发入门/7.Web开发入门' },
+          { text: '7.网络应用开发入门', link: '/7.网络应用开发/7.网络应用开发入门' },
           {
-            text: '7.1前端部分',
+            text: '7.1WEB开发入门',
             collapsed: true,
             items: [
-              { text: '7.1前端部分', link: '/7.Web开发入门/7.1前端部分' },
-              { text: '7.1.1基础部分', link: '/7.Web开发入门/7.1.1基础部分' },
-              { text: '7.1.2进阶部分', link: '/7.Web开发入门/7.1.2进阶部分' },
-              { text: '7.1.3附录1：前端介绍（详细版）', link: '/7.Web开发入门/7.1.3附录1：前端介绍（详细版）' },
-              { text: '7.1.4附录2：大前端开发', link: '/7.Web开发入门/7.1.4附录2：大前端开发' },
-              { text: '7.1.5附录3：跨端开发', link: '/7.Web开发入门/7.1.5附录3：跨端开发' },
+              { text: '7.1WEB开发入门', link: '/7.网络应用开发/7.1WEB开发入门' },
+              {
+                text: '7.1.1前端部分',
+                collapsed: true,
+                items: [
+                  { text: '7.1.1前端部分', link: '/7.网络应用开发/7.1.1前端部分' },
+                  { text: '7.1.1.1基础部分', link: '/7.网络应用开发/7.1.1.1基础部分' },
+                  { text: '7.1.1.2进阶部分', link: '/7.网络应用开发/7.1.1.2进阶部分' },
+                  { text: '7.1.1.3附录1：前端介绍（详细版）', link: '/7.网络应用开发/7.1.1.3附录1：前端介绍（详细版）' },
+                  { text: '7.1.1.4附录2：大前端开发', link: '/7.网络应用开发/7.1.1.4附录2：大前端开发' },
+                  { text: '7.1.1.5附录3：跨端开发', link: '/7.网络应用开发/7.1.1.5附录3：跨端开发' },
+                ]
+              },
+              {
+                text: '7.1.2后端部分',
+                collapsed: true,
+                items: [
+                  { text: '7.1.2后端部分', link: '/7.网络应用开发/7.1.2后端部分' },
+                  { text: '7.1.2.1基础部分', link: '/7.网络应用开发/7.1.2.1基础部分' },
+                  { text: '7.1.2.2进阶部分', link: '/7.网络应用开发/7.1.2.2进阶部分' },
+                ]
+              },
             ]
           },
-          {
-            text: '7.2后端部分',
-            collapsed: true,
-            items: [
-              { text: '7.2后端部分', link: '/7.Web开发入门/7.2后端部分' },
-              { text: '7.2.1基础部分', link: '/7.Web开发入门/7.2.1基础部分' },
-              { text: '7.2.2进阶部分', link: '/7.Web开发入门/7.2.2进阶部分' },
-            ]
-          }
         ]
       },
       {
@@ -633,7 +642,6 @@ export default defineConfig({
         items: [
           { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
           { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
-          { text: '8.2定积分', link: '/8.基础学科/8.2定积分' },
         ]
       },
       {
@@ -668,6 +676,7 @@ export default defineConfig({
       pattern: 'https://github.com/camera-2018/hdu-cs-wiki/edit/master/:path',
       text: '在 GitHub 上修改此页'
     },
+    externalLinkIcon: true,
   },
   markdown: {
     config: (md) => {

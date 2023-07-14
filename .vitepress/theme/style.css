@@ -180,3 +180,9 @@ mjx-container {
 .jp-RenderedHTMLCommon :not(pre) > code {
   background-color: var(--vp-c-mute) !important;
 }
+
+.VPImage {
+  user-drag: none !important;
+  -webkit-user-drag: none !important;
+  -moz-user-drag: none !important;
+}
