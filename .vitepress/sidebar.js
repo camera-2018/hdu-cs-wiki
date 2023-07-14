@@ -28,8 +28,67 @@ export function main_sidebar() {
       ]
     },
     {
-      text: '2.高效学习',
+      text: "2.高效学习",
       collapsed: true,
+      items: [{ text: "2.高效学习", link: "/2.高效学习/2.高效学习" }]
+    },
+    {
+      text: "3.编程思维体系构建",
+      collapsed: true,
+      items: [
+        { text: "3.编程思维体系构建", link: "/3.编程思维体系构建/3.编程思维体系构建" }
+      ]
+    },
+    {
+      text: "4.人工智能",
+      collapsed: true,
+      items: [{ text: "4.人工智能", link: "/4.人工智能/4.人工智能" }]
+    },
+    {
+      text: "5.富有生命的嵌入式",
+      collapsed: true,
+      items: [
+        { text: "5.富有生命的嵌入式", link: "/5.富有生命的嵌入式/5.富有生命的嵌入式" }
+      ]
+    },
+    {
+      text: "6.计算机安全",
+      collapsed: true,
+      items: [{ text: "6.计算机安全", link: "/6.计算机安全/6.计算机安全" }]
+    },
+    {
+      text: "7.网络应用开发入门",
+      collapsed: true,
+      items: [
+        { text: "7.网络应用开发入门", link: "/7.网络应用开发/7.网络应用开发入门" }
+      ]
+    },
+    {
+      text: "8.基础学科",
+      collapsed: true,
+      items: [{ text: "8.基础学科", link: "/8.基础学科/8.基础学科" }]
+    },
+    {
+      text: 'Contributors',
+      link: '/contributors'
+    },
+    {
+      text: '贡献指南',
+      link: '/CONTRIBUTING'
+    },
+    {
+      text: 'notebook测试',
+      link: '/notebook'
+    }
+  ]
+}
+
+export function chapter2() {
+  return [
+    { text: '返回上一层', link: '/简介' },
+    {
+      text: '2.高效学习',
+      collapsed: false,
       items: [
         { text: '2.高效学习', link: '/2.高效学习/2.高效学习' },
         {
@@ -60,9 +119,15 @@ export function main_sidebar() {
         { text: '2.5以理工科的方式阅读英语', link: '/2.高效学习/2.5以理工科的方式阅读英语' },
       ]
     },
+  ]
+}
+
+export function chapter3() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '3.编程思维体系构建',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '3.编程思维体系构建', link: '/3.编程思维体系构建/3.编程思维体系构建' },
         { text: '3.0 编程入门之道', link: '/3.编程思维体系构建/3.0 编程入门之道' },
@@ -172,9 +237,16 @@ export function main_sidebar() {
         }
       ]
     },
+
+  ]
+}
+
+export function chapter4() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '4.人工智能',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '4.人工智能', link: '/4.人工智能/4.人工智能' },
         { text: '4.1前言', link: '/4.人工智能/4.1前言' },
@@ -459,9 +531,15 @@ export function main_sidebar() {
         }
       ]
     },
+  ]
+}
+
+export function chapter5() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '5.富有生命的嵌入式',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '5.富有生命的嵌入式', link: '/5.富有生命的嵌入式/5.富有生命的嵌入式' },
         { text: '5.1嵌入式是什么？可以吃吗？', link: '/5.富有生命的嵌入式/5.1嵌入式是什么？可以吃吗？' },
@@ -469,9 +547,15 @@ export function main_sidebar() {
         { text: '5.3还玩裸机？上操作系统！', link: '/5.富有生命的嵌入式/5.3还玩裸机？上操作系统！' },
       ]
     },
+  ]
+}
+
+export function chapter6() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '6.计算机安全',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '6.计算机安全', link: '/6.计算机安全/6.计算机安全' },
         {
@@ -495,9 +579,15 @@ export function main_sidebar() {
         { text: '6.4安全杂项', link: '/6.计算机安全/6.4安全杂项' },
       ]
     },
+  ]
+}
+
+export function chapter7() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '7.网络应用开发',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '7.网络应用开发入门', link: '/7.网络应用开发/7.网络应用开发入门' },
         {
@@ -530,25 +620,19 @@ export function main_sidebar() {
         },
       ]
     },
+  ]
+}
+
+export function chapter8() {
+  return [
+    { text: '返回上一层', link: '/简介' },
     {
       text: '8.基础学科',
-      collapsed: true,
+      collapsed: false,
       items: [
         { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
         { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
       ]
-    },
-    {
-      text: 'Contributors',
-      link: '/contributors'
-    },
-    {
-      text: '贡献指南',
-      link: '/CONTRIBUTING'
-    },
-    {
-      text: 'notebook测试',
-      link: '/notebook'
     }
   ]
 }

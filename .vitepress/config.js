@@ -1,7 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
-import { main_sidebar } from './main_sidebar.js';
+import { main_sidebar , chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
 const customElements = [
   'mjx-container',
   'mjx-assistive-mml',
@@ -107,12 +107,13 @@ export default withMermaid({
 
     sidebar: {
       '/': main_sidebar(),
-      '/hduhelp/': [
-        {
-          text: 'HDU帮助',
-          link: '/hduhelp/notebook',
-        }
-      ]
+      '/2.高效学习/': chapter2(),
+      '/3.编程思维体系构建/': chapter3(),
+      '/4.人工智能/': chapter4(),
+      '/5.富有生命的嵌入式/': chapter5(),
+      '/6.计算机安全/': chapter6(),
+      '/7.网络应用开发/': chapter7(),
+      '/8.基础学科/': chapter8(),
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
