@@ -139,7 +139,7 @@ Fork 本仓库，然后在你的仓库中进行修改，修改完成后在本仓
     :::
 
 2. 支持Mermaid流程图，格式如下
-    ```text
+    ```txt
         ```mermaid
         graph TD;
         A-->B;
