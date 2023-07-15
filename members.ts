@@ -125,4 +125,12 @@ export const members: Member = [
       { icon: 'github', link: 'https://github.com/Plumbiu' },
     ]
   },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/GoldenSheep402',
+    name: 'GoldenSheep',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/GoldenSheep402' },
+    ]
+  },
 ]
