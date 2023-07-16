@@ -1,7 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
-import { main_sidebar , chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
+import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
 const customElements = [
   'mjx-container',
   'mjx-assistive-mml',
@@ -103,6 +103,13 @@ export default withMermaid({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
+      { text: 'Wiki史', link: '/wiki史' },
+      {
+        text: '友链', items:
+          [
+            { text: '杭电导航', link: 'https://wiki.hduhelp.com' },
+          ]
+      },
     ],
 
     sidebar: {
@@ -119,8 +126,8 @@ export default withMermaid({
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
     ],
     footer: {
-      message: 'Made with ❤️ by HDU 计算机科协 && ALL 协作者',
-      copyright: 'Copyright © 2023-present Evan You && HDU 计算机科协 && ALL 协作者'
+      message: 'Made with ❤️ by ALL 协作者',
+      copyright: 'Copyright © 2023-present Evan You && ALL 协作者'
     },
     lastUpdatedText: '上次更改',
     docFooter: {
