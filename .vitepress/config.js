@@ -2,6 +2,8 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
+import PanguPlugin from 'markdown-it-pangu'
+
 const customElements = [
   'mjx-container',
   'mjx-assistive-mml',
@@ -146,6 +148,7 @@ export default withMermaid({
   markdown: {
     config: (md) => {
       md.use(mathjax3);
+      md.use(PanguPlugin);
     },
   },
   vue: {
