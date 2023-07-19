@@ -2,6 +2,7 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
+import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 
 const customElements = [
@@ -103,16 +104,7 @@ export default withMermaid({
   head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      { text: 'Wiki史', link: '/wiki史' },
-      {
-        text: '友链', items:
-          [
-            { text: '杭电导航', link: 'https://wiki.hduhelp.com' },
-          ]
-      },
-    ],
+    nav: nav(),
 
     sidebar: {
       '/': main_sidebar(),
