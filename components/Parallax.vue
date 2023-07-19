@@ -93,7 +93,7 @@ export default {
           <div :style="cardWindowStyle">
             <img
               :style="layer0"
-              src="/hdu-cs-wiki main.png"
+              src="/hdu-cs-wiki_main.png"
               class="image"
             >
           </div>
