@@ -10,7 +10,8 @@
     "@jupyterlab/mathjax2": "^3.6.5",
     "@jupyterlab/theme-light-extension": "^4.0.3",
     "@vueuse/core": "^10.2.1",
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^13.0.1",
+    "markdown-it-pangu": "^1.0.2"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-mindmap": "^9.3.0",

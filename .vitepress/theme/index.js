@@ -3,6 +3,8 @@ import { h, watch } from 'vue'
 // import Theme from 'vitepress/theme'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import Download from '../../components/Download.vue'
+import Bilibili from '../../components/Bilibili.vue'
+import Parallax from '../../components/Parallax.vue'
 import './style.css'
 import './rainbow.css'
 
@@ -18,6 +20,8 @@ export default {
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
     ctx.app.component('Download', Download)
+    ctx.app.component('Bilibili', Bilibili)
+    ctx.app.component('Parallax', Parallax)
     if (typeof window === 'undefined')
       return
 
