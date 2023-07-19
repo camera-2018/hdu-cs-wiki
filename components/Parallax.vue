@@ -11,6 +11,7 @@ const targetStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  userSelect: 'none',
   transition: '.3s ease-out all',
 }
 const cardWindowStyle: CSSProperties = {
@@ -25,6 +26,8 @@ const cardWindowStyle: CSSProperties = {
 }
 const layerBase: CSSProperties = {
   position: 'absolute',
+  userSelect: 'none',
+  "-webkit-user-drag": "none",
   height: '100%',
   width: '100%',
   transition: '.3s ease-out all',
