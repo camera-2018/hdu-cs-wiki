@@ -69,9 +69,9 @@ const layer4 = layerBase
 
 const cardStyle = computed(() => ({
   background: '',
-  height: '20rem',
-  width: '15rem',
-  borderRadius: '5px',
+  height: '14rem',
+  width: '20rem',
+  borderRadius: '20px',
   border: '1px solid #000000',
   overflow: 'hidden',
   transition: '.3s ease-out all',
