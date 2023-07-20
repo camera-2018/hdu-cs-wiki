@@ -116,6 +116,7 @@ export default withMermaid({
       '/7.网络应用开发/': chapter7(),
       '/8.基础学科/': chapter8(),
     },
+    outline: [2, 6],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
     ],
