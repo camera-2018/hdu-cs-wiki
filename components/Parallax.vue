@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
 import type { CSSProperties } from 'vue'
-import { useParallax } from '@vueuse/core'
+import { useMounted, useParallax } from '@vueuse/core'
 const target = ref(null)
 
 
@@ -39,18 +39,17 @@ const containerStyle: CSSProperties = {
 
 const layer0 = computed(() => ({
   ...layerBase,
+  content:'url(https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki_main.png)',
   transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 10
     }px) scale(1)`,
 }))
 
 const layer1 = computed(() => ({
+  content:'url(https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/sparkles.gif)',
   userSelect: 'none',
   "-webkit-user-drag": "none",
   transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 20
     }px) scale(1.33)`,
-  'background-image': 'linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%)',
-  'background-position': '50% 50%',
-  'background-size': '160%',
   'background-blend-mode': 'overlay',
   filter: 'brightness(1) contrast(1)',
   'mix-blend-mode': 'color-dodge',
@@ -62,7 +61,7 @@ const layer2 = computed(() => ({
   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 30
     }px) scale(1.33)`,
   'background-image': 'linear-gradient(115deg,transparent 0%,#ec9bb6 25%,transparent 47%,transparent 53%,#ccac6f 75%,transparent 100%)',
-  opacity: '.1',
+  opacity: '.18',
   filter: 'brightness(.5) contrast(1)',
   width: '100%',
   height: '100%',
@@ -85,7 +84,7 @@ const cardStyle = computed(() => ({
   border: '1px solid #000000',
   overflow: 'hidden',
   transition: '.3s ease-out all',
-  boxShadow: '-20px -20px 30px -25px #ec9bb6, 20px 20px 30px -25px #ccac6f, -7px -7px 10px -5px #ec9bb6, 7px 7px 10px -5px #ccac6f, 0 0 13px 4px rgba(255,255,255,0.3),0 55px 35px -20px rgba(0, 0, 0, 0.5)',
+  boxShadow: '-20px -20px 30px -25px #11e8da, 20px 20px 30px -25px #1ea5e6, -7px -7px 10px -5px #11e8da, 7px 7px 10px -5px #1ea5e6, 0 0 13px 4px rgba(255,255,255,0.3),0 55px 35px -20px rgba(0, 0, 0, 0.5)',
   transform: `rotateX(${parallax.roll * 20}deg) rotateY(${parallax.tilt * 20
     }deg)`,
 }))
@@ -104,11 +103,10 @@ export default {
         <div :style="cardStyle">
           <div id="kirakira"></div>
           <div :style="layer2"></div>
-          <img :style="layer1" src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/sparkles.gif"
+          <img :style="layer1"
             class="image">
           <div :style="cardWindowStyle">
-            <img :style="layer0"
-              src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki_main.png" class="image">
+            <img :style="layer0" class="image">
           </div>
         </div>
       </div>
