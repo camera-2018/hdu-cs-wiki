@@ -39,30 +39,40 @@ const containerStyle: CSSProperties = {
 
 const layer0 = computed(() => ({
   ...layerBase,
-  transform: `translateX(${parallax.tilt * 10}px) translateY(${
-    parallax.roll * 10
-  }px) scale(1)`,
+  transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 10
+    }px) scale(1)`,
 }))
 
 const layer1 = computed(() => ({
-  ...layerBase,
-  transform: `translateX(${parallax.tilt * 20}px) translateY(${
-    parallax.roll * 20
-  }px) scale(1.33)`,
+  userSelect: 'none',
+  "-webkit-user-drag": "none",
+  transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 20
+    }px) scale(1.33)`,
+  'background-image': 'linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%)',
+  'background-position': '50% 50%',
+  'background-size': '160%',
+  'background-blend-mode': 'overlay',
+  filter: 'brightness(1) contrast(1)',
+  'mix-blend-mode': 'color-dodge',
+  opacity: '1',
+  position: 'absolute',
 }))
 
 const layer2 = computed(() => ({
-  ...layerBase,
-  transform: `translateX(${parallax.tilt * 30}px) translateY(${
-    parallax.roll * 30
-  }px) scale(1.33)`,
+  transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 30
+    }px) scale(1.33)`,
+  'background-image': 'linear-gradient(115deg,transparent 0%,#ec9bb6 25%,transparent 47%,transparent 53%,#ccac6f 75%,transparent 100%)',
+  opacity: '.1',
+  filter: 'brightness(.5) contrast(1)',
+  width: '100%',
+  height: '100%',
+  position: 'absolute',
 }))
 
 const layer3 = computed(() => ({
   ...layerBase,
-  transform: `translateX(${parallax.tilt * 40}px) translateY(${
-    parallax.roll * 40
-  }px) scale(1.33)`,
+  transform: `translateX(${parallax.tilt * 40}px) translateY(${parallax.roll * 40
+    }px) scale(1.33)`,
 }))
 
 const layer4 = layerBase
@@ -75,10 +85,9 @@ const cardStyle = computed(() => ({
   border: '1px solid #000000',
   overflow: 'hidden',
   transition: '.3s ease-out all',
-  boxShadow: '0 0 20px 0 rgba(255, 255, 255, 0.1)',
-  transform: `rotateX(${parallax.roll * 20}deg) rotateY(${
-    parallax.tilt * 20
-  }deg)`,
+  boxShadow: '-20px -20px 30px -25px #ec9bb6, 20px 20px 30px -25px #ccac6f, -7px -7px 10px -5px #ec9bb6, 7px 7px 10px -5px #ccac6f, 0 0 13px 4px rgba(255,255,255,0.3),0 55px 35px -20px rgba(0, 0, 0, 0.5)',
+  transform: `rotateX(${parallax.roll * 20}deg) rotateY(${parallax.tilt * 20
+    }deg)`,
 }))
 </script>
 
@@ -93,15 +102,70 @@ export default {
     <div ref="target" :style="targetStyle">
       <div :style="containerStyle">
         <div :style="cardStyle">
+          <div id="kirakira"></div>
+          <div :style="layer2"></div>
+          <img :style="layer1" src="/sparkles.gif" class="image">
           <div :style="cardWindowStyle">
-            <img
-              :style="layer0"
-              src="/hdu-cs-wiki_main.png"
-              class="image"
-            >
+            <img :style="layer0" src="/hdu-cs-wiki_main.png" class="image">
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style>
+#kirakira {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: .3s ease-out;
+}
+#kirakira:hover {
+  background-image: linear-gradient(
+    110deg,
+    transparent 25%,
+    #ec9bb6 48%,
+    #ccac6f 52%,
+    transparent 75%
+  );
+  background-position: 50% 50%;
+  background-size: 250% 250%;
+  opacity: .18;
+  filter: brightness(.66) contrast(1.33);
+  transition: none;
+  background-repeat: no-repeat;
+  mix-blend-mode: color-dodge;
+  transition: all .33s ease;
+  animation: holoGradient 12s ease 0s 1,
+}
+@keyframes holoGradient {
+  0%, 100% {
+    opacity: 0.3;
+    background-position: 50% 50%;
+    filter: brightness(.5) contrast(1);
+  }
+  5%, 9% {
+    background-position: 100% 100%;
+    opacity: 0.1;
+    filter: brightness(.75) contrast(1.25);
+  }
+  13%, 17% {
+    background-position: 0% 0%;
+    opacity: .18;
+  }
+  35%, 39% {
+    background-position: 100% 100%;
+    opacity: 0.2;
+    filter: brightness(.5) contrast(1);
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 0.3;
+    filter: brightness(.75) contrast(1.25);
+  }
+}
+</style>
