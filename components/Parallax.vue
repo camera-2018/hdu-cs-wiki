@@ -104,9 +104,11 @@ export default {
         <div :style="cardStyle">
           <div id="kirakira"></div>
           <div :style="layer2"></div>
-          <img :style="layer1" src="/sparkles.gif" class="image">
+          <img :style="layer1" src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/sparkles.gif"
+            class="image">
           <div :style="cardWindowStyle">
-            <img :style="layer0" src="/hdu-cs-wiki_main.png" class="image">
+            <img :style="layer0"
+              src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki_main.png" class="image">
           </div>
         </div>
       </div>
@@ -124,14 +126,13 @@ export default {
   z-index: 1;
   transition: .3s ease-out;
 }
+
 #kirakira:hover {
-  background-image: linear-gradient(
-    110deg,
-    transparent 25%,
-    #ec9bb6 48%,
-    #ccac6f 52%,
-    transparent 75%
-  );
+  background-image: linear-gradient(110deg,
+      transparent 25%,
+      #ec9bb6 48%,
+      #ccac6f 52%,
+      transparent 75%);
   background-position: 50% 50%;
   background-size: 250% 250%;
   opacity: .18;
@@ -142,30 +143,39 @@ export default {
   transition: all .33s ease;
   animation: holoGradient 12s ease 0s 1,
 }
+
 @keyframes holoGradient {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     background-position: 50% 50%;
     filter: brightness(.5) contrast(1);
   }
-  5%, 9% {
+
+  5%,
+  9% {
     background-position: 100% 100%;
     opacity: 0.1;
     filter: brightness(.75) contrast(1.25);
   }
-  13%, 17% {
+
+  13%,
+  17% {
     background-position: 0% 0%;
     opacity: .18;
   }
-  35%, 39% {
+
+  35%,
+  39% {
     background-position: 100% 100%;
     opacity: 0.2;
     filter: brightness(.5) contrast(1);
   }
+
   55% {
     background-position: 0% 0%;
     opacity: 0.3;
     filter: brightness(.75) contrast(1.25);
   }
-}
-</style>
+}</style>
