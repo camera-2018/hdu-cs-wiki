@@ -103,7 +103,7 @@ Word2vec包含两个模型，**Skip-gram与CBOW**。下面，我们先讲**Skip-
 我们滑动窗口，再以banking为中心词
 
 
-<img src="https://ryluo.oss-cn-chengdu.aliyuncs.com/图片4.png"在这里插入图片描述"  /> 
+<img src="https://ryluo.oss-cn-chengdu.aliyuncs.com/图片4.png"  /> 
 
 
 那么，如果我们在整个语料库上不断地滑动窗口，我们可以得到所有位置的$P(o|c)$，我们希望在所有位置上**最大化单词o在单词c周围出现了这一事实**，由极大似然法，可得：

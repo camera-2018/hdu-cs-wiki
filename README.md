@@ -51,10 +51,8 @@
 zzm 花费了一年的时间动员了大伙对讲义进行修缮和完备，不得不说这确实不是一个小的工作，不过在2023年3月，在计院领导的支持下，计算机学院科协成立了。我们将在学院的支持下继续完善这个内容，同时也欢迎大伙加入我们，共同参与到讲义的学习与撰写中来！
 
 <div align="center">
-  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-qq.jpg">
+  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/qrcodes.png">
 </div>
-
-<p align="center">欢迎加群669895692</p>
 
 ## 学习原则
 
