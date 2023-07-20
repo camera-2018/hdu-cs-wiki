@@ -1,0 +1,43 @@
+name: update to cos
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+        
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+      
+    - name: install doc dependencies
+      run: sudo npm i
+    
+    - name: build
+      run: |
+        npm run docs:build
+    
+    - name: install coscmd and tccli
+      run: |
+        sudo pip3 install coscmd
+        sudo pip3 install tccli
+
+    - name: confirgure coscmd and tccli
+      env:
+        SECRET_ID: ${{ secrets.TCLOUD_API_ID }}
+        SECRET_KEY: ${{ secrets.TCLOUD_API_KEY }}
+        BUCKET: hdu-cs-wiki-1307923872
+        REGION: ap-shanghai
+      run: |
+        coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION -m 10 -p 5
+        tccli configure set secretId $SECRET_ID
+        tccli configure set secretKey $SECRET_KEY
+        tccli configure set region $REGION
+
+    - name: upload and refresh cdn
+      run: |
+        coscmd upload -rfs --delete ./.vitepress/dist/ /
+        tccli cdn PurgePathCache --cli-unfold-argument --Paths https://wiki.xyxsw.site/ --FlushType flush

@@ -1,0 +1,50 @@
+name: Subscribe to updates
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - 'master'
+    paths:
+      - '**.md'
+jobs:
+  subscribe:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+
+      - name: Changed Files Exporter
+        id: changed-files
+        uses: umani/changed-files@v4.0.0
+        with:
+          repo-token: ${{ github.token }}
+          pattern: '^.*\.(md|markdown)$'
+
+      - name: Get PR labels
+        id: pr-labels
+        uses: joerick/pr-labels-action@v1.0.8
+        
+      - name: Post Data
+        id: post-data
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST https://np4l5e.laf.run/pr
+          repo: ${{github.event.repository.full_name}}
+          title: ${{ github.event.pull_request.title }}
+          work_branch: ${{ steps.branch.outputs.work_branch }}
+          base_branch: ${{ steps.branch.outputs.base_branch }}
+          id: ${{ github.event.pull_request.number }}
+          labels: ${{ steps.pr-labels.outputs.labels }}
+          files_updated: ${{ steps.changed-files.outputs.files_updated }}
+          files_created: ${{ steps.changed-files.outputs.files_created }}
+          files_deleted: ${{ steps.changed-files.outputs.files_deleted }}
+          source_url: ${{ github.event.pull_request.html_url }}
+          content: |
+            |
+            ${{ github.event.pull_request.body }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
