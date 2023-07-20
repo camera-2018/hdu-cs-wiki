@@ -11,17 +11,19 @@ jobs:
         
     steps:
     - name: checkout
-      uses: actions/checkout@master
-
-    - name: install dependencies
-      run: |
-        sudo pip install coscmd
-        sudo pip install tccli
-        npm i
+      uses: actions/checkout@v3
+      
+    - name: install doc dependencies
+      run: sudo npm i
     
     - name: build
       run: |
         npm run docs:build
+    
+    - name: install coscmd and tccli
+      run: |
+        sudo pip3 install coscmd
+        sudo pip3 install tccli
 
     - name: confirgure coscmd and tccli
       env:
