@@ -25,6 +25,14 @@
   --vp-font-family-base: 'Noto Sans SC', 'Noto Color Emoji', sans-serif;
   --vp-font-family-mono: 'Noto Sans Mono', sans-serif, monospace, consolas;
 }
+/**
+ * 这个版本可能有 bug，build 后字体变不了还为 consolas 可能是我自己配的有问题 可能是这个版本拉了 总之就加个临时的
+ * -------------------------------------------------------------------------- */
+code { 
+  font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
 
 /**
  * Component: Button

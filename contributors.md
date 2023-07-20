@@ -1,11 +1,11 @@
 <script setup>
-import { VPTeamMembers } from 'vitepress/theme'
+import { VPTeamMembers } from 'vitepress/theme-without-fonts'
 import { members } from './members.ts'
 
 </script>
 
 # 贡献者名单
-
+<Parallax/>
 以下为对本项目做出贡献的人员名单，排名不分先后。
 
 <VPTeamMembers size="small" :members="members" />
