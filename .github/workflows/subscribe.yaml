@@ -27,10 +27,24 @@ jobs:
       - name: Get PR labels
         id: pr-labels
         uses: joerick/pr-labels-action@v1.0.8
-
-
-      - name: Post
-        uses: dkershner6/post-api-call-action@v1
+        
+      - name: Post Data
+        id: post-data
+        uses: octokit/request-action@v2.x
         with:
-          url: "https://np4l5e.laf.run/pr"
-          data: "{\"id\": \"${{ github.event.pull_request.number }}\", \"labels\": \"${{ steps.pr-labels.outputs.labels }}\", \"files_updated\": \"${{ steps.changed-files.outputs.files_updated }}\", \"files_created\": \"${{ steps.changed-files.outputs.files_created }}\", \"files_deleted\": \"${{ steps.changed-files.outputs.files_deleted }}\",\"body\":\"${{github.event.pull_request.body}}\",\"title\":\"${{github.event.pull_request.title}}\",\"url\":\"${{github.event.pull_request.html_url}}\"}"
+          route: POST https://np4l5e.laf.run/pr
+          repo: ${{github.event.repository.full_name}}
+          title: ${{ github.event.pull_request.title }}
+          work_branch: ${{ steps.branch.outputs.work_branch }}
+          base_branch: ${{ steps.branch.outputs.base_branch }}
+          id: ${{ github.event.pull_request.number }}
+          labels: ${{ steps.pr-labels.outputs.labels }}
+          files_updated: ${{ steps.changed-files.outputs.files_updated }}
+          files_created: ${{ steps.changed-files.outputs.files_created }}
+          files_deleted: ${{ steps.changed-files.outputs.files_deleted }}
+          source_url: ${{ github.event.pull_request.html_url }}
+          content: |
+            |
+            ${{ github.event.pull_request.body }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
