@@ -151,6 +151,6 @@ def DeepFM(linear_feature_columns, dnn_feature_columns):
 **参考资料**
 - [论文原文](https://arxiv.org/pdf/1703.04247.pdf)
 - [deepctr](https://github.com/shenweichen/DeepCTR)
-- [FM](https://github.com/datawhalechina/team-learning-rs/blob/master/RecommendationSystemFundamentals/04%20FM.md)
+- [FM](https://github.com/datawhalechina/fun-rec/blob/master/docs/ch02/ch2.1/ch2.1.2/FM.md)
 - [推荐系统遇上深度学习(三)--DeepFM模型理论和实践](https://www.jianshu.com/p/6f1c2643d31b)
 - [FM算法公式推导](https://blog.csdn.net/qq_32486393/article/details/103498519)
