@@ -4,6 +4,7 @@ editLink: false
 aside: false
 next: false 
 lastUpdated: false
+sidebar: false
 ---
 
 <script setup>
