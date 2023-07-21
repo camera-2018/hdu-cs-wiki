@@ -132,13 +132,13 @@ const pageArraySm = computed(() => {
 .paper-item:hover {
   background-color: #0099ff0d;
   --un-text-opacity: 1;
-  color: #0099ff;
+  color: var(--vp-c-brand-lighter);
 }
 
 .paper-item.active {
   background-color: #0099ff0d;
   --un-text-opacity: 1;
-  color: #0099ff;
+  color: var(--vp-c-brand-lighter);
 }
 
 @media (prefers-color-scheme: dark) {

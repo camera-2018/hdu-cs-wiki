@@ -1,20 +1,20 @@
 <template>
-  <p class="blog-item" >
+  <p class="blog-item" @click="openBlog(PostURL)">
     <!-- <i class="pin" v-if="!!pin"></i> -->
     <!-- 标题 -->
-    <p class="title" v-if="inMobile" @click="openBlog(PostURL)">{{ Title }}</p>
+    <p class="title" v-if="inMobile">{{ Title }}</p>
     <div class="info-container">
       <!-- 左侧信息 -->
       <div class="info-part">
         <!-- 标题 -->
-        <p class="title" v-if="!inMobile" @click="openBlog(PostURL)">{{ Title }}</p>
+        <p class="title" v-if="!inMobile">{{ Title }}</p>
         <!-- 简短描述 -->
-        <p class="description" v-if="!!Content" @click="openBlog(PostURL)">
+        <p class="description" v-if="!!Content">
           {{ Content }}
         </p>
         <!-- 底部补充描述 -->
         <div class="badge-list" v-if="!inMobile">
-          <a class="split" v-if="Author" :href="withBase(AuthorURL)">{{ Author }}</a>
+          <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
           <span class="split">{{ showTime }}</span>
           <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
         </div>
@@ -28,7 +28,7 @@
     </div>
     <!-- 底部补充描述 -->
     <div class="badge-list" v-if="inMobile">
-      <a class="split" v-if="Author" :href="withBase(AuthorURL)">{{ Author }}</a>
+      <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
       <span class="split">{{ showTime }}</span>
       <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
     </div>

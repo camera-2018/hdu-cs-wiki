@@ -2,6 +2,8 @@
 title: Blogs
 editLink: false
 aside: false
+next: false 
+lastUpdated: false
 ---
 
 <script setup>

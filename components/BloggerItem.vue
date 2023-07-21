@@ -5,15 +5,15 @@ defineProps({
   member: Object
 })
 
-const goUrl = (url)=> {
-  window.open(url,"_blank")
+const goUrl = (url) => {
+  window.open(url, "_blank")
 }
 
 </script>
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
-    <div class="profile">
+    <div class="profile" @click="goUrl(member.url)">
       <figure class="avatar">
         <img class="avatar-img" :src="member.avatar" :alt="member.name">
       </figure>
@@ -29,10 +29,15 @@ const goUrl = (url)=> {
             @
           </span>
         </p>
-        <p v-if="member.description" class="desc" v-html="member.description"/>
+        <p v-if="member.description" class="desc" @click.stop>
+          {{ member.description }}
+        </p>
         <div v-if="member.url" class="links">
-          <svg v-if="member.rss" @click="goUrl(member.rss)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0a8 8 0 0 0-8-8a1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6a1 1 0 1 1-2 0a4 4 0 0 0-4-4a1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3z"/></svg>
-          <svg v-if="member.url" @click="goUrl(member.url)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1000 1000"><path fill="currentColor" d="M196.099.156C88.379.156.219 88.317.219 196.036v607.851c0 107.72 88.16 195.849 195.88 195.849H803.95c107.72 0 195.849-88.129 195.849-195.849V196.036C999.799 88.316 911.67.156 803.95.156H196.099zm338.012 186.777c94.026 7.596 148.647 68.316 155.146 145.948c5.05 39.953 3.637 69.6-2.127 91.418c53.633 1.773 116.39 25.822 120.388 113.098v85.911c-5.561 75.026-32.259 167.679-169.225 187.339c-30.84 4.427-65.452 1.464-110.345 1.157c-45.139-1.19-84.496-.975-118.917-.344c-138.941 2.545-215.468-58.535-216.185-189.28c-1.116-44.494.65-92.734.501-152.581c-.558-37.925-.768-77.544.094-114.381c.267-7.189-.671-15.069 1.22-22.807c5.98-84.295 73.682-133.698 152.706-144.665l186.745-.814zM377.963 304.192c-80.036 13.104-83.991 104.44 0 115.726h151.924c80.036-13.104 83.991-104.44 0-115.726H377.963zm-34.508 252.82c-82.395 12.791-83.607 116.536 2.941 127.271l279.1 1.001c81.695-12.682 81.454-116.322-2.941-127.302l-279.1-.97z"/></svg>
+          <svg v-if="member.rss" @click="goUrl(member.rss)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            viewBox="0 0 16 16">
+            <path fill="currentColor"
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0a8 8 0 0 0-8-8a1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6a1 1 0 1 1-2 0a4 4 0 0 0-4-4a1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3z" />
+          </svg>
         </div>
       </div>
     </div>
@@ -153,12 +158,13 @@ const goUrl = (url)=> {
 }
 
 .name {
-  margin:  0;
+  margin: 0;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .affiliation {
-  margin:  0;
+  margin: 0;
   font-weight: 500;
   color: var(--vp-c-text-2);
 }
@@ -201,8 +207,8 @@ const goUrl = (url)=> {
   margin: 0 .5rem;
 }
 
-.links svg path:hover {
-  fill:aquamarine;
+.links :hover {
+  fill: var(--vp-c-brand-lighter)
 }
 
 .sp-link {
@@ -230,5 +236,4 @@ const goUrl = (url)=> {
   width: 16px;
   height: 16px;
   fill: currentColor;
-}
-</style>
+}</style>

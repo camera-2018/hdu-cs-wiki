@@ -107,7 +107,7 @@ const pluginLists = computed(() => {
 .select-button.active {
   background-color: #0099ff0d;
   --un-text-opacity: 1;
-  color: #0099ff;
+  color: var(--vp-c-brand-lighter);
 }
 
 .divider {
