@@ -14,6 +14,7 @@ export function nav() {
           { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
         ]
     },
+    { text: '博客', link: '/blog/' },
     { text: 'Wiki史', link: '/wiki史' },
     {
       text: '友链', items:
