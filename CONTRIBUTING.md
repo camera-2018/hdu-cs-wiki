@@ -159,3 +159,38 @@ Fork 本仓库，然后在你的仓库中进行修改，修改完成后在本仓
     :::tip
     语法自查 https://mermaid.js.org
     :::
+
+3. 代码分块
+
+    ```
+        ::: code-group
+
+        ```sh [npm]
+        $ npm install -D vitepress
+        ```
+
+        ```sh [pnpm]
+        $ pnpm add -D vitepress
+        ```
+
+        ```sh [yarn]
+        $ yarn add -D vitepress
+        ```
+
+        :::
+    ```
+    ::: code-group
+
+    ```sh [npm]
+    $ npm install -D vitepress
+    ```
+
+    ```sh [pnpm]
+    $ pnpm add -D vitepress
+    ```
+
+    ```sh [yarn]
+    $ yarn add -D vitepress
+    ```
+
+    :::
