@@ -1,7 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
-import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
+import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 
@@ -115,6 +115,7 @@ export default withMermaid({
       '/6.计算机安全/': chapter6(),
       '/7.网络应用开发/': chapter7(),
       '/8.基础学科/': chapter8(),
+      '/9.计算机网络/': chapter9(),
     },
     outline: [2, 6],
     socialLinks: [
