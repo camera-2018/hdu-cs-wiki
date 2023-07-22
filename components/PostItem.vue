@@ -111,18 +111,6 @@ const showTime = computed(() => {
   return formatShowDate(props.Date)
 })
 
-// function isWrappedWithPreventDefault(element: HTMLElement) {
-//   let parent = element.parentElement
-
-//   while (parent) {
-//     if (parent.hasAttribute('preventDefault')) {
-//       return true
-//     }
-//     parent = parent.parentElement
-//   }
-
-//   return false
-// }
 </script>
 
 <style scoped>
@@ -208,13 +196,13 @@ const showTime = computed(() => {
   margin-top: 8px;
 }
 .badge-list .split:not(:last-child)::after {
-      content: '';
-      display: inline-block;
-      width: 1px;
-      height: 8px;
-      margin: 0 10px;
-      background-color: #4e5969;
-    }
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  margin: 0 10px;
+  background-color: #4e5969;
+}
 .cover-img {
   width: 120px;
   height: 80px;

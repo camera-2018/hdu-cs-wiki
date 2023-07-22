@@ -18,9 +18,9 @@ const goUrl = (url) => {
         <img class="avatar-img" :src="member.avatar" :alt="member.name">
       </figure>
       <div class="data">
-        <h1 class="name">
+        <div class="author_name">
           {{ member.name }}
-        </h1>
+        </div>
         <p v-if="member.title || member.org" class="affiliation">
           <span v-if="member.title" class="title">
             {{ member.title }}
@@ -157,7 +157,7 @@ const goUrl = (url) => {
   object-fit: cover;
 }
 
-.name {
+.author_name {
   margin: 0;
   font-weight: 600;
   cursor: pointer;

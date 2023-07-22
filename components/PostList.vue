@@ -59,12 +59,12 @@ const pluginLists = computed(() => {
       </div>
       <div class="divider" style="margin-bottom: 1rem;" />
     </div> -->
-    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;" key="0" />
+    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;padding: 1rem 0;" key="0" />
     <div class="card-list">
       <PostItem v-for="(item, index) in pluginLists" :key="index" :Title="item.Title" :Content="item.Content"
         :Date="item.Date" :Author="item.Author" :tag="item?.tag" :cover="item?.cover" :PostURL="item.PostURL" :AuthorURL="item.AuthorURL"/>
     </div>
-    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;" key="1" />
+    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;padding: 1rem 0;" key="1" />
   </div>
 </template>
 
@@ -131,9 +131,9 @@ const pluginLists = computed(() => {
 }
 
 .card-list {
-  display: grid;
-  /* gap: 1.5rem; */
-  /* grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .card {
