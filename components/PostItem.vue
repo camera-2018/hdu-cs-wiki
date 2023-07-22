@@ -1,38 +1,30 @@
 <template>
-  <p class="blog-item" @click="openBlog(PostURL)">
-    <!-- <i class="pin" v-if="!!pin"></i> -->
-    <!-- 标题 -->
-    <p class="title" v-if="inMobile">{{ Title }}</p>
+  <div class="blog-item" @click="openBlog(PostURL)">
+    <div class="title" v-if="inMobile">{{ Title }}</div>
     <div class="info-container">
-      <!-- 左侧信息 -->
       <div class="info-part">
-        <!-- 标题 -->
-        <p class="title" v-if="!inMobile">{{ Title }}</p>
-        <!-- 简短描述 -->
-        <p class="description" v-if="!!Content">
+        <div class="title" v-if="!inMobile">{{ Title }}</div>
+        <div class="description" v-if="!!Content">
           {{ Content }}
-        </p>
-        <!-- 底部补充描述 -->
+        </div>
         <div class="badge-list" v-if="!inMobile">
           <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
           <span class="split">{{ showTime }}</span>
           <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
         </div>
       </div>
-      <!-- 右侧封面图 -->
       <div
         v-if="cover"
         class="cover-img"
         :style="`background-image: url(${cover});`"
       ></div>
     </div>
-    <!-- 底部补充描述 -->
     <div class="badge-list" v-if="inMobile">
       <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
       <span class="split">{{ showTime }}</span>
       <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
     </div>
-  </p>
+  </div>
 </template>
 
 <script setup>
