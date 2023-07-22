@@ -1,5 +1,6 @@
 ---
 title: Blogs
+footer: false
 editLink: false
 aside: false
 next: false 
@@ -11,9 +12,12 @@ sidebar: false
 import { ref } from 'vue'
 import PostList from '../components/PostList.vue'
 import Blogger from '../components/Blogger.vue'
+const goUrl = (url) => {
+  window.open(url, "_blank")
+}
 </script>
 
-# Friends <Badge type="warning" text="beta" />
+# Friends <Badge type="tip" text="join us" @click="goUrl('https://github.com/NX-Official/friends-link-plus/edit/main/input/friends.json')" />
 
 <Suspense><Blogger ></Blogger></Suspense>
 
@@ -22,3 +26,5 @@ import Blogger from '../components/Blogger.vue'
 # Recent Posts <Badge type="warning" text="beta" />
 
 <Suspense><PostList ></PostList></Suspense>
+
+<a href="https://github.com/NX-Official/friends-link-plus/edit/main/input/friends.json" target="_blank" style="font-size: 0.5rem; color: #666;">在GitHub上修改关注列表</a>

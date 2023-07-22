@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import VPTeamMembersItem from './BloggerItem.vue'
 const size = 'small'
-const props= {friends:(await (await fetch("https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json")).json()).friends}
+const props= {friends:(await (await fetch("https://ghproxy.com/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json")).json()).friends}
 const members =  props.friends
 const classes = computed(() => [
   size ?? 'medium',
