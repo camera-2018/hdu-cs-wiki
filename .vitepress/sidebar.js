@@ -68,6 +68,11 @@ export function main_sidebar() {
       items: [{ text: "8.基础学科", link: "/8.基础学科/8.基础学科" }]
     },
     {
+      text: "9.计算机网络",
+      collapsed: true,
+      items: [{ text: "9.计算机网络", link: "/9.计算机网络/9.计算机网络" }]
+    },
+    {
       text: 'Contributors',
       link: '/contributors'
     },
@@ -633,6 +638,19 @@ export function chapter8() {
       items: [
         { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
         { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
+      ]
+    }
+  ]
+}
+
+export function chapter9() {
+  return [
+    { text: '返回上一层', link: '/简介' },
+    {
+      text: '9.计算机网络',
+      collapsed: false,
+      items: [
+        { text: '9.计算机网络', link: '/9.计算机网络/9.计算机网络' },
       ]
     }
   ]
