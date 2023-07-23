@@ -15,6 +15,7 @@ export function nav() {
           { text: '9.计算机网络', link: '9.计算机网络/9.计算机网络' },
         ]
     },
+    { text: '博客', link: '/blog/' },
     { text: 'Wiki史', link: '/wiki史' },
     {
       text: '友链', items:
