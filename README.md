@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki%20full.svg" alt="logo" width="450rem" height="450rem"/>
+  <img src="https://cdn.xyxsw.site/hdu-cs-wiki%20full.svg" alt="logo" width="450rem" height="450rem"/>
 </div>
 <h1 align="center">HDU计算机科学讲义</h1>
 <p align="center">
@@ -51,7 +51,7 @@
 zzm 花费了一年的时间动员了大伙对讲义进行修缮和完备，不得不说这确实不是一个小的工作，不过在2023年3月，在计院领导的支持下，计算机学院科协成立了。我们将在学院的支持下继续完善这个内容，同时也欢迎大伙加入我们，共同参与到讲义的学习与撰写中来！
 
 <div align="center">
-  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/qrcodes.png">
+  <img src="https://cdn.xyxsw.site/qrcodes.png">
 </div>
 
 ## 学习原则

@@ -2,7 +2,7 @@
 
 SRT 社团，全名 Student Research Trainning，旨在通过真正的科研活动培养本科生的科研能力。SRT 社团依托 [智能信息处理处理实验室](http://iipl.net.cn/index/list_team.aspx)（IIPL），主要研究方向围绕人工智能，具体来说，包括：计算机视觉，多模态，3D 视觉，Slam 等领域。有充足且优质的显卡资源，工位资源，以及学长学姐，老师的指导。
 
-![](https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/Am3Iwb1ggnyUkB1b9osh.png)
+![](https://cdn.xyxsw.site/Am3Iwb1ggnyUkB1b9osh.png)
 
 社团每年都在全校范围为智能信息处理实验室招收，培养本科生。本科生进入实验室后跟随导师独立或合作进行科研项目，发表论文。我们届时会在自动化以及通信学院进行宣讲招新，新生在经过1-2学期的培养后，能够具备独立科研的能力。在正式进入实验室前，可以暂时使用社团的工位，进入实验室后可以拥有独立工位以及显卡资源。社团的实验室在科技馆五楼，欢迎大家常来 ~
 
@@ -12,4 +12,4 @@ SRT 社团，全名 Student Research Trainning，旨在通过真正的科研活�
 
 当然，在学习人工智能模块时遇到任何问题也都可以咨询我们，我们将在能力范围内尽力给各位解答！
 
-![](https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/srt2023newqqgroup.png)
+![](https://cdn.xyxsw.site/srt2023newqqgroup.png)

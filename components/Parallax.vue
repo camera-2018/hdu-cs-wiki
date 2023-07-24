@@ -39,13 +39,13 @@ const containerStyle: CSSProperties = {
 
 const layer0 = computed(() => ({
   ...layerBase,
-  content:'url(https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki_main.png)',
+  content:'url(https://cdn.xyxsw.site/hdu-cs-wiki_main.png)',
   transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 10
     }px) scale(1)`,
 }))
 
 const layer1 = computed(() => ({
-  content:'url(https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/sparkles.gif)',
+  content:'url(https://cdn.xyxsw.site/sparkles.gif)',
   userSelect: 'none',
   "-webkit-user-drag": "none",
   transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 20
