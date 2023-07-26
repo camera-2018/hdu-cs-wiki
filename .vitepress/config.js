@@ -7,6 +7,7 @@ import PanguPlugin from 'markdown-it-pangu'
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
+import { fileURLToPath, URL } from 'node:url'
 
 const links = []
 
@@ -175,5 +176,17 @@ export default withMermaid({
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
   },
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPSwitchAppearance\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./components/CustomSwitchAppearance.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  }
 })
 
