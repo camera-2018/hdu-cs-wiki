@@ -1,10 +1,13 @@
-name: links
+name: links schedule
 
 on:
   # repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: "30 8 * * *"
+    - cron: "0 0 */3 * *"
+
+permissions:
+  issues: write
 
 jobs:
   linkChecker:
@@ -34,13 +37,13 @@ jobs:
           # -r, --retry-wait-time <RETRY_WAIT_TIME>  Minimum wait time in seconds between retries of failed requests
           # -u, --user-agent <USER_AGENT>            User agent
           # *.md all markdown files in the root directory
-        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -- '*.md'
+        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -- '.vitepress/dist' '*.md'
         output: out.md
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Create Issue From File
-      uses: peter-evans/create-issue-from-file@v3
+      uses: peter-evans/create-issue-from-file@v4
       with:
         title: Broken Link Detected
         content-filepath: out.md
-        assignees: nightwhite
+        assignees: camera-2018
