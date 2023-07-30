@@ -18,8 +18,8 @@
     "@mermaid-js/mermaid-mindmap": "^9.3.0",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.2.4",
-    "vitepress": "^1.0.0-beta.6",
+    "mermaid": "^10.3.0",
+    "vitepress": "^1.0.0-beta.7",
     "vitepress-plugin-mermaid": "^2.0.13"
   }
 }
