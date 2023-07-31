@@ -9,7 +9,7 @@
     "@codemirror/lang-sql": "^6.5.2",
     "@jupyterlab/mathjax2": "^3.6.5",
     "@jupyterlab/theme-light-extension": "^4.0.3",
-    "@vueuse/core": "^10.2.1",
+    "@vueuse/core": "^10.3.0",
     "markdown-it": "^13.0.1",
     "markdown-it-pangu": "^1.0.2",
     "sitemap": "^7.1.1"
