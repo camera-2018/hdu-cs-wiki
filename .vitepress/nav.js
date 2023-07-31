@@ -12,8 +12,10 @@ export function nav() {
           { text: '6.计算机安全', link: '/6.计算机安全/6.计算机安全' },
           { text: '7.网络应用开发', link: '/7.网络应用开发/7.网络应用开发入门' },
           { text: '8.基础学科', link: '/8.基础学科/8.基础学科' },
+          { text: '9.计算机网络', link: '9.计算机网络/9.计算机网络' },
         ]
     },
+    { text: '博客', link: '/blog/' },
     { text: 'Wiki史', link: '/wiki史' },
     {
       text: '友链', items:
