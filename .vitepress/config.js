@@ -1,8 +1,15 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
-import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8 } from './sidebar.js';
+import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
+import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
+import { createWriteStream } from 'node:fs'
+import { resolve } from 'node:path'
+import { SitemapStream } from 'sitemap'
+import { fileURLToPath, URL } from 'node:url'
+
+const links = []
 
 const customElements = [
   'mjx-container',
@@ -103,16 +110,7 @@ export default withMermaid({
   head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      { text: 'Wiki史', link: '/wiki史' },
-      {
-        text: '友链', items:
-          [
-            { text: '杭电导航', link: 'https://wiki.hduhelp.com' },
-          ]
-      },
-    ],
+    nav: nav(),
 
     sidebar: {
       '/': main_sidebar(),
@@ -123,7 +121,9 @@ export default withMermaid({
       '/6.计算机安全/': chapter6(),
       '/7.网络应用开发/': chapter7(),
       '/8.基础学科/': chapter8(),
+      '/9.计算机网络/': chapter9(),
     },
+    outline: [2, 6],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
     ],
@@ -158,5 +158,35 @@ export default withMermaid({
       },
     },
   },
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id))
+      links.push({
+        // you might need to change this if not using clean urls mode
+        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+        lastmod: pageData.lastUpdated
+      })
+  },
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({
+      hostname: 'https://hdu-cs.wiki/'
+    })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach((link) => sitemap.write(link))
+    sitemap.end()
+    await new Promise((r) => writeStream.on('finish', r))
+  },
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPSwitchAppearance\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./components/CustomSwitchAppearance.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  }
 })
 

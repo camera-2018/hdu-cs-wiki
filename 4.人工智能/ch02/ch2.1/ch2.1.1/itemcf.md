@@ -260,10 +260,4 @@ $$
 # 参考资料
 
 * [基于用户的协同过滤来构建推荐系统：https://mp.weixin.qq.com/s/ZtnaQrVIpVOPJpqMdLWOcw](https://mp.weixin.qq.com/s/ZtnaQrVIpVOPJpqMdLWOcw)
-* [协同过滤算法概述：https://chenk.tech/posts/8ad63d9d.html](https://chenk.tech/posts/8ad63d9d.html)
 * B站黑马推荐系统实战课程
-
-
-
-
-

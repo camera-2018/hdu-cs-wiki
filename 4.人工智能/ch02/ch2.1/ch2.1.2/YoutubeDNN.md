@@ -85,7 +85,7 @@ $$
 
 Ok，到这里平淡无奇， 前向传播也大致上快说完了， 还差最后一步。 最后这一步，就是做多分类问题，然后求损失，这就是training那边做的事情。 但是在详细说这个之前， 我想先简单回忆下word2vec里面的skip-gram Model， 这个模型，如果回忆起来，这里理解起来就非常的简单了。
 
-这里只需要看一张图即可， 这个来自cs231N公开课PPT， 我之前整理w2v的时候用到的，详细内容可看我[这篇博客](https://zhongqiang.blog.csdn.net/article/details/106948860)， 这里的思想其实也是从w2v那边过来的。
+这里只需要看一张图即可， 这个来自cs231N公开课PPT， 我之前整理w2v的时候用到的，这里的思想其实也是从w2v那边过来的。
 
 <div align=center>
 <img src="https://img-blog.csdnimg.cn/20200624193409649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1emhvbmdxaWFuZw==,size_1,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" style="zoom:70%;" /> 
