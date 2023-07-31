@@ -651,6 +651,7 @@ export function chapter9() {
       collapsed: false,
       items: [
         { text: '9.计算机网络', link: '/9.计算机网络/9.计算机网络' },
+        { text: '9.1计网速通',link: '/9.计算机网络/9.1计网速通' },
       ]
     }
   ]
