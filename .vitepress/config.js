@@ -8,6 +8,7 @@ import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
 import { fileURLToPath, URL } from 'node:url'
+import { inject } from '@vercel/analytics';
 
 const links = []
 
@@ -167,6 +168,7 @@ export default withMermaid({
       })
   },
   buildEnd: async ({ outDir }) => {
+    inject()
     const sitemap = new SitemapStream({
       hostname: 'https://hdu-cs.wiki/'
     })
