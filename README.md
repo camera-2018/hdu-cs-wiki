@@ -18,6 +18,9 @@
   <a href="https://app.netlify.com/sites/hdu-cs-wiki/deploys">
     <img src="https://api.netlify.com/api/v1/badges/92121c47-e608-4736-bffa-c0958e570348/deploy-status">
   </a>
+  <a href="https://app.netlify.com/sites/hdu-cs-wiki/deploys">
+    <img src="http://therealsujitk-vercel-badge.vercel.app/?app=hdu-cs-wiki&logo=true">
+  </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white">
   </a>
