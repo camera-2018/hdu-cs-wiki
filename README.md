@@ -26,7 +26,7 @@
 <pre align="center">喜欢本项目可以点击右上角 star 收藏哦🎇</pre>
 <br/>
 <p align="center">
-  <a href="https://hdu-cs.wiki/" target="_blank">📚在线阅读（美国、AWS节点）</a> 
+  <a href="https://hdu-cs.wiki/" target="_blank">📚在线阅读（美国加利福尼亚、Vercel节点）</a> 
   <a href="https://cn.hdu-cs.wiki/" target="_blank">🎉【推荐】📚在线阅读（中国腾讯云CDN节点）</a> 
 </p>
 
