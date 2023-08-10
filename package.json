@@ -21,6 +21,6 @@
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.3.0",
     "vitepress": "^1.0.0-rc.4",
-    "vitepress-plugin-mermaid": "^2.0.13"
+    "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   }
 }
