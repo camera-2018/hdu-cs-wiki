@@ -1,5 +1,5 @@
 // import { defineConfig } from 'vitepress'
-import { withMermaid } from "vitepress-plugin-mermaid";
+import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
 import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
@@ -158,23 +158,8 @@ export default withMermaid({
       },
     },
   },
-  transformHtml: (_, id, { pageData }) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        // you might need to change this if not using clean urls mode
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated
-      })
-  },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({
-      hostname: 'https://hdu-cs.wiki/'
-    })
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
+  sitemap: {
+    hostname: 'https://hdu-cs.wiki'
   },
   vite: {
     resolve: {
