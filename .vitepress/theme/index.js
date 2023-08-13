@@ -1,6 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch } from 'vue'
-import { inject } from '@vercel/analytics';
 // import Theme from 'vitepress/theme'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import Download from '../../components/Download.vue'
@@ -10,8 +9,6 @@ import './style.css'
 import './rainbow.css'
 
 let homePageStyle = undefined
-
-inject()
 
 export default {
   ...DefaultTheme,
