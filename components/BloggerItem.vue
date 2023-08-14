@@ -1,22 +1,20 @@
-<script setup >
-
+<script setup>
 defineProps({
   size: String,
   member: Object,
-  blank: Boolean
-})
+  blank: Boolean,
+});
 
 const goUrl = (url) => {
-  window.open(url, "_blank")
-}
-
+  window.open(url, "_blank");
+};
 </script>
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
     <div class="profile" @click="goUrl(member.url)" v-if="!blank">
       <figure class="avatar">
-        <img class="avatar-img" :src="member.avatar" :alt="member.name">
+        <img class="avatar-img" :src="member.avatar" :alt="member.name" />
       </figure>
       <div class="data">
         <div class="author_name">
@@ -26,18 +24,24 @@ const goUrl = (url) => {
           <span v-if="member.title" class="title">
             {{ member.title }}
           </span>
-          <span v-if="member.title && member.org" class="at">
-            @
-          </span>
+          <span v-if="member.title && member.org" class="at"> @ </span>
         </p>
         <p v-if="member.description" class="desc" @click.stop>
           {{ member.description }}
         </p>
         <div v-if="member.url" class="links">
-          <svg v-if="member.rss" @click="goUrl(member.rss)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-            viewBox="0 0 16 16">
-            <path fill="currentColor"
-              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0a8 8 0 0 0-8-8a1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6a1 1 0 1 1-2 0a4 4 0 0 0-4-4a1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3z" />
+          <svg
+            v-if="member.rss"
+            @click="goUrl(member.rss)"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="currentColor"
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0a8 8 0 0 0-8-8a1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6a1 1 0 1 1-2 0a4 4 0 0 0-4-4a1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3a1.5 1.5 0 0 1 0 3z"
+            />
           </svg>
         </div>
       </div>
@@ -160,14 +164,19 @@ const goUrl = (url) => {
   object-fit: cover;
 }
 
-.author_name,.more {
+.author_name,
+.more {
   margin: 0;
   font-weight: 600;
   cursor: pointer;
 }
 
-.more{
+.more {
   color: var(--vp-c-text-2);
+}
+
+.more:hover {
+  color: var(--vp-c-brand-lighter);
 }
 
 .affiliation {
@@ -211,11 +220,11 @@ const goUrl = (url) => {
 }
 
 .links svg {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 .links :hover {
-  fill: var(--vp-c-brand-lighter)
+  fill: var(--vp-c-brand-lighter);
 }
 
 .sp-link {
@@ -243,4 +252,5 @@ const goUrl = (url) => {
   width: 16px;
   height: 16px;
   fill: currentColor;
-}</style>
+}
+</style>
