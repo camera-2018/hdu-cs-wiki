@@ -1,9 +1,16 @@
 <script setup>
-import { computed } from 'vue'
+import { computed,ref } from 'vue'
 import VPTeamMembersItem from './BloggerItem.vue'
 const size = 'small'
 const props= {friends:(await (await fetch("https://ghproxy.com/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json")).json()).friends}
-const members =  props.friends
+const isMore = ref(false)
+const members =  computed(() => {
+  if (isMore.value) {
+    return props.friends
+  } else {
+    return props.friends.slice(0, 5)
+  }
+})
 const classes = computed(() => [
   size ?? 'medium',
   `count-${members.length}`
@@ -15,6 +22,9 @@ const classes = computed(() => [
     <div class="container">
       <div v-for="member in members" :key="member.name" class="item">
         <VPTeamMembersItem :size="size" :member="member" />
+      </div>
+      <div v-if="!isMore">
+        <VPTeamMembersItem :blank="true" @click="isMore=true"/>
       </div>
     </div>
   </div>
