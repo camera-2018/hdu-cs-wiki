@@ -2,7 +2,8 @@
 
 defineProps({
   size: String,
-  member: Object
+  member: Object,
+  blank: Boolean
 })
 
 const goUrl = (url) => {
@@ -13,7 +14,7 @@ const goUrl = (url) => {
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
-    <div class="profile" @click="goUrl(member.url)">
+    <div class="profile" @click="goUrl(member.url)" v-if="!blank">
       <figure class="avatar">
         <img class="avatar-img" :src="member.avatar" :alt="member.name">
       </figure>
@@ -41,6 +42,7 @@ const goUrl = (url) => {
         </div>
       </div>
     </div>
+    <div class="profile" v-else><div class="more">More..</div></div>
   </article>
 </template>
 
@@ -60,7 +62,8 @@ const goUrl = (url) => {
 }
 
 .VPTeamMembersItem.small .data {
-  padding-top: 20px;
+  padding-top: 10px;
+  width: 100px;
 }
 
 .VPTeamMembersItem.small .avatar {
@@ -157,10 +160,14 @@ const goUrl = (url) => {
   object-fit: cover;
 }
 
-.author_name {
+.author_name,.more {
   margin: 0;
   font-weight: 600;
   cursor: pointer;
+}
+
+.more{
+  color: var(--vp-c-text-2);
 }
 
 .affiliation {
