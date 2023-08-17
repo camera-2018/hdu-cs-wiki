@@ -4,12 +4,7 @@ import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
-import { SitemapStream } from 'sitemap'
 import { fileURLToPath, URL } from 'node:url'
-
-const links = []
 
 const customElements = [
   'mjx-container',
