@@ -5,6 +5,8 @@ import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
+import VueMacros from 'unplugin-vue-macros/vite'
+import Vue from '@vitejs/plugin-vue'
 
 const customElements = [
   'mjx-container',
@@ -152,17 +154,27 @@ export default withMermaid({
         isCustomElement: (tag) => customElements.includes(tag),
       },
     },
+    
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
   },
   vite: {
+    plugins: [
+      VueMacros(),
+    ],
     resolve: {
       alias: [
         {
           find: /^.*\/VPSwitchAppearance\.vue$/,
           replacement: fileURLToPath(
             new URL('./components/CustomSwitchAppearance.vue', import.meta.url)
+          )
+        },
+        {
+          find: /^.*\/NotFound\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./components/CustomNotFound.vue', import.meta.url)
           )
         }
       ]

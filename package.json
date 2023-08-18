@@ -11,6 +11,7 @@
     "@jupyterlab/theme-light-extension": "^4.0.4",
     "@vercel/analytics": "^1.0.2",
     "@vueuse/core": "^10.3.0",
+    "canvas-confetti": "^1.6.0",
     "markdown-it": "^13.0.1",
     "markdown-it-pangu": "^1.0.2",
     "sitemap": "^7.1.1"
@@ -20,6 +21,7 @@
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.3.0",
+    "unplugin-vue-macros": "^2.4.7",
     "vitepress": "^1.0.0-rc.4",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   }
