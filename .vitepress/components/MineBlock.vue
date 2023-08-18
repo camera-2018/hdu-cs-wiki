@@ -48,6 +48,7 @@ function getBlockClass(block) {
   .bg-gray-500-20 { background-color: rgba(107, 114, 128, 0.2); }
   .bg-red-500-50 { background-color: rgba(239, 68, 68, 0.5); }
   .font-600 { font-weight: 600; }
+  .button-block { width: 30px; height: 30px; }
 </style>
 
 <template>
@@ -56,7 +57,7 @@ function getBlockClass(block) {
     :class="getBlockClass(block)"
   >
     <template v-if="block.flagged">
-      <div class="text-red">
+      <div class="text-red button-block">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6Z"/></svg>
       </div>
     </template>

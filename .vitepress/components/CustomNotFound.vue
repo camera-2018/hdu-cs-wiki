@@ -26,14 +26,6 @@ onMounted(() => {
     <p class="code">{{ theme.notFound?.code ?? '404' }}</p>
     <h1 class="title">{{ theme.notFound?.title ?? 'PAGE NOT FOUND' }}</h1>
     <div class="divider" />
-    <blockquote class="quote">
-      {{
-        theme.notFound?.quote ??
-        "这是一个扫雷小游戏"
-      }}
-    </blockquote>
-    <Sweep />
-
     <div class="action">
       <a
         class="link"
@@ -43,6 +35,13 @@ onMounted(() => {
         {{ theme.notFound?.linkText ?? 'Take me home' }}
       </a>
     </div>
+    <blockquote class="quote">
+      {{
+        theme.notFound?.quote ??
+        "虽然你迷路了，但是这是一个扫雷小游戏"
+      }}
+    </blockquote>
+    <Sweep />
   </div>
 </template>
 
@@ -59,21 +58,21 @@ onMounted(() => {
 }
 
 .code {
-  line-height: 64px;
-  font-size: 64px;
-  font-weight: 600;
+  line-height: 128px;
+  font-size: 128px;
+  font-weight: 500;
 }
 
 .title {
   padding-top: 12px;
   letter-spacing: 2px;
   line-height: 20px;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 700;
 }
 
 .divider {
-  margin: 24px auto 18px;
+  margin: 24px auto 1px;
   width: 64px;
   height: 1px;
   background-color: var(--vp-c-divider);
@@ -81,6 +80,7 @@ onMounted(() => {
 
 .quote {
   margin: 0 auto;
+  padding-top: 20px;
   max-width: 256px;
   font-size: 14px;
   font-weight: 500;
