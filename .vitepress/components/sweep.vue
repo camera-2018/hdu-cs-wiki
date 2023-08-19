@@ -4,7 +4,7 @@ import { useNow, useStorage } from '@vueuse/core'
 import { watchEffect } from 'vue'
 import MineBlock from './MineBlock.vue'
 import Confetti from './Confetti.vue'
-const play = new GamePlay(6, 6, 3)
+const play = new GamePlay(9, 9, 10)
 
 const now = $(useNow())
 const timerMS = $computed(() => Math.round(((play.state.value.endMS || +now) - play.state.value.startMS) / 1000))
@@ -120,7 +120,7 @@ watchEffect(() => {
     font-size: 1.5rem;
   }
   .btn {
-    background-color: var(--primary);
+    background-color: var(--vp-button-brand-bg);
     border: 1px solid var(--vp-c-brand-light);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -132,6 +132,11 @@ watchEffect(() => {
   }
   .btn:hover {
     background-color: var(--vp-c-brand-light);
+    border-color: var(--vp-c-brand-light);
+    transition: all 0.1s ease-in-out;
+  }
+  .btn:dark {
+    background-color: var(--vp-c-brand-dark);
     border-color: var(--vp-c-brand-light);
     transition: all 0.1s ease-in-out;
   }
