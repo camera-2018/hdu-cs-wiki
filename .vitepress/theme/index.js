@@ -26,7 +26,7 @@ export default {
 
     watch(
       () => ctx.router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors.html'),
+      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors'),
       { immediate: true },
     )
   },
