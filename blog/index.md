@@ -17,7 +17,7 @@ const goUrl = (url) => {
 }
 </script>
 
-# Friends <Badge type="tip" text="join us" @click="goUrl('https://github.com/NX-Official/friends-link-plus/edit/main/input/friends.json')" />
+# Friends <Badge type="tip" text="join us" @click="goUrl('https://github.com/NX-Official/friends-link-plus/edit/main/input/friends.json')" style="cursor: pointer;"/>
 
 <Suspense><Blogger ></Blogger></Suspense>
 

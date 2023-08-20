@@ -234,7 +234,7 @@ UserCF算法的两个步骤：
    print(similarity_matrix)
    ```
 
-   ```
+   ```python
              1         2         3         4         5
    1  1.000000  0.852803  0.707107  0.000000 -0.792118
    2  0.852803  1.000000  0.467707  0.489956 -0.900149
@@ -253,7 +253,7 @@ UserCF算法的两个步骤：
    print(f'与用户{target_user}最相似的{num}个用户为：{sim_users}')
    ```
 
-   ```
+   ```python
    与用户 Alice 最相似的2个用户为：['user1', 'user2']
    ```
 
@@ -277,7 +277,7 @@ UserCF算法的两个步骤：
    print(f'用户{target_user}对物品{target_item}的预测评分为：{target_item_pred}')
    ```
 
-   ```
+   ```python
    用户 Alice 对物品E的预测评分为：4.871979899370592
    ```
 

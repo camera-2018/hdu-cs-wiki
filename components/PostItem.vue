@@ -8,9 +8,16 @@
           {{ Content }}
         </div>
         <div class="badge-list" v-if="!inMobile">
-          <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
+          <a
+            class="split"
+            v-if="Author"
+            :href="withBase(AuthorURL)"
+            @click.stop
+            target="_blank"
+            >{{ Author }}</a
+          >
           <span class="split">{{ showTime }}</span>
-          <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
+          <span class="split" v-if="tag?.length">{{ tag.join(" · ") }}</span>
         </div>
       </div>
       <div
@@ -20,40 +27,47 @@
       ></div>
     </div>
     <div class="badge-list" v-if="inMobile">
-      <a class="split" v-if="Author" :href="withBase(AuthorURL)" @click.stop target="_blank">{{ Author }}</a>
+      <a
+        class="split"
+        v-if="Author"
+        :href="withBase(AuthorURL)"
+        @click.stop
+        target="_blank"
+        >{{ Author }}</a
+      >
       <span class="split">{{ showTime }}</span>
-      <span class="split" v-if="tag?.length">{{ tag.join(' · ') }}</span>
+      <span class="split" v-if="tag?.length">{{ tag.join(" · ") }}</span>
     </div>
   </div>
 </template>
 
 <script setup>
-import { withBase } from 'vitepress'
-import { computed } from 'vue'
-import { useWindowSize } from '@vueuse/core'
+import { withBase } from "vitepress";
+import { computed } from "vue";
+import { useWindowSize } from "@vueuse/core";
 const openBlog = (url) => {
-  window.open(url, '_blank')
-}
-const { width } = useWindowSize()
-const inMobile = computed(() => width.value <= 500)
-function formatDate(d, fmt = 'yyyy-MM-dd hh:mm:ss') {
+  window.open(url, "_blank");
+};
+const { width } = useWindowSize();
+const inMobile = computed(() => width.value <= 500);
+function formatDate(d, fmt = "yyyy-MM-dd hh:mm:ss") {
   if (!(d instanceof Date)) {
-    d = new Date(d)
+    d = new Date(d);
   }
   const o = {
-    'M+': d.getMonth() + 1, // 月份
-    'd+': d.getDate(), // 日
-    'h+': d.getHours(), // 小时
-    'm+': d.getMinutes(), // 分
-    's+': d.getSeconds(), // 秒
-    'q+': Math.floor((d.getMonth() + 3) / 3), // 季度
-    S: d.getMilliseconds() // 毫秒
-  }
+    "M+": d.getMonth() + 1, // 月份
+    "d+": d.getDate(), // 日
+    "h+": d.getHours(), // 小时
+    "m+": d.getMinutes(), // 分
+    "s+": d.getSeconds(), // 秒
+    "q+": Math.floor((d.getMonth() + 3) / 3), // 季度
+    S: d.getMilliseconds(), // 毫秒
+  };
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(
       RegExp.$1,
       `${d.getFullYear()}`.substr(4 - RegExp.$1.length)
-    )
+    );
   }
   // eslint-disable-next-line no-restricted-syntax
   for (const k in o) {
@@ -61,33 +75,33 @@ function formatDate(d, fmt = 'yyyy-MM-dd hh:mm:ss') {
       fmt = fmt.replace(
         RegExp.$1,
         RegExp.$1.length === 1 ? o[k] : `00${o[k]}`.substr(`${o[k]}`.length)
-      )
+      );
   }
-  return fmt
+  return fmt;
 }
 function formatShowDate(date) {
-  const source = date ? +new Date(date) : +new Date()
-  const now = +new Date()
-  const diff = now - source
-  const oneSeconds = 1000
-  const oneMinute = oneSeconds * 60
-  const oneHour = oneMinute * 60
-  const oneDay = oneHour * 24
-  const oneWeek = oneDay * 7
+  const source = date ? +new Date(date) : +new Date();
+  const now = +new Date();
+  const diff = now - source;
+  const oneSeconds = 1000;
+  const oneMinute = oneSeconds * 60;
+  const oneHour = oneMinute * 60;
+  const oneDay = oneHour * 24;
+  const oneWeek = oneDay * 7;
   if (diff < oneMinute) {
-    return `${Math.floor(diff / oneSeconds)}秒前`
+    return `${Math.floor(diff / oneSeconds)}秒前`;
   }
   if (diff < oneHour) {
-    return `${Math.floor(diff / oneMinute)}分钟前`
+    return `${Math.floor(diff / oneMinute)}分钟前`;
   }
   if (diff < oneDay) {
-    return `${Math.floor(diff / oneHour)}小时前`
+    return `${Math.floor(diff / oneHour)}小时前`;
   }
   if (diff < oneWeek) {
-    return `${Math.floor(diff / oneDay)}天前`
+    return `${Math.floor(diff / oneDay)}天前`;
   }
 
-  return formatDate(new Date(date), 'yyyy-MM-dd')
+  return formatDate(new Date(date), "yyyy-MM-dd");
 }
 
 const props = defineProps({
@@ -104,13 +118,12 @@ const props = defineProps({
     required: false,
   },
   PostURL: String,
-  AuthorURL: String
-})
+  AuthorURL: String,
+});
 
 const showTime = computed(() => {
-  return formatShowDate(props.Date)
-})
-
+  return formatShowDate(props.Date);
+});
 </script>
 
 <style scoped>
@@ -127,7 +140,7 @@ const showTime = computed(() => {
   opacity: 1;
 }
 .blog-item .pin::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 120%;
   height: 30px;
@@ -145,8 +158,8 @@ const showTime = computed(() => {
 
 .blog-item {
   position: relative;
-  border: 1px solid rgba(82, 82, 89, .32);
-  border-radius: .5rem;
+  border: 1px solid rgba(82, 82, 89, 0.32);
+  border-radius: 0.5rem;
   padding: 1.5rem;
   width: 100%;
   overflow: hidden;
@@ -154,10 +167,9 @@ const showTime = computed(() => {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  transition: border-color .25s;
+  transition: border-color 0.25s;
   cursor: pointer;
 }
-
 
 .blog-item:hover {
   border: 1px solid #09f;
@@ -196,7 +208,7 @@ const showTime = computed(() => {
   margin-top: 8px;
 }
 .badge-list .split:not(:last-child)::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1px;
   height: 8px;
