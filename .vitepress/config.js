@@ -6,7 +6,6 @@ import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
-import Vue from '@vitejs/plugin-vue'
 
 const customElements = [
   'mjx-container',
@@ -144,6 +143,7 @@ export default withMermaid({
     externalLinkIcon: true,
   },
   markdown: {
+    lineNumbers: true,
     config: (md) => {
       md.use(mathjax3);
       md.use(PanguPlugin);
@@ -166,12 +166,6 @@ export default withMermaid({
     ],
     resolve: {
       alias: [
-        {
-          find: /^.*\/VPSwitchAppearance\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./components/CustomSwitchAppearance.vue', import.meta.url)
-          )
-        },
         {
           find: /^.*\/NotFound\.vue$/,
           replacement: fileURLToPath(

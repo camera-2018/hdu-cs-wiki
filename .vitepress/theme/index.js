@@ -2,6 +2,7 @@
 import { h, watch } from 'vue'
 // import Theme from 'vitepress/theme'
 import DefaultTheme from 'vitepress/theme-without-fonts'
+import Layout from './Layout.vue'
 import Download from '../../components/Download.vue'
 import Bilibili from '../../components/Bilibili.vue'
 import Parallax from '../../components/Parallax.vue'
@@ -12,10 +13,7 @@ let homePageStyle = undefined
 
 export default {
   ...DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-    })
-  },
+  Layout: Layout,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
     ctx.app.component('Download', Download)
