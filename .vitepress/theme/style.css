@@ -18,7 +18,7 @@
 }
 
 .dark .vp-doc a,#loading, .dark .vp-doc a>code, .dark .VPNavBarMenuLink.VPNavBarMenuLink:hover, .dark .VPNavBarMenuLink.VPNavBarMenuLink.active, .dark .link.link:hover, .dark .link.link.active, .dark .edit-link-button.edit-link-button, .dark .pager-link .title {
-  color: var(--vp-c-brand-lighter);
+  color: var(--vp-c-brand-3);
 }
 
 /**
@@ -31,13 +31,18 @@ code {
 }
 
 :root {
-  --vp-c-brand: #0dadc4;
-  --vp-c-brand-light: #1A9CED;
-  --vp-c-brand-lighter: #1CA8FF;
-  --vp-c-brand-lightest: #5EB2E6;
-  --vp-c-brand-dark: #0B52BF;
-  --vp-c-brand-darker: #015F8F;
-  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --vp-c-brand-1: #0dadc4;
+  --vp-c-brand-2: #1A9CED;
+  --vp-c-brand-3: #1CA8FF;
+  --vp-c-brand-soft: #5EB2E6;
+  --vp-code-copy-copied-text-content: '复制成功';
+  --vp-code-color: rgba(60, 60, 67);
+  --vp-custom-block-tip-bg: rgba(100, 108, 255, 0.16) !important;
+  --vp-badge-tip-bg: rgba(100, 108, 255, 0.16) !important;
+}
+
+.dark {
+  --vp-code-color: rgba(255, 255, 245, 0.86);
 }
 
 :root {
@@ -50,15 +55,15 @@ code {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand);
-  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
   --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
-  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
 /**
@@ -100,15 +105,10 @@ code {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
-}
-
-.dark {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
 /**
@@ -116,7 +116,7 @@ code {
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand) !important;
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
 mjx-container {
@@ -134,7 +134,6 @@ mjx-container {
 .VPHero .image-container:hover .image-bg {
   opacity: 1;
 }
-
 
 :root {
   --vp-home-hero-name-color: transparent;
@@ -204,4 +203,12 @@ mjx-container {
   user-drag: none !important;
   -webkit-user-drag: none !important;
   -moz-user-drag: none !important;
+}
+
+.custom-block.tip code {
+  background-color: rgba(100, 108, 255, 0.14);
+}
+
+mjx-container > svg {
+  display: inline-block;
 }
