@@ -1,8 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch } from 'vue'
-import { inject } from '@vercel/analytics';
 // import Theme from 'vitepress/theme'
 import DefaultTheme from 'vitepress/theme-without-fonts'
+import Layout from './Layout.vue'
 import Download from '../../components/Download.vue'
 import Bilibili from '../../components/Bilibili.vue'
 import Parallax from '../../components/Parallax.vue'
@@ -11,14 +11,9 @@ import './rainbow.css'
 
 let homePageStyle = undefined
 
-inject()
-
 export default {
   ...DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-    })
-  },
+  Layout: Layout,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
     ctx.app.component('Download', Download)
@@ -29,7 +24,7 @@ export default {
 
     watch(
       () => ctx.router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors.html'),
+      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors'),
       { immediate: true },
     )
   },

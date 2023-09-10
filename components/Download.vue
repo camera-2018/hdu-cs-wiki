@@ -1,20 +1,20 @@
 <template>
   <div class="download">
-    <button @click='download()'>📎下载附件代码</button>
+    <button @click="download()">📎下载附件代码</button>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps } from "vue";
 const url = defineProps({
   url: {
     type: String,
-    default: ''
-  }
-})
+    default: "",
+  },
+});
 const download = () => {
-  window.open(url.url)
-}
+  window.open(url.url);
+};
 </script>
 
 <style scoped>

@@ -1,15 +1,11 @@
 // import { defineConfig } from 'vitepress'
-import { withMermaid } from "vitepress-plugin-mermaid";
+import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
 import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
-import { SitemapStream } from 'sitemap'
 import { fileURLToPath, URL } from 'node:url'
-
-const links = []
+import VueMacros from 'unplugin-vue-macros/vite'
 
 const customElements = [
   'mjx-container',
@@ -107,6 +103,7 @@ export default withMermaid({
   title: "HDU-CS-WIKI",
   description: "HDU 计算机科学讲义",
   lastUpdated: true,
+  cleanUrls: true,
   head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -146,6 +143,7 @@ export default withMermaid({
     externalLinkIcon: true,
   },
   markdown: {
+    lineNumbers: true,
     config: (md) => {
       md.use(mathjax3);
       md.use(PanguPlugin);
@@ -157,32 +155,21 @@ export default withMermaid({
         isCustomElement: (tag) => customElements.includes(tag),
       },
     },
+    
   },
-  transformHtml: (_, id, { pageData }) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        // you might need to change this if not using clean urls mode
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated
-      })
-  },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({
-      hostname: 'https://hdu-cs.wiki/'
-    })
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
+  sitemap: {
+    hostname: 'https://hdu-cs.wiki'
   },
   vite: {
+    plugins: [
+      VueMacros(),
+    ],
     resolve: {
       alias: [
         {
-          find: /^.*\/VPSwitchAppearance\.vue$/,
+          find: /^.*\/NotFound\.vue$/,
           replacement: fileURLToPath(
-            new URL('./components/CustomSwitchAppearance.vue', import.meta.url)
+            new URL('./components/CustomNotFound.vue', import.meta.url)
           )
         }
       ]

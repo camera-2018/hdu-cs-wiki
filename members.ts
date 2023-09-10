@@ -30,6 +30,14 @@ export const members: Member = [
     ]
   },
   {
+    avatar: 'https://avatars.hdu-cs.wiki/FallenYing',
+    name: 'FallenYing',
+    title: 'Maintainer',
+    links: [
+      { icon: 'github', link: 'https://github.com/FallenYing' },
+    ]
+  },
+  {
     avatar: 'https://avatars.hdu-cs.wiki/aFlyBird0',
     name: '爱飞的鸟',
     title: 'Contributer',

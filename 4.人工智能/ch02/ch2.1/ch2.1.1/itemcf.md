@@ -97,7 +97,7 @@ $$
    print(similarity_matrix)
    ```
 
-   ```
+   ```python
           A         B         C         D         E
    A  1.000000 -0.476731 -0.123091  0.532181  0.969458
    B -0.476731  1.000000  0.645497 -0.310087 -0.478091
@@ -124,7 +124,7 @@ $$
    print(f'与物品{target_item}最相似的{num}个物品为：{sim_items}')
    ```
 
-   ```
+   ```python
    与物品E最相似的2个物品为：['A', 'D']
    ```
 
@@ -147,7 +147,7 @@ $$
    print(f'用户{target_user}对物品{target_item}的预测评分为：{target_item_pred}')
    ```
 
-   ```
+   ```python
    用户 Alice 对物品E的预测评分为：4.6
    ```
 

@@ -1,23 +1,31 @@
 <script setup>
-import { ref, computed } from 'vue';
-import Pagination from './Pagination.vue';
-import PostItem from './PostItem.vue';
-const props= {data:(await (await fetch("https://ghproxy.com/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json")).json()).posts}
-const pageSize = 10
+import { ref, computed } from "vue";
+import Pagination from "./Pagination.vue";
+import PostItem from "./PostItem.vue";
+const props = {
+  data: (
+    await (
+      await fetch(
+        "https://ghproxy.com/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json"
+      )
+    ).json()
+  ).posts,
+};
+const pageSize = 10;
 // const Date = ref('')
-const pageTotal = ref(Math.ceil(props.data.length / pageSize))
-const pageNum = ref(1)
+const pageTotal = ref(Math.ceil(props.data.length / pageSize));
+const pageNum = ref(1);
 // const searchText = ref('')
 // const onsearchText = ref('')
 const pluginLists = computed(() => {
-  let data_ = props.data//.filter(item => item.Date == Date.value)
+  let data_ = props.data; //.filter(item => item.Date == Date.value)
   // if (!!onsearchText.value) {
   //   data_ = data_.filter(item => item.name.indexOf(onsearchText.value) > -1)
   // }
-  pageTotal.value = Math.ceil(data_.length / pageSize)
-  data_ = data_.slice((pageNum.value - 1) * pageSize, pageNum.value * pageSize)
-  return data_
-})
+  pageTotal.value = Math.ceil(data_.length / pageSize);
+  data_ = data_.slice((pageNum.value - 1) * pageSize, pageNum.value * pageSize);
+  return data_;
+});
 // const setDate = (Date_) => {
 //   Date.value = Date_
 //   searchText.value = ""
@@ -59,43 +67,62 @@ const pluginLists = computed(() => {
       </div>
       <div class="divider" style="margin-bottom: 1rem;" />
     </div> -->
-    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;padding: 1rem 0;" key="0" />
+    <Pagination
+      :pageTotal="pageTotal"
+      v-model="pageNum"
+      style="width: 100%; padding: 1rem 0"
+      key="0"
+    />
     <div class="card-list">
-      <PostItem v-for="(item, index) in pluginLists" :key="index" :Title="item.Title" :Content="item.Content"
-        :Date="item.Date" :Author="item.Author" :tag="item?.tag" :cover="item?.cover" :PostURL="item.PostURL" :AuthorURL="item.AuthorURL"/>
+      <PostItem
+        v-for="(item, index) in pluginLists"
+        :key="index"
+        :Title="item.Title"
+        :Content="item.Content"
+        :Date="item.Date"
+        :Author="item.Author"
+        :tag="item?.tag"
+        :cover="item?.cover"
+        :PostURL="item.PostURL"
+        :AuthorURL="item.AuthorURL"
+      />
     </div>
-    <Pagination :pageTotal="pageTotal" v-model="pageNum" style="width: 100%;padding: 1rem 0;" key="1" />
+    <Pagination
+      :pageTotal="pageTotal"
+      v-model="pageNum"
+      style="width: 100%; padding: 1rem 0"
+      key="1"
+    />
   </div>
 </template>
 
-
 <style scoped>
 .tab {
-  grid-row-gap: .5rem;
-  row-gap: .5rem;
+  grid-row-gap: 0.5rem;
+  row-gap: 0.5rem;
   margin-top: 2.5rem;
   grid-template-columns: 80px auto;
   display: grid;
 }
 
 .sm {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 .select-list {
-  grid-gap: .5rem;
-  gap: .5rem;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   display: flex;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .select-button {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   background-color: #9ca3af0d;
-  padding: .125rem .5rem;
-  font-size: .875rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
@@ -111,17 +138,17 @@ const pluginLists = computed(() => {
 }
 
 .divider {
-  background-color: rgba(60, 60, 67, .12);
+  background-color: rgba(60, 60, 67, 0.12);
   height: 1px;
 }
 
 .search {
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
 }
 
 .icon {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .search-input {
@@ -138,12 +165,12 @@ const pluginLists = computed(() => {
 
 .card {
   display: block;
-  border: 1px solid rgba(82, 82, 89, .32);
-  border-radius: .5rem;
+  border: 1px solid rgba(82, 82, 89, 0.32);
+  border-radius: 0.5rem;
   padding: 1.5rem;
   width: 100%;
   height: 100%;
-  transition: border-color .25s;
+  transition: border-color 0.25s;
   cursor: pointer;
 }
 
@@ -173,24 +200,24 @@ const pluginLists = computed(() => {
 }
 
 .card-des {
-  color: #3C3C43;
-  opacity: .7;
-  font-size: .875rem;
+  color: #3c3c43;
+  opacity: 0.7;
+  font-size: 0.875rem;
   line-height: 1.25rem;
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .card-tags {
   display: flex;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-  font-size: .875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 .card-tag {
-  margin: 0 .5rem;
-  padding: 0 .5rem;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
   background-color: #9ca3af2b;
 }
 
@@ -200,12 +227,12 @@ const pluginLists = computed(() => {
 }
 
 .card-details {
-  margin: .8rem 0 .5rem 0;
+  margin: 0.8rem 0 0.5rem 0;
 }
 
 .card-text {
-  margin-left: .5rem;
-  font-size: .95rem;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
   line-height: 1.5rem;
 }
 
@@ -219,9 +246,9 @@ const pluginLists = computed(() => {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   background-color: #f6f6f7;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -234,7 +261,6 @@ const pluginLists = computed(() => {
 }
 
 @media (prefers-color-scheme: dark) {
-
   .card-button {
     background-color: #9ca3af0d;
   }
@@ -242,6 +268,5 @@ const pluginLists = computed(() => {
   .card-des {
     color: #9ca3af;
   }
-
 }
 </style>
