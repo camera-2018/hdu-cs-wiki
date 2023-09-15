@@ -21,8 +21,8 @@
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.4.0",
-    "unplugin-vue-macros": "^2.4.14",
-    "vitepress": "^1.0.0-rc.10",
+    "unplugin-vue-macros": "^2.5.1",
+    "vitepress": "^1.0.0-rc.12",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   }
 }
