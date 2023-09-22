@@ -1,101 +1,10 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
-import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
-
-const customElements = [
-  'mjx-container',
-  'mjx-assistive-mml',
-  'math',
-  'maction',
-  'maligngroup',
-  'malignmark',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mi',
-  'mlongdiv',
-  'mmultiscripts',
-  'mn',
-  'mo',
-  'mover',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'ms',
-  'mscarries',
-  'mscarry',
-  'mscarries',
-  'msgroup',
-  'mstack',
-  'mlongdiv',
-  'msline',
-  'mstack',
-  'mspace',
-  'msqrt',
-  'msrow',
-  'mstack',
-  'mstack',
-  'mstyle',
-  'msub',
-  'msup',
-  'msubsup',
-  'mtable',
-  'mtd',
-  'mtext',
-  'mtr',
-  'munder',
-  'munderover',
-  'semantics',
-  'math',
-  'mi',
-  'mn',
-  'mo',
-  'ms',
-  'mspace',
-  'mtext',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'msqrt',
-  'mstyle',
-  'mmultiscripts',
-  'mover',
-  'mprescripts',
-  'msub',
-  'msubsup',
-  'msup',
-  'munder',
-  'munderover',
-  'none',
-  'maligngroup',
-  'malignmark',
-  'mtable',
-  'mtd',
-  'mtr',
-  'mlongdiv',
-  'mscarries',
-  'mscarry',
-  'msgroup',
-  'msline',
-  'msrow',
-  'mstack',
-  'maction',
-  'semantics',
-  'annotation',
-  'annotation-xml',
-];
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -145,17 +54,9 @@ export default withMermaid({
   markdown: {
     lineNumbers: true,
     config: (md) => {
-      md.use(mathjax3);
       md.use(PanguPlugin);
     },
-  },
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag),
-      },
-    },
-    
+    math: true
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
