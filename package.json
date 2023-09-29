@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "docs:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress dev --host --open",
+    "docs:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress dev --host",
     "docs:build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress build",
     "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
   },
