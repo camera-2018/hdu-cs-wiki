@@ -22,6 +22,7 @@
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.5.1",
     "unplugin-vue-macros": "^2.6.1",
+    "vite-plugin-webfont-dl": "^3.7.6",
     "vitepress": "^1.0.0-rc.24",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   }
