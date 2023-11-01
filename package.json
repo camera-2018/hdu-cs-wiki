@@ -20,8 +20,8 @@
     "@mermaid-js/mermaid-mindmap": "^9.3.0",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.5.1",
-    "unplugin-vue-macros": "^2.6.1",
+    "mermaid": "^10.6.0",
+    "unplugin-vue-macros": "^2.6.2",
     "vite-plugin-webfont-dl": "^3.7.6",
     "vitepress": "^1.0.0-rc.24",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
