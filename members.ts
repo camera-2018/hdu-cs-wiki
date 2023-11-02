@@ -197,4 +197,12 @@ export const members: Member = [
       { icon: 'github', link: 'https://github.com/Krisnile' },
     ]
   },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/fltb',
+    name: 'floatingblocks',
+    title: 'Contributer',
+    links: [
+      { icon: 'github', link: 'https://github.com/fltb' },
+    ]
+  },
 ]

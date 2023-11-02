@@ -243,11 +243,13 @@ export function chapter3() {
           collapsed: true,
           items: [
             { text: '3.Y 附加模块：Linux', link: '/3.编程思维体系构建/3.Y 附加模块：Linux' },
-            { text: '3.Y.1VMware的安装与安装Ubuntu22.04系统', link: '/3.编程思维体系构建/3.Y.1VMware的安装与安装Ubuntu22.04系统' },
-            { text: '3.Y.2WSL的安装', link: '/3.编程思维体系构建/3.Y.2WSL的安装' },
-            { text: '3.Y.3Linux初探索', link: '/3.编程思维体系构建/3.Y.3Linux初探索' },
-            { text: '3.Y.4Vim初探索', link: '/3.编程思维体系构建/3.Y.4Vim初探索' },
-            { text: '3.Y.5linux小任务', link: '/3.编程思维体系构建/3.Y.5linux小任务' },
+            { text: '3.Y.1Linux概念普及', link: '/3.编程思维体系构建/3.Y.1Linux概念普及' },
+            { text: '3.Y.2双系统安装和发行版推荐', link: '/3.编程思维体系构建/3.Y.2双系统安装和发行版推荐' },
+            { text: '3.Y.3VMware的安装与安装Ubuntu22.04系统', link: '/3.编程思维体系构建/3.Y.3VMware的安装与安装Ubuntu22.04系统' },
+            { text: '3.Y.4WSL的安装', link: '/3.编程思维体系构建/3.Y.4WSL的安装' },
+            { text: '3.Y.5Linux初探索', link: '/3.编程思维体系构建/3.Y.5Linux初探索' },
+            { text: '3.Y.6Vim初探索', link: '/3.编程思维体系构建/3.Y.6Vim初探索' },
+            { text: '3.Y.7linux小任务', link: '/3.编程思维体系构建/3.Y.7linux小任务' },
           ]
         }
       ]
