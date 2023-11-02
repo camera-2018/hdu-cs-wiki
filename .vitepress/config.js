@@ -5,6 +5,7 @@ import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
+import webfontDownload from 'vite-plugin-webfont-dl'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -85,6 +86,9 @@ export default withMermaid({
   vite: {
     plugins: [
       VueMacros(),
+      webfontDownload([
+        'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap'
+      ]),
     ],
     resolve: {
       alias: [
