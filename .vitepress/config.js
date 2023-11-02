@@ -88,7 +88,14 @@ export default withMermaid({
       VueMacros(),
       webfontDownload([
         'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap'
-      ]),
+      ],
+      {
+        injectAsStyleTag: true,
+        minifyCss: true,
+        async: true,
+        cache: true,
+        proxy: false,
+      }),
     ],
     resolve: {
       alias: [
