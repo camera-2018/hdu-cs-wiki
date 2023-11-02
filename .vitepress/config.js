@@ -5,7 +5,6 @@ import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
-import webfontDownload from 'vite-plugin-webfont-dl'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -86,7 +85,6 @@ export default withMermaid({
   vite: {
     plugins: [
       VueMacros(),
-      webfontDownload(),
     ],
     resolve: {
       alias: [
