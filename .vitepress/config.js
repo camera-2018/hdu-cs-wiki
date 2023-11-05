@@ -1,101 +1,10 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
-import mathjax3 from 'markdown-it-mathjax3';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
-
-const customElements = [
-  'mjx-container',
-  'mjx-assistive-mml',
-  'math',
-  'maction',
-  'maligngroup',
-  'malignmark',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mi',
-  'mlongdiv',
-  'mmultiscripts',
-  'mn',
-  'mo',
-  'mover',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'ms',
-  'mscarries',
-  'mscarry',
-  'mscarries',
-  'msgroup',
-  'mstack',
-  'mlongdiv',
-  'msline',
-  'mstack',
-  'mspace',
-  'msqrt',
-  'msrow',
-  'mstack',
-  'mstack',
-  'mstyle',
-  'msub',
-  'msup',
-  'msubsup',
-  'mtable',
-  'mtd',
-  'mtext',
-  'mtr',
-  'munder',
-  'munderover',
-  'semantics',
-  'math',
-  'mi',
-  'mn',
-  'mo',
-  'ms',
-  'mspace',
-  'mtext',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'msqrt',
-  'mstyle',
-  'mmultiscripts',
-  'mover',
-  'mprescripts',
-  'msub',
-  'msubsup',
-  'msup',
-  'munder',
-  'munderover',
-  'none',
-  'maligngroup',
-  'malignmark',
-  'mtable',
-  'mtd',
-  'mtr',
-  'mlongdiv',
-  'mscarries',
-  'mscarry',
-  'msgroup',
-  'msline',
-  'msrow',
-  'mstack',
-  'maction',
-  'semantics',
-  'annotation',
-  'annotation-xml',
-];
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -104,7 +13,28 @@ export default withMermaid({
   description: "HDU 计算机科学讲义",
   lastUpdated: true,
   cleanUrls: true,
-  head: [['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }]],
+  head: [
+    ['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ["meta", { "name": "description", "content": "HDU计算机科学讲义" }],
+    ["meta", { "property": "og:url", "content": "https://hdu-cs.wiki/" }],
+    ["meta", { "property": "og:type", "content": "website" }],
+    ["meta", { "property": "og:title", "content": "HDU-CS-WIKI | HDU-CS-WIKI" }],
+    ["meta", { "property": "og:description", "content": "HDU计算机科学讲义" }],
+    ["meta", { "property": "og:image", "content": "https://cdn.xyxsw.site/og-img.png" }],
+    ["meta", { "name": "twitter:card", "content": "summary_large_image" }],
+    ["meta", { "property": "twitter:domain", "content": "hdu-cs.wiki" }],
+    ["meta", { "property": "twitter:url", "content": "https://hdu-cs.wiki/" }],
+    ["meta", { "name": "twitter:title", "content": "HDU-CS-WIKI | HDU-CS-WIKI" }],
+    ["meta", { "name": "twitter:description", "content": "HDU计算机科学讲义" }],
+    ["meta", { "name": "twitter:image", "content": "https://cdn.xyxsw.site/og-img.png" }],
+    ["link", { "rel": "apple-touch-icon", "sizes": "180x180", "href": "/apple-touch-icon.png" }],
+    ["link", { "rel": "icon", "type": "image/png", "sizes": "32x32", "href": "/favicon-32x32.png" }],
+    ["link", { "rel": "icon", "type": "image/png", "sizes": "16x16", "href": "/favicon-16x16.png" }],
+    ["link", { "rel": "manifest", "href": "/site.webmanifest" }],
+    ["link", { "rel": "mask-icon", "href": "/safari-pinned-tab.svg", "color": "#5bbad5" }],
+    ["meta", { "name": "msapplication-TileColor", "content": "#2b5797" }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: nav(),
@@ -145,17 +75,9 @@ export default withMermaid({
   markdown: {
     lineNumbers: true,
     config: (md) => {
-      md.use(mathjax3);
       md.use(PanguPlugin);
     },
-  },
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag),
-      },
-    },
-    
+    math: true
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
