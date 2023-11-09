@@ -20,10 +20,10 @@
     "@mermaid-js/mermaid-mindmap": "^9.3.0",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.6.0",
+    "mermaid": "^10.6.1",
     "unplugin-vue-macros": "^2.6.2",
     "vitepress": "^1.0.0-rc.25",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13",
-    "@vitejs/plugin-vue": "^4.4.0"
+    "@vitejs/plugin-vue": "^4.4.1"
   }
 }
