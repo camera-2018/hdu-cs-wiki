@@ -22,12 +22,12 @@
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.6.1",
-    "unplugin-vue-macros": "^2.7.0",
-    "vitepress": "^1.0.0-rc.31",
+    "unplugin-vue-macros": "^2.7.3",
+    "vitepress": "^1.0.0-rc.32",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.7.0",
-    "@rollup/rollup-win32-x64-msvc": "^4.7.0"
+    "@rollup/rollup-linux-x64-gnu": "^4.9.1",
+    "@rollup/rollup-win32-x64-msvc": "^4.9.1"
   }
 }
