@@ -2,28 +2,29 @@
 import { h, watch } from 'vue'
 // import Theme from 'vitepress/theme'
 import DefaultTheme from 'vitepress/theme-without-fonts'
+import Layout from './Layout.vue'
 import Download from '../../components/Download.vue'
+import Bilibili from '../../components/Bilibili.vue'
+import Parallax from '../../components/Parallax.vue'
 import './style.css'
 import './rainbow.css'
 
 let homePageStyle = undefined
 
-
 export default {
   ...DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-    })
-  },
+  Layout: Layout,
   enhanceApp(ctx) {
     DefaultTheme.enhanceApp(ctx)
     ctx.app.component('Download', Download)
+    ctx.app.component('Bilibili', Bilibili)
+    ctx.app.component('Parallax', Parallax)
     if (typeof window === 'undefined')
       return
 
     watch(
       () => ctx.router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors.html'),
+      () => updateHomePageStyle(location.pathname === '/' || location.pathname === '/contributors'),
       { immediate: true },
     )
   },

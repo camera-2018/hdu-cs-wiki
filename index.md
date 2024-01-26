@@ -26,6 +26,5 @@ features:
     details: 给你学习大学理应掌握的编程思维，构建合理的编程思维方式！当然，未完待续，很多内容仍在测试阶段。
   - title: 🤣what's more?
     details: 还有非常多的内容尚未更新完毕，我们期待着你的反馈和加入！
----
 
-<meta name="baidu-site-verification" content="codeva-GDehy1VQ6d" />
+---

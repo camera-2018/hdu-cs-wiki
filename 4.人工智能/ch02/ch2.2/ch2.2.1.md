@@ -239,7 +239,7 @@ $$
 
 ### 编程实践
 
-下面我们通过kaggle上的一个ctr预测的比赛来看一下GBDT+LR模型部分的编程实践， [数据来源](https://github.com/zhongqiangwu960812/AI-RecommenderSystem/tree/master/GBDT%2BLR/data)
+下面我们通过kaggle上的一个ctr预测的比赛来看一下GBDT+LR模型部分的编程实践， [数据来源](https://github.com/zhongqiangwu960812/AI-RecommenderSystem/tree/master/Rank/GBDT%2BLR/data)
 
 我们回顾一下上面的模型架构， 首先是要训练GBDT模型， GBDT的实现一般可以使用xgboost， 或者lightgbm。训练完了GBDT模型之后， 我们需要预测出每个样本落在了哪棵树上的哪个节点上， 然后通过one-hot就会得到一些新的离散特征， 这和原来的特征进行合并组成新的数据集， 然后作为逻辑回归的输入，最后通过逻辑回归模型得到结果。
 

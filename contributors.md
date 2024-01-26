@@ -1,5 +1,5 @@
 <script setup>
-import { VPTeamMembers } from 'vitepress/theme'
+import { VPTeamMembers } from 'vitepress/theme-without-fonts'
 import { members } from './members.ts'
 
 </script>

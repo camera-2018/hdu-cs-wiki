@@ -1,0 +1,49 @@
+name: links schedule
+
+on:
+  # repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 */3 * *"
+
+permissions:
+  issues: write
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: install doc dependencies
+      run: sudo npm i
+
+    - name: build
+      run: |
+        npm run docs:build
+
+    - name: Link Checker
+      uses: lycheeverse/lychee-action@v1.8.0
+      with:
+          # For parameter description, see https://github.com/lycheeverse/lychee#commandline-parameters
+          # -E, --exclude-all-private    Exclude all private IPs from checking.
+          # -i, --insecure               Proceed for server connections considered insecure (invalid TLS)
+          # -n, --no-progress            Do not show progress bar.
+          # -t, --timeout <timeout>      Website timeout in seconds from connect to response finished [default:20]
+          # --max-concurrency <max-concurrency>      Maximum number of concurrent network requests [default: 128]
+          # -a --accept <accept>                     Comma-separated list of accepted status codes for valid links
+          # --max-retries <MAX_RETRIES>              Maximum number of retries per request
+          # -r, --retry-wait-time <RETRY_WAIT_TIME>  Minimum wait time in seconds between retries of failed requests
+          # -u, --user-agent <USER_AGENT>            User agent
+          # *.md all markdown files in the root directory
+        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -- '.vitepress/dist' '*.md'
+        output: out.md
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - name: Create Issue From File
+      uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Broken Link Detected
+        content-filepath: out.md
+        assignees: camera-2018

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-wiki%20full.svg" alt="logo" width="450rem" height="450rem"/>
+  <img src="https://cdn.xyxsw.site/hdu-cs-wiki%20full.svg" alt="logo" width="450rem" height="450rem"/>
 </div>
 <h1 align="center">HDU计算机科学讲义</h1>
 <p align="center">
@@ -18,6 +18,9 @@
   <a href="https://app.netlify.com/sites/hdu-cs-wiki/deploys">
     <img src="https://api.netlify.com/api/v1/badges/92121c47-e608-4736-bffa-c0958e570348/deploy-status">
   </a>
+  <a href="https://vercel.com/camera-2018/hdu-cs-wiki/deployments">
+    <img src="http://therealsujitk-vercel-badge.vercel.app/?app=hdu-cs-wiki&logo=true">
+  </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white">
   </a>
@@ -26,7 +29,7 @@
 <pre align="center">喜欢本项目可以点击右上角 star 收藏哦🎇</pre>
 <br/>
 <p align="center">
-  <a href="https://hdu-cs.wiki/" target="_blank">📚在线阅读（美国、AWS节点）</a> 
+  <a href="https://hdu-cs.wiki/" target="_blank">📚在线阅读（美国加利福尼亚、Vercel节点）</a> 
   <a href="https://cn.hdu-cs.wiki/" target="_blank">🎉【推荐】📚在线阅读（中国腾讯云CDN节点）</a> 
 </p>
 
@@ -51,10 +54,8 @@
 zzm 花费了一年的时间动员了大伙对讲义进行修缮和完备，不得不说这确实不是一个小的工作，不过在2023年3月，在计院领导的支持下，计算机学院科协成立了。我们将在学院的支持下继续完善这个内容，同时也欢迎大伙加入我们，共同参与到讲义的学习与撰写中来！
 
 <div align="center">
-  <img src="https://pic-hdu-cs-wiki-1307923872.cos.ap-shanghai.myqcloud.com/hdu-cs-qq.jpg">
+  <img src="https://cdn.xyxsw.site/qrcodes.png">
 </div>
-
-<p align="center">欢迎加群669895692</p>
 
 ## 学习原则
 
@@ -66,7 +67,7 @@ zzm 花费了一年的时间动员了大伙对讲义进行修缮和完备，不�
 
 例如看书过程中学习到 Linux 命令，不需要把整本 Liunx 书籍全部看完后才可使用。（边学边试，边用边学）
 
-4. 敢于否定，如果对于给出的学习资料看不懂，要尝试自己寻找学习资料，找到适合自己的那份学习资料。并且中文的社区包括我们，都可能会犯各种各样的错误。就连论文也不一定是对的。有写论文就是专门驳斥前人哪怕是巨佬的观点。我非常欢迎你提出异议。
+4. 敢于否定，如果对于给出的学习资料看不懂，要尝试自己寻找学习资料，找到适合自己的那份学习资料。并且中文的社区包括我们，都可能会犯各种各样的错误。就连论文也不一定是对的。有些论文就是专门驳斥前人哪怕是巨佬的观点。我非常欢迎你提出异议。
 
 ## **如何获得帮助**
 
