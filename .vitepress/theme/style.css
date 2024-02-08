@@ -182,7 +182,11 @@ mjx-container {
 
 .dark .cm-content{
   font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
-  /* background-color: #161618 !important; */
+  background-color: #161618 !important;
+}
+
+.dark .ͼw , .dark .ͼ19, .dark .cm-line{
+  color: #E1E4E8 !important;
 }
 
 .jp-RenderedHTMLCommon :not(pre) > code {
