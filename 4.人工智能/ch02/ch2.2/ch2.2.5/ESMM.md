@@ -138,7 +138,7 @@ def ESSM(dnn_feature_columns, task_type='binary', task_names=['ctr', 'ctcvr'],
 
 测试数据集：
 
-adult：[https://archive.ics.uci.edu/ml/datasets/census+income](https://link.zhihu.com/?target=https%3A//archive.ics.uci.edu/ml/datasets/census%2Bincome)
+adult：[https://archive.ics.uci.edu/ml/datasets/census+income](https://archive.ics.uci.edu/dataset/20/census+income)
 
 将里面两个特征转为label，完成两个任务的预测：
 
@@ -157,6 +157,6 @@ https://www.zhihu.com/question/475787809
 
 https://zhuanlan.zhihu.com/p/37562283
 
-美团：[https://cloud.tencent.com/developer/article/1868117](https://link.zhihu.com/?target=https%3A//cloud.tencent.com/developer/article/1868117)
+美团：[https://cloud.tencent.com/developer/article/1868117](https://cloud.tencent.com/developer/article/1868117)
 
 Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate (SIGIR'2018)
