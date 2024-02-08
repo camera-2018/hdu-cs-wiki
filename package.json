@@ -5,12 +5,11 @@
     "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
   },
   "dependencies": {
-    "@codemirror/lang-python": "^6.1.3",
-    "@codemirror/lang-sql": "^6.5.4",
-    "@jupyterlab/mathjax2": "^3.6.6",
-    "@jupyterlab/theme-light-extension": "^4.0.9",
-    "@vercel/analytics": "^1.1.1",
-    "@vueuse/core": "^10.7.0",
+    "@codemirror/lang-python": "^6.1.4",
+    "@codemirror/lang-sql": "^6.5.5",
+    "@jupyterlab/mathjax2": "^3.6.7",
+    "@jupyterlab/theme-light-extension": "^4.1.0",
+    "@vueuse/core": "^10.7.2",
     "canvas-confetti": "^1.9.2",
     "markdown-it": "^14.0.0",
     "markdown-it-pangu": "^1.0.2",
@@ -18,16 +17,16 @@
   },
   "devDependencies": {
     "@mermaid-js/mermaid-mindmap": "^9.3.0",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^5.0.3",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.6.1",
-    "unplugin-vue-macros": "^2.7.3",
-    "vitepress": "^1.0.0-rc.32",
+    "mermaid": "^10.8.0",
+    "unplugin-vue-macros": "^2.7.10",
+    "vitepress": "^1.0.0-rc.42",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.9.1",
-    "@rollup/rollup-win32-x64-msvc": "^4.9.1"
+    "@rollup/rollup-linux-x64-gnu": "^4.9.6",
+    "@rollup/rollup-win32-x64-msvc": "^4.9.6"
   }
 }
