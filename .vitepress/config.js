@@ -37,6 +37,11 @@ export default withMermaid({
     ["link", { "rel": "mask-icon", "href": "/safari-pinned-tab.svg", "color": "#5bbad5" }],
     ["meta", { "name": "msapplication-TileColor", "content": "#2b5797" }],
     ["meta", { "name": "theme-color", "content": "#ffffff" }],
+    ["link", { "rel": "dns-prefetch", "href": "https://fonts.googleapis.com" }],
+    ["link", { "rel": "dns-prefetch", "href": "https://fonts.gstatic.com" }],
+    ["link", { "rel": "preconnect", "href": "https://fonts.googleapis.com" }],
+    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com" }],
+    ["link", { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -92,7 +97,8 @@ export default withMermaid({
         registerType: 'autoUpdate',
         devOptions: {
           enabled: false,
-          type: 'module'
+          type: 'module',
+          navigateFallback: '/',
         },
         injectRegister: 'auto',
         includeAssets: ['favicon.ico', 'favicon-16x16.png',
@@ -114,6 +120,40 @@ export default withMermaid({
               src: '/android-chrome-512x512.png',
               sizes: '512x512',
               type: 'image/png'
+            }
+          ]
+        },
+        workbox: {
+          navigateFallback: '/',
+          globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gstatic-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                },
+              }
             }
           ]
         }

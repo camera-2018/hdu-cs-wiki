@@ -5,7 +5,7 @@
 /**
  * Colors
  * -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap'); */
 
 .dark .vp-doc a,#loading, .dark .vp-doc a>code, .dark .VPNavBarMenuLink.VPNavBarMenuLink:hover, .dark .VPNavBarMenuLink.VPNavBarMenuLink.active, .dark .link.link:hover, .dark .link.link.active, .dark .edit-link-button.edit-link-button, .dark .pager-link .title {
   color: var(--vp-c-brand-3);
