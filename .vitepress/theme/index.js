@@ -32,6 +32,8 @@ export default {
 
 if (typeof window !== 'undefined') {
   // detect browser, add to class for conditional styling
+  import('./pwa.js')
+
   const browser = navigator.userAgent.toLowerCase()
   if (browser.includes('chrome'))
     document.documentElement.classList.add('browser-chrome')
