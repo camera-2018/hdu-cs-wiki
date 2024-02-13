@@ -91,7 +91,7 @@ export default withMermaid({
       VitePWA({
         registerType: 'autoUpdate',
         devOptions: {
-          enabled: true,
+          enabled: false,
           type: 'module'
         },
         injectRegister: 'auto',
