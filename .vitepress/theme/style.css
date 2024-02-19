@@ -206,3 +206,11 @@ mjx-container {
 mjx-container > svg {
   display: inline-block;
 }
+
+.medium-zoom-overlay {
+  z-index: 99;
+}
+
+.medium-zoom-image {
+  z-index: 99;
+}

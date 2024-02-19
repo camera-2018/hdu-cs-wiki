@@ -13,6 +13,7 @@
     "canvas-confetti": "^1.9.2",
     "markdown-it": "^14.0.0",
     "markdown-it-pangu": "^1.0.2",
+    "medium-zoom": "^1.1.0",
     "sitemap": "^7.1.1"
   },
   "devDependencies": {
