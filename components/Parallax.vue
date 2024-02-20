@@ -109,7 +109,7 @@ export default {
         <div :style="cardStyle">
           <div id="kirakira"></div>
           <div :style="layer2"></div>
-          <img :style="layer1" class="image" />
+          <img :style="layer1" class="image no-zoom" />
           <div :style="cardWindowStyle">
             <img :style="layer0" class="image" />
           </div>

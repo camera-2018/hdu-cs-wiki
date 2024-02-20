@@ -273,5 +273,5 @@ OK， 这就是AutoInt比较核心的部分了，当然，上面自注意部分�
 
 
 **参考资料**：
-* [AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1810.11921)
+* [AutoInt: Automatic Feature Interaction Learning via Self-Attentive Neural Networks](https://arxiv.org/abs/1810.11921)
 * [AutoInt：基于Multi-Head Self-Attention构造高阶特征](https://zhuanlan.zhihu.com/p/60185134)

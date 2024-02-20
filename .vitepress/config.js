@@ -1,5 +1,6 @@
 // import { defineConfig } from 'vitepress'
 import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
+import { VitePWA } from 'vite-plugin-pwa';
 import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
 import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
@@ -17,6 +18,7 @@ export default withMermaid({
     ['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ["meta", { "name": "description", "content": "HDU计算机科学讲义" }],
+    ["meta", { "name": "viewport", "content": "width=device-width,initial-scale=1" }],
     ["meta", { "property": "og:url", "content": "https://hdu-cs.wiki/" }],
     ["meta", { "property": "og:type", "content": "website" }],
     ["meta", { "property": "og:title", "content": "HDU-CS-WIKI | HDU-CS-WIKI" }],
@@ -28,12 +30,18 @@ export default withMermaid({
     ["meta", { "name": "twitter:title", "content": "HDU-CS-WIKI | HDU-CS-WIKI" }],
     ["meta", { "name": "twitter:description", "content": "HDU计算机科学讲义" }],
     ["meta", { "name": "twitter:image", "content": "https://cdn.xyxsw.site/og-img.png" }],
-    ["link", { "rel": "apple-touch-icon", "sizes": "180x180", "href": "/apple-touch-icon.png" }],
+    ["link", { "rel": "apple-touch-icon", "sizes": "180x180", "href": "/apple-touch-icon-180x180.png" }],
     ["link", { "rel": "icon", "type": "image/png", "sizes": "32x32", "href": "/favicon-32x32.png" }],
     ["link", { "rel": "icon", "type": "image/png", "sizes": "16x16", "href": "/favicon-16x16.png" }],
-    ["link", { "rel": "manifest", "href": "/site.webmanifest" }],
+    ["link", { "rel": "manifest", "href": "/manifest.webmanifest" }],
     ["link", { "rel": "mask-icon", "href": "/safari-pinned-tab.svg", "color": "#5bbad5" }],
     ["meta", { "name": "msapplication-TileColor", "content": "#2b5797" }],
+    ["meta", { "name": "theme-color", "content": "#ffffff" }],
+    ["link", { "rel": "dns-prefetch", "href": "https://fonts.googleapis.com" }],
+    ["link", { "rel": "dns-prefetch", "href": "https://fonts.gstatic.com" }],
+    ["link", { "rel": "preconnect", "href": "https://fonts.googleapis.com" }],
+    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com" }],
+    ["link", { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -85,6 +93,71 @@ export default withMermaid({
   vite: {
     plugins: [
       VueMacros(),
+      VitePWA({
+        registerType: 'autoUpdate',
+        devOptions: {
+          enabled: false,
+          type: 'module',
+          navigateFallback: '/',
+        },
+        injectRegister: 'auto',
+        includeAssets: ['favicon.ico', 'favicon-16x16.png',
+          'favicon-32x32.png', 'apple-touch-icon-180x180.png', 'safari-pinned-tab.svg'],
+        manifest: {
+          name: 'HDU 计算机科学讲义',
+          short_name: 'HDU-CS-WIKI',
+          description: 'HDU 计算机科学讲义',
+          theme_color: '#ffffff',
+          start_url: '/',
+          prefer_related_applications: true,
+          icons: [
+            {
+              src: '/android-chrome-192x192.png',
+              sizes: '192x192',
+              type: 'image/png'
+            },
+            {
+              src: '/android-chrome-512x512.png',
+              sizes: '512x512',
+              type: 'image/png'
+            }
+          ]
+        },
+        workbox: {
+          navigateFallback: '/',
+          globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gstatic-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                },
+                cacheableResponse: {
+                  statuses: [0, 200]
+                },
+              }
+            }
+          ]
+        }
+      }),
     ],
     resolve: {
       alias: [

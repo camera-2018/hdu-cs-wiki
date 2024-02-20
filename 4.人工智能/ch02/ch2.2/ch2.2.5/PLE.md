@@ -382,9 +382,8 @@ Progressive Layered Extraction (PLE): A Novel Multi-Task Learning (MTL) Model fo
 
 https://zhuanlan.zhihu.com/p/291406172
 
-爱奇艺：[https://www.6aiq.com/article/1624916831286](https://link.zhihu.com/?target=https%3A//www.6aiq.com/article/1624916831286)
+爱奇艺：[https://www.6aiq.com/article/1624916831286](https://www.6aiq.com/article/1624916831286)
 
-美团：[https://mp.weixin.qq.com/s/WBwvfqOTDKCwGgoaGoSs6Q](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/WBwvfqOTDKCwGgoaGoSs6Q)
+美团：[https://mp.weixin.qq.com/s/WBwvfqOTDKCwGgoaGoSs6Q](https://mp.weixin.qq.com/s/WBwvfqOTDKCwGgoaGoSs6Q)
 
-多任务loss优化：[https://blog.csdn.net/wuzhongqi](https://link.zhihu.com/?target=https%3A//blog.csdn.net/wuzhongqiang/article/details/124258128)
-
+多任务loss优化：[https://blog.csdn.net/wuzhongqi](https://blog.csdn.net/wuzhongqi)

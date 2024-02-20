@@ -5,7 +5,7 @@
 /**
  * Colors
  * -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap'); */
 
 .dark .vp-doc a,#loading, .dark .vp-doc a>code, .dark .VPNavBarMenuLink.VPNavBarMenuLink:hover, .dark .VPNavBarMenuLink.VPNavBarMenuLink.active, .dark .link.link:hover, .dark .link.link.active, .dark .edit-link-button.edit-link-button, .dark .pager-link .title {
   color: var(--vp-c-brand-3);
@@ -182,7 +182,11 @@ mjx-container {
 
 .dark .cm-content{
   font-family: 'Noto Sans Mono', sans-serif, monospace, consolas !important;
-  /* background-color: #161618 !important; */
+  background-color: #161618 !important;
+}
+
+.dark .ͼw , .dark .ͼ19, .dark .cm-line{
+  color: #E1E4E8 !important;
 }
 
 .jp-RenderedHTMLCommon :not(pre) > code {
@@ -201,4 +205,12 @@ mjx-container {
 
 mjx-container > svg {
   display: inline-block;
+}
+
+.medium-zoom-overlay {
+  z-index: 99;
+}
+
+.medium-zoom-image {
+  z-index: 99;
 }
