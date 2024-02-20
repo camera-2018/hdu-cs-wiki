@@ -2,7 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
-
+import { useMediumZoom } from './useMediumZoom';
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -36,7 +36,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }) => {
       pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
     }
   )
+  
 })
+
+useMediumZoom()
 </script>
 
 <template>
