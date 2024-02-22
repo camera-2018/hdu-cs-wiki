@@ -40,7 +40,7 @@ export default withMermaid({
     ["link", { "rel": "dns-prefetch", "href": "https://fonts.googleapis.com" }],
     ["link", { "rel": "dns-prefetch", "href": "https://fonts.gstatic.com" }],
     ["link", { "rel": "preconnect", "href": "https://fonts.googleapis.com" }],
-    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com" }],
+    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com", "crossorigin": "anonymous"}],
     ["link", { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" }],
   ],
   themeConfig: {
