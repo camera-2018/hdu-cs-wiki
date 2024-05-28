@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.0.0...v1.0.1) (2024-05-28)
+
+
+### Bug Fixes
+
+* release ([0856faf](https://github.com/camera-2018/hdu-cs-wiki/commit/0856fafde78226721d32260789fb96f36bfa5911))
+
 # 1.0.0 (2024-05-28)
 
 
