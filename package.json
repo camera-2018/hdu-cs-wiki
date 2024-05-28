@@ -5,30 +5,36 @@
     "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
   },
   "dependencies": {
-    "@codemirror/lang-python": "^6.1.5",
-    "@codemirror/lang-sql": "^6.6.3",
+    "@codemirror/lang-python": "^6.1.6",
+    "@codemirror/lang-sql": "^6.6.4",
     "@jupyterlab/mathjax2": "^3.6.7",
-    "@jupyterlab/theme-light-extension": "^4.1.6",
-    "@vueuse/core": "^10.9.0",
-    "canvas-confetti": "^1.9.2",
+    "@jupyterlab/theme-light-extension": "^4.2.1",
+    "@vueuse/core": "^10.10.0",
+    "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
     "markdown-it-pangu": "^1.0.2",
     "medium-zoom": "^1.1.0",
-    "sitemap": "^7.1.1"
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-mindmap": "^9.3.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.5",
+    "@semantic-release/release-notes-generator": "^13.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^10.9.0",
-    "unplugin-vue-macros": "^2.9.1",
-    "vite-plugin-pwa": "^0.19.8",
-    "vitepress": "^1.1.3",
+    "mermaid": "^10.9.1",
+    "semantic-release": "^23.1.1",
+    "unplugin-vue-macros": "^2.9.3",
+    "vite-plugin-pwa": "^0.20.0",
+    "vitepress": "^1.2.2",
     "vitepress-plugin-mermaid-xyxsw": "^2.12.13"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.16.3",
-    "@rollup/rollup-win32-x64-msvc": "^4.16.3"
+    "@rollup/rollup-linux-x64-gnu": "^4.18.0",
+    "@rollup/rollup-win32-x64-msvc": "^4.18.0"
   }
 }
