@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.0.1...v1.1.0) (2024-06-03)
+
+
+### Features
+
+* add CHANGELOG ([f3c53da](https://github.com/camera-2018/hdu-cs-wiki/commit/f3c53da0d6a0c86852be7650b82fc63c0075b261))
+
 ## [1.0.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.0.0...v1.0.1) (2024-05-28)
 
 
