@@ -6,6 +6,7 @@ import { nav } from './nav.js';
 import PanguPlugin from 'markdown-it-pangu'
 import { fileURLToPath, URL } from 'node:url'
 import VueMacros from 'unplugin-vue-macros/vite'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -85,7 +86,10 @@ export default withMermaid({
     config: (md) => {
       md.use(PanguPlugin);
     },
-    math: true
+    math: true,
+    codeTransformers: [
+      transformerTwoslash() 
+    ]
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
