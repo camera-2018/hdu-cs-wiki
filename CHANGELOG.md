@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.1.0...v1.2.0) (2024-06-03)
+
+
+### Features
+
+* add twoslash js/ts highlight ([b5b72ee](https://github.com/camera-2018/hdu-cs-wiki/commit/b5b72ee93107db9f2ea0b0198e34cf51e1cd0a19))
+
 # [1.1.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.0.1...v1.1.0) (2024-06-03)
 
 
