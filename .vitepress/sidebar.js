@@ -31,43 +31,83 @@ export function main_sidebar() {
     {
       text: "2.高效学习",
       collapsed: true,
-      items: [{ text: "2.高效学习", link: "/2.高效学习/2.高效学习" }]
+      items: [{ text: "2.高效学习", link: "/2.高效学习/2.高效学习" },
+      { text: '2.1高效的前提：摆脱高中思维', link: '/2.高效学习/2.1高效的前提：摆脱高中思维' },
+      { text: '2.2优雅的使用工具', link: '/2.高效学习/2.2优雅的使用工具' },
+      { text: '2.3高效的信息检索', link: '/2.高效学习/2.3高效的信息检索' },
+      { text: '2.4优雅的记笔记', link: '/2.高效学习/2.4优雅的记笔记' },
+      { text: '2.5以理工科的方式阅读英语', link: '/2.高效学习/2.5以理工科的方式阅读英语' },
+      { text: '2.6学会使用AI辅助学习', link: '/2.高效学习/2.6学会使用AI辅助学习' },]
     },
     {
       text: "3.编程思维体系构建",
       collapsed: true,
       items: [
-        { text: "3.编程思维体系构建", link: "/3.编程思维体系构建/3.编程思维体系构建" }
+        { text: '3.编程思维体系构建', link: '/3.编程思维体系构建/3.编程思维体系构建' },
+        { text: '3.0 编程入门之道', link: '/3.编程思维体系构建/3.0 编程入门之道' },
+        { text: '3.1该使用哪个编辑器？？？', link: '/3.编程思维体系构建/3.1该使用哪个编辑器？？？' },
+        { text: '3.2算法杂谈', link: '/3.编程思维体系构建/3.2算法杂谈' },
+        { text: '3.3如何选择编程语言', link: '/3.编程思维体系构建/3.3如何选择编程语言' },
+        { text: '3.4C语言', link: '/3.编程思维体系构建/3.4C语言' },
+        { text: '3.5git与github', link: '/3.编程思维体系构建/3.5git与github' },
+        { text: '3.6Python（灵巧的胶水）', link: '/3.编程思维体系构建/3.6Python（灵巧的胶水）' },
+        { text: '3.X 聊聊设计模式和程序设计', link: '/3.编程思维体系构建/3.X 聊聊设计模式和程序设计' },
+        { text: '3.Y 附加模块：Linux', link: '/3.编程思维体系构建/3.Y 附加模块：Linux' }
       ]
     },
     {
       text: "4.人工智能",
       collapsed: true,
-      items: [{ text: "4.人工智能", link: "/4.人工智能/4.人工智能" }]
+      items: [
+        { text: "4.人工智能", link: "/4.人工智能/4.人工智能" },
+        { text: '4.1前言', link: '/4.人工智能/4.1前言' },
+        { text: '4.2机器学习（AI）快速入门（quick start）', link: '/4.人工智能/4.2机器学习（AI）快速入门（quick start）' },
+        { text: '4.3人工智能导论及机器学习入门', link: '/4.人工智能/4.3人工智能导论及机器学习入门' },
+        { text: '4.4FAQ：常见问题', link: '/4.人工智能/4.4FAQ：常见问题' },
+        { text: '4.5图网络略述（intro&GCN）', link: '/4.人工智能/4.5图网络略述（intro&GCN）' },
+        { text: '4.6数据分析', link: '/4.人工智能/4.6数据分析' },
+        { text: '4.7如何做研究', link: '/4.人工智能/4.7如何做研究' },
+        { text: '4.8科研论文写作', link: '/4.人工智能/4.8科研论文写作' },
+        { text: '4.9从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.9从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
+        { text: '4.10LLM Agent之结构化输出', link: '/4.人工智能/4.10LLMAgent之结构化输出' },
+        { text: '4.11本章节内容的局限性', link: '/4.人工智能/4.11本章节内容的局限性' },]
     },
     {
       text: "5.富有生命的嵌入式",
       collapsed: true,
       items: [
-        { text: "5.富有生命的嵌入式", link: "/5.富有生命的嵌入式/5.富有生命的嵌入式" }
+        { text: "5.富有生命的嵌入式", link: "/5.富有生命的嵌入式/5.富有生命的嵌入式" },
+        { text: '5.1嵌入式是什么？可以吃吗？', link: '/5.富有生命的嵌入式/5.1嵌入式是什么？可以吃吗？' },
+        { text: '5.2New meaning of C', link: '/5.富有生命的嵌入式/5.2New meaning of C' },
+        { text: '5.3还玩裸机？上操作系统！', link: '/5.富有生命的嵌入式/5.3还玩裸机？上操作系统！' }
       ]
     },
     {
       text: "6.计算机安全",
       collapsed: true,
-      items: [{ text: "6.计算机安全", link: "/6.计算机安全/6.计算机安全" }]
+      items: [
+        { text: "6.计算机安全", link: "/6.计算机安全/6.计算机安全" },
+        { text: '6.1Web安全', link: '/6.计算机安全/6.1Web安全' },
+        { text: '6.2二进制安全', link: '/6.计算机安全/6.2二进制安全' },
+        { text: '6.3密码学', link: '/6.计算机安全/6.3密码学' },
+        { text: '6.4安全杂项', link: '/6.计算机安全/6.4安全杂项' },
+        { text: '6.5学习资料推荐', link: '/6.计算机安全/6.5学习资料推荐' },]
     },
     {
       text: "7.网络应用开发入门",
       collapsed: true,
       items: [
-        { text: "7.网络应用开发入门", link: "/7.网络应用开发/7.网络应用开发入门" }
+        { text: "7.网络应用开发入门", link: "/7.网络应用开发/7.网络应用开发入门" },
+        { text: '7.1WEB开发入门', link: '/7.网络应用开发/7.1WEB开发入门' },
       ]
     },
     {
       text: "8.基础学科",
       collapsed: true,
-      items: [{ text: "8.基础学科", link: "/8.基础学科/8.基础学科" }]
+      items: [
+        { text: "8.基础学科", link: "/8.基础学科/8.基础学科" },
+        { text: '8.1经济学科普Part1', link: '/8.基础学科/8.1经济学科普Part1' },
+      ]
     },
     {
       text: "9.计算机网络",
@@ -312,250 +352,14 @@ export function chapter4() {
           ]
         },
         { text: '4.4FAQ：常见问题', link: '/4.人工智能/4.4FAQ：常见问题' },
-        {
-          text: '4.6深度学习',
-          collapsed: true,
-          items: [
-            { text: '4.6深度学习', link: '/4.人工智能/4.6深度学习' },
-            { text: '4.6.1工欲善其事，必先利其器', link: '/4.人工智能/4.6.1工欲善其事，必先利其器' },
-            { text: '4.6.2你可能会需要的术语介绍', link: '/4.人工智能/4.6.2你可能会需要的术语介绍' },
-            { text: '4.6.3深度学习快速入门', link: '/4.人工智能/4.6.3深度学习快速入门' },
-            { text: '4.6.4Pytorch安装', link: '/4.人工智能/4.6.4Pytorch安装' },
-            {
-              text: '4.6.5计算机视觉（CV）',
-              collapsed: true,
-              items: [
-                { text: '4.6.5计算机视觉（CV）', link: '/4.人工智能/4.6.5计算机视觉（CV）' },
-                { text: '4.6.5.1CV领域任务(研究目标)', link: '/4.人工智能/4.6.5.1CV领域任务(研究目标)' },
-                {
-                  text: '4.6.5.2CV中的数据预处理（torchvision）',
-                  collapsed: true,
-                  items: [
-                    { text: '4.6.5.2CV中的数据预处理（torchvision）', link: '/4.人工智能/4.6.5.2CV中的数据预处理（torchvision）' },
-                    { text: '4.6.5.2.1数据读取', link: '/4.人工智能/4.6.5.2.1数据读取' },
-                    { text: '4.6.5.2.2数据增强', link: '/4.人工智能/4.6.5.2.2数据增强' },
-                  ]
-                },
-                {
-                  text: '4.6.5.3CV中的经典网络',
-                  collapsed: true,
-                  items: [
-                    { text: '4.6.5.3CV中的经典网络', link: '/4.人工智能/4.6.5.3CV中的经典网络' },
-                    { text: '4.6.5.3.1AlexNet', link: '/4.人工智能/4.6.5.3.1AlexNet' },
-                    { text: '4.6.5.3.2FCN', link: '/4.人工智能/4.6.5.3.2FCN' },
-                    { text: '4.6.5.3.3ResNet', link: '/4.人工智能/4.6.5.3.3ResNet' },
-                    { text: '4.6.5.3.4UNet', link: '/4.人工智能/4.6.5.3.4UNet' },
-                    { text: '4.6.5.3.5GAN', link: '/4.人工智能/4.6.5.3.5GAN' },
-                    { text: '4.6.5.3.6思考题参考', link: '/4.人工智能/4.6.5.3.6思考题参考' },
-                    { text: '4.6.5.3.7还要学更多？', link: '/4.人工智能/4.6.5.3.7还要学更多？' },
-                  ]
-                },
-                {
-                  text: '4.6.5.4神经辐射场(NeRF)',
-                  collapsed: true,
-                  items: [
-                    { text: '4.6.5.4神经辐射场(NeRF)', link: '/4.人工智能/4.6.5.4神经辐射场(NeRF)' },
-                    { text: '4.6.5.4.1NeRF', link: '/4.人工智能/4.6.5.4.1NeRF' },
-                    { text: '4.6.5.4.2NeRF的改进方向', link: '/4.人工智能/4.6.5.4.2NeRF的改进方向' },
-                    { text: '4.6.5.4.3自制数据集的工具COLMAP', link: '/4.人工智能/4.6.5.4.3自制数据集的工具COLMAP' },
-                  ]
-                },
-                {
-                  text: '4.6.5.5行人重识别(ReID)',
-                  collapsed: true,
-                  items: [
-                    { text: '4.6.5.5行人重识别(ReID)', link: '/4.人工智能/4.6.5.5行人重识别(ReID)' },
-                  ]
-                },
-              ]
-            },
-            {
-              text: '4.6.6自然语言处理（NLP）',
-              collapsed: true,
-              items: [
-                { text: '4.6.6自然语言处理（NLP）', link: '/4.人工智能/4.6.6自然语言处理（NLP）' },
-                { text: '4.6.6.1NLP领域任务（研究目标）', link: '/4.人工智能/4.6.6.1NLP领域任务（研究目标）' },
-                {
-                  text: '4.6.6.2推荐系统',
-                  collapsed: true,
-                  items: [
-                    { text: '4.6.6.2推荐系统', link: '/4.人工智能/4.6.6.2推荐系统' },
-                    { text: '4.6.6.2.1推荐系统经典模型综述', link: '/4.人工智能/4.6.6.2.1推荐系统经典模型综述' },
-                    {
-                      text: '4.6.6.2.2基于数据的角度，看待推荐系统的构造',
-                      collapsed: true,
-                      items: [
-                        { text: '4.6.6.2.2基于数据的角度，看待推荐系统的构造', link: '/4.人工智能/4.6.6.2.2基于数据的角度，看待推荐系统的构造' },
-                        { text: '4.6.6.2.2.1《推荐系统实践》读后的一些想法', link: '/4.人工智能/4.6.6.2.2.1《推荐系统实践》读后的一些想法' },
-                        { text: '4.6.6.2.2.2推荐系统概念解释 and 一个好的推荐系统', link: '/4.人工智能/4.6.6.2.2.2推荐系统概念解释 and 一个好的推荐系统' },
-                        { text: '4.6.6.2.2.3推荐系统实例', link: '/4.人工智能/4.6.6.2.2.3推荐系统实例' },
-                        { text: '4.6.6.2.2.4利用用户行为数据', link: '/4.人工智能/4.6.6.2.2.4利用用户行为数据' },
-                        { text: '4.6.6.2.2.5推荐系统冷启动', link: '/4.人工智能/4.6.6.2.2.5推荐系统冷启动' },
-                        { text: '4.6.6.2.2.6利用标签信息', link: '/4.人工智能/4.6.6.2.2.6利用标签信息' },
-                        { text: '4.6.6.2.2.7利用上下文信息', link: '/4.人工智能/4.6.6.2.2.7利用上下文信息' },
-                      ]
-                    },
-                    { text: '4.6.6.2.3序列化推荐', link: '/4.人工智能/4.6.6.2.3序列化推荐' },
-                  ]
-                },
-                { text: '4.6.6.3知识图谱', link: '/4.人工智能/4.6.6.3知识图谱' },
-              ]
-            },
-            {
-              text: '4.6.7Transformer',
-              collapsed: true,
-              items: [
-                { text: '4.6.7Transformer', link: '/4.人工智能/4.6.7Transformer' },
-                { text: '4.6.7.1VIT', link: '/4.人工智能/4.6.7.1VIT' },
-                { text: '4.6.7.2BERT', link: '/4.人工智能/4.6.7.2BERT' },
-                { text: '4.6.7.3MAE', link: '/4.人工智能/4.6.7.3MAE' },
-              ]
-            },
-            {
-              text: '4.6.8对比学习',
-              collapsed: true,
-              items: [
-                { text: '4.6.8对比学习', link: '/4.人工智能/4.6.8对比学习' },
-                { text: '4.6.8.1前言', link: '/4.人工智能/4.6.8.1前言' },
-                { text: '4.6.8.2Inst Disc', link: '/4.人工智能/4.6.8.2Inst Disc' },
-                { text: '4.6.8.3定义正负样本的方式', link: '/4.人工智能/4.6.8.3定义正负样本的方式' },
-                { text: '4.6.8.4MoCo', link: '/4.人工智能/4.6.8.4MoCo' },
-                { text: '4.6.8.5SimCLR', link: '/4.人工智能/4.6.8.5SimCLR' },
-                { text: '4.6.8.6SwAV', link: '/4.人工智能/4.6.8.6SwAV' },
-                { text: '4.6.8.7BYOL', link: '/4.人工智能/4.6.8.7BYOL' },
-                { text: '4.6.8.8SimSiam', link: '/4.人工智能/4.6.8.8SimSiam' },
-                { text: '4.6.8.9MoCo v3', link: '/4.人工智能/4.6.8.9MoCo v3' },
-                { text: '4.6.8.10总结', link: '/4.人工智能/4.6.8.10总结' },
-              ]
-            },
-            {
-              text: '4.6.9深度强化学习',
-              collapsed: true,
-              items: [
-                { text: '4.6.9深度强化学习', link: '/4.人工智能/4.6.9深度强化学习' },
-                { text: '4.6.9.1前言', link: '/4.人工智能/4.6.9.1前言' },
-                { text: '4.6.9.2基础资料推荐', link: '/4.人工智能/4.6.9.2基础资料推荐' },
-                { text: '4.6.9.3基本概念介绍', link: '/4.人工智能/4.6.9.3基本概念介绍' },
-              ]
-            }
-          ]
-        },
-        { text: '4.7图网络略述（intro&GCN）', link: '/4.人工智能/4.7图网络略述（intro&GCN）' },
-        { text: '4.8数据分析', link: '/4.人工智能/4.8数据分析' },
-        { text: '4.9如何做研究', link: '/4.人工智能/4.9如何做研究' },
-        { text: '4.10科研论文写作', link: '/4.人工智能/4.10科研论文写作' },
-        { text: '4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.11从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
-        { text: '4.12LLM Agent之结构化输出', link: '/4.人工智能/4.12LLMAgent之结构化输出' },
-        { text: '4.13本章节内容的局限性', link: '/4.人工智能/4.13本章节内容的局限性' },
-        { text: 'SRT社团介绍', link: '/4.人工智能/SRT' },
-        {
-          text: 'FunRec',
-          collapsed: true,
-          items: [
-            { text: 'FunRec概述', link: '/4.人工智能/FunRec概述' },
-            {
-              text: '推荐系统概述',
-              collapsed: true,
-              items: [
-                { text: '推荐系统的意义', link: '/4.人工智能/ch01/ch1.1.md' },
-                { text: '推荐系统架构', link: '/4.人工智能/ch01/ch1.2.md' },
-                { text: '推荐系统技术栈', link: '/4.人工智能/ch01/ch1.3.md' },
-              ]
-            },
-            {
-              text: '推荐系统算法基础',
-              collapsed: true,
-              items: [
-                {
-                  text: '经典召回模型',
-                  collapsed: true,
-                  items: [
-                    {
-                      text: '基于协同过滤的召回', collapsed: true, items: [
-                        { text: 'UserCF', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/usercf.md' },
-                        { text: 'ItemCF', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/itemcf.md' },
-                        { text: 'Swing', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/Swing.md' },
-                        { text: '矩阵分解', link: '/4.人工智能/ch02/ch2.1/ch2.1.1/mf.md' },
-                      ]
-                    },
-                    { text: 'FM召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/FM.md' },
-                    {
-                      text: 'item2vec召回系列', collapsed: true, items: [
-                        { text: 'word2vec原理', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/word2vec.md' },
-                        { text: 'item2vec召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/item2vec.md' },
-                        { text: 'Airbnb召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/Airbnb.md' },
-                      ]
-                    },
-                    { text: 'YoutubeDNN召回', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/YoutubeDNN.md' },
-                    {
-                      text: '双塔召回', collapsed: true, items: [
-                        { text: '经典双塔', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/DSSM.md' },
-                        { text: 'Youtube双塔', link: '/4.人工智能/ch02/ch2.1/ch2.1.2/YoutubeTwoTower.md' },
-                      ]
-                    },
-                    {
-                      text: '图召回', collapsed: true, items: [
-                        { text: 'EGES', link: '/4.人工智能/ch02/ch2.1/ch2.1.3/EGES.md' },
-                        { text: 'PinSAGE', link: '/4.人工智能/ch02/ch2.1/ch2.1.3/PinSage.md' },
-                      ]
-                    },
-                    {
-                      text: '序列召回', collapsed: true, items: [
-                        { text: 'MIND', link: '/4.人工智能/ch02/ch2.1/ch2.1.4/MIND.md' },
-                        { text: 'SDM', link: '/4.人工智能/ch02/ch2.1/ch2.1.4/SDM.md' },
-                      ]
-                    },
-                    {
-                      text: '树模型召回', collapsed: true, items: [
-                        { text: 'TDM', link: '/4.人工智能/ch02/ch2.1/ch2.1.5/TDM.md' },
-                      ]
-                    }
-                  ]
-                },
-                {
-                  text: '经典排序模型',
-                  collapsed: true,
-                  items: [
-                    { text: 'GBDT+LR', link: '/4.人工智能/ch02/ch2.2/ch2.2.1.md' },
-                    {
-                      text: '特征交叉', collapsed: true, items: [
-                        { text: 'FM', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/FM.md' },
-                        { text: 'PNN', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/PNN.md' },
-                        { text: 'DCN', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/DCN.md' },
-                        { text: 'AutoInt', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/AutoInt.md' },
-                        { text: 'FiBiNET', link: '/4.人工智能/ch02/ch2.2/ch2.2.2/FiBiNet.md' },
-                      ]
-                    },
-                    {
-                      text: 'WideNDeep系列', collapsed: true, items: [
-                        { text: 'Wide&Deep', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/WideNDeep.md' },
-                        { text: 'NFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/NFM.md' },
-                        { text: 'AFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/AFM.md' },
-                        { text: 'DeepFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/DeepFM.md' },
-                        { text: 'xDeepFM', link: '/4.人工智能/ch02/ch2.2/ch2.2.3/xDeepFM.md' },
-                      ]
-                    },
-                    {
-                      text: '序列模型', collapsed: true, items: [
-                        { text: 'DIN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DIN.md' },
-                        { text: 'DIEN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DIEN.md' },
-                        { text: 'DSIN', link: '/4.人工智能/ch02/ch2.2/ch2.2.4/DSIN.md' },
-                      ]
-                    },
-                    {
-                      text: '多任务学习', collapsed: true, items: [
-                        { text: '多任务学习概述', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/2.2.5.0.md' },
-                        { text: 'ESMM', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/ESMM.md' },
-                        { text: 'MMOE', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/MMOE.md' },
-                        { text: 'PLE', link: '/4.人工智能/ch02/ch2.2/ch2.2.5/PLE.md' },
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        { text: '4.5图网络略述（intro&GCN）', link: '/4.人工智能/4.5图网络略述（intro&GCN）' },
+        { text: '4.6数据分析', link: '/4.人工智能/4.6数据分析' },
+        { text: '4.7如何做研究', link: '/4.人工智能/4.7如何做研究' },
+        { text: '4.8科研论文写作', link: '/4.人工智能/4.8科研论文写作' },
+        { text: '4.9从 AI 到 智能系统 —— 从 LLMs 到 Agents', link: '/4.人工智能/4.9从 AI 到 智能系统 —— 从 LLMs 到 Agents' },
+        { text: '4.10LLM Agent之结构化输出', link: '/4.人工智能/4.10LLMAgent之结构化输出' },
+        { text: '4.11本章节内容的局限性', link: '/4.人工智能/4.11本章节内容的局限性' },
+
       ]
     },
   ]

@@ -39,7 +39,7 @@
 5. 代码块使用 ` ``` ` 包裹，并标注常见的语言标识符，如 ` ```python ` ，其作用是使代码正常高亮。
 ::: details 代码高亮支持的语言
 
-```ts
+```ts twoslash
 export type Lang =
   | 'abap'
   | 'actionscript-3'

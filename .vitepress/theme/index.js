@@ -9,6 +9,8 @@ import Bilibili from '../../components/Bilibili.vue'
 import Parallax from '../../components/Parallax.vue'
 import './style.css'
 import './rainbow.css'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
+import '@shikijs/vitepress-twoslash/style.css'
 
 let homePageStyle = undefined
 
@@ -21,6 +23,7 @@ export default {
     ctx.app.component('Download', Download)
     ctx.app.component('Bilibili', Bilibili)
     ctx.app.component('Parallax', Parallax)
+    ctx.app.use(TwoslashFloatingVue)
     if (typeof window === 'undefined')
       return
     watch(
