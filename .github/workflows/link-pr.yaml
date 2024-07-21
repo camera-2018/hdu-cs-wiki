@@ -41,7 +41,7 @@ jobs:
           # -r, --retry-wait-time <RETRY_WAIT_TIME>  Minimum wait time in seconds between retries of failed requests
           # -u, --user-agent <USER_AGENT>            User agent
           # *.md all markdown files in the root directory
-        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -- '.vitepress/dist' '*.md'
+        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -- '*.md'
         
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

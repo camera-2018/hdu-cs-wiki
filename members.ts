@@ -182,14 +182,6 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/Lacsion',
-    name: 'KAFUU',
-    title: 'Contributer',
-    links: [
-      { icon: 'github', link: 'https://github.com/Lacsion' },
-    ]
-  },
-  {
     avatar: 'https://avatars.hdu-cs.wiki/Krisnile',
     name: 'Krisnile',
     title: 'Contributer',
