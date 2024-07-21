@@ -6,7 +6,7 @@ const props = {
   data: (
     await (
       await fetch(
-        "https://ghproxy.com/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json"
+        "https://gh.dn11.top/https://raw.githubusercontent.com/NX-Official/friends-link-plus/main/output/friends.json"
       )
     ).json()
   ).posts,
