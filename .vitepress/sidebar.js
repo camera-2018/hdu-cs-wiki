@@ -126,10 +126,6 @@ export function main_sidebar() {
     {
       text: '贡献指南',
       link: '/CONTRIBUTING'
-    },
-    {
-      text: 'notebook测试',
-      link: '/notebook'
     }
   ]
 }
