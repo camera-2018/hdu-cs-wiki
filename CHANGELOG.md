@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.1...v1.2.2) (2024-07-28)
+
+
+### Bug Fixes
+
+* **jupyter:** remove jupyter ([f699e34](https://github.com/camera-2018/hdu-cs-wiki/commit/f699e3486c616853a027a230e2c70309367f8ec0))
+
 ## [1.2.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.0...v1.2.1) (2024-06-23)
 
 
