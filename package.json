@@ -1,15 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "docs:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress dev --host",
-    "docs:build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress build",
-    "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
+    "docs:dev": "vitepress dev --host",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@codemirror/lang-python": "^6.1.6",
-    "@codemirror/lang-sql": "^6.7.0",
-    "@jupyterlab/mathjax2": "^3.6.7",
-    "@jupyterlab/theme-light-extension": "^4.2.4",
     "@vueuse/core": "^10.11.0",
     "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
@@ -26,7 +22,6 @@
     "@semantic-release/release-notes-generator": "^14.0.1",
     "@shikijs/vitepress-twoslash": "^1.10.3",
     "@vitejs/plugin-vue": "^5.0.5",
-    "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.9.1",
     "semantic-release": "^24.0.0",
