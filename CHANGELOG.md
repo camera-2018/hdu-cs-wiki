@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.3...v1.2.4) (2024-07-28)
+
+
+### Bug Fixes
+
+* **deps:** del  optionalDependencies ([c988363](https://github.com/camera-2018/hdu-cs-wiki/commit/c988363472bfb0377c76034ce97f2e4bbc1b544b))
+
 ## [1.2.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.2...v1.2.3) (2024-07-28)
 
 
