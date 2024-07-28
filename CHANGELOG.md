@@ -1,3 +1,11 @@
+## [1.2.5](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.4...v1.2.5) (2024-07-28)
+
+
+### Bug Fixes
+
+* **CI:** use npm install ([37a6e88](https://github.com/camera-2018/hdu-cs-wiki/commit/37a6e881c5752e29f047a3a521d56ddef71b1cc1))
+* **deps:** add optionalDependencies ([a82c517](https://github.com/camera-2018/hdu-cs-wiki/commit/a82c51718438bf4dd7940f592c84e802cbefda22))
+
 ## [1.2.4](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.3...v1.2.4) (2024-07-28)
 
 
