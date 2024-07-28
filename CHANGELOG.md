@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.2...v1.2.3) (2024-07-28)
+
+
+### Bug Fixes
+
+* **jupyter:** fix sidebar ([03a9fde](https://github.com/camera-2018/hdu-cs-wiki/commit/03a9fde836769b7144c8e780e4a08a4d185424bc))
+
 ## [1.2.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.1...v1.2.2) (2024-07-28)
 
 
