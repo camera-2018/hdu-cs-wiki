@@ -1,5 +1,3 @@
-import { generateSidebar } from 'vitepress-sidebar';
-
 export function main_sidebar() {
   return [
     {
