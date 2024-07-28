@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.5...v1.3.0) (2024-07-28)
+
+
+### Features
+
+* **WIKI:** wiki 2025 BREAKING CHANGE: Older content is categorized into older folders ([4ff7c80](https://github.com/camera-2018/hdu-cs-wiki/commit/4ff7c80ebf2a3a4dd3ebbf4849ee917c83d4ffec))
+
 ## [1.2.5](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.4...v1.2.5) (2024-07-28)
 
 
