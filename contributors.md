@@ -25,5 +25,7 @@ import { members } from './members.ts'
   -webkit-text-fill-color: var(--vp-home-hero-name-color);
   animation: rainbow 3s cubic-bezier(0.1, 0.7, 1.0, 0.1) infinite !important;
 }
-
+.avatar-img {
+  z-index: 1;
+}
 </style>
