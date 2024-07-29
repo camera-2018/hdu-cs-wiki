@@ -133,7 +133,15 @@ export class GamePlay {
       this.generateMines(this.board, block);
       this.state.value.mineGenerated = true;
     }
+    
+    if (block.revealed)
+      return;
 
+    if (block.flagged) {
+      block.flagged = !block.flagged;
+      return;
+    }
+      
     block.revealed = true;
     if (block.mine) {
       this.onGameOver('lost');
