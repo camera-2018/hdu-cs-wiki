@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 
 export function main_sidebar() {
@@ -546,31 +546,58 @@ function compareNumericPrefixes(a, b) {
   return 0;
 }
 
-// Function to generate sidebar items
-/**
- * 
- * @param {String} dir the start folder to scan
- * @param {String[]} excludeDir exclude unwanted folder
- * @returns
- */
-export function generateSidebar(dir, excludeDir = []) {
-  const files = fs.readdirSync(dir);
+
+export async function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
+  if (currentDepth >= maxDepth) 
+    console.warn("the file depth is beyond the maxium depth that your sidebar can show!");
+  const files = await fs.readdir(dir);
   const sortedFiles = files.sort(compareNumericPrefixes);
 
-  return sortedFiles.map((file) => {
-    const fullPath = path.join(dir, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      if (excludeDir.includes(file)) {
-        return null; // Skip excluded directories
+  const sidebar = await Promise.all(
+    sortedFiles.map(async (file) => {
+      const fullPath = path.join(dir, file);
+      const stats = await fs.stat(fullPath);
+
+      if (stats.isDirectory()) {
+        if (excludeDir.includes(file)) return null; // Skip excluded directories
+        return {
+          text: file,
+          collapsed: true,
+          items: await generateSidebarBasic(fullPath, excludeDir, maxDepth, ++currentDepth),
+        };
+      } else if (file.endsWith('.md')) {
+        return {
+          text: file.replace('.md', ''),
+          link: `/${fullPath.replace('.md', '')}`,
+        };
       }
-      return {
-        text: file,
-        collapsed: true,
-        items: generateSidebar(fullPath, excludeDir),
-      };
-    } else if (file.endsWith('.md')) {
-      return { text: file.replace('.md', ''), link: `/${fullPath.replace('.md', '')}` };
-    }
-  }).filter(Boolean);
+    })
+  );
+
+  return sidebar.filter(Boolean);
+}
+
+export async function generateSidebar(
+  dir,
+  {
+    excludeDir = ['static'],
+    previousLevel = '/',
+    previousLevelDescription = '返回上一层',
+    topLevelName,
+    maxDepth = 5
+  } = {}
+) {
+  const sidebar = [
+    {
+      text: previousLevelDescription,
+      link: previousLevel,
+    },
+    {
+      text: topLevelName ?? dir,
+      collapsed: false,
+      items: await generateSidebarBasic(dir, excludeDir, maxDepth),
+    },
+  ];
+  return sidebar;
 }
 
