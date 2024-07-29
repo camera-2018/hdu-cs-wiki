@@ -51,11 +51,11 @@ export default withMermaid({
 
     sidebar: {
       '/': main_sidebar(),
-      '/1.杭电生存指南/': await generateSidebar('1.杭电生存指南'),
-      '/2.编程模块/': await generateSidebar('2.编程模块'),
-      '/3.AI模块/': await generateSidebar('3.AI模块'),
-      '/4.WEB模块/': await generateSidebar('4.WEB模块'),
-      '/5.安全模块/': await generateSidebar('5.安全模块'),
+      '/1.杭电生存指南/': generateSidebar('1.杭电生存指南'),
+      '/2.编程模块/': generateSidebar('2.编程模块'),
+      '/3.AI模块/': generateSidebar('3.AI模块'),
+      '/4.WEB模块/': generateSidebar('4.WEB模块'),
+      '/5.安全模块/': generateSidebar('5.安全模块'),
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
       '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),

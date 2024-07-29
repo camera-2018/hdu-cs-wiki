@@ -1,4 +1,4 @@
-import fs from 'fs/promises';
+import fs from 'fs';
 import path from 'path';
 
 export function main_sidebar() {
@@ -547,23 +547,23 @@ function compareNumericPrefixes(a, b) {
 }
 
 
-export async function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
+export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
   if (currentDepth >= maxDepth) 
     console.warn("the file depth is beyond the maxium depth that your sidebar can show!");
-  const files = await fs.readdir(dir);
+  const files = fs.readdirSync(dir);
   const sortedFiles = files.sort(compareNumericPrefixes);
 
-  const sidebar = await Promise.all(
-    sortedFiles.map(async (file) => {
+  const sidebar = 
+    sortedFiles.map((file) => {
       const fullPath = path.join(dir, file);
-      const stats = await fs.stat(fullPath);
+      const stats = fs.statSync(fullPath);
 
       if (stats.isDirectory()) {
         if (excludeDir.includes(file)) return null; // Skip excluded directories
         return {
           text: file,
           collapsed: true,
-          items: await generateSidebarBasic(fullPath, excludeDir, maxDepth, ++currentDepth),
+          items: generateSidebarBasic(fullPath, excludeDir, maxDepth, currentDepth + 1),
         };
       } else if (file.endsWith('.md')) {
         return {
@@ -572,12 +572,11 @@ export async function generateSidebarBasic(dir, excludeDir = [], maxDepth, curre
         };
       }
     })
-  );
 
   return sidebar.filter(Boolean);
 }
 
-export async function generateSidebar(
+export function generateSidebar(
   dir,
   {
     excludeDir = ['static'],
@@ -595,7 +594,7 @@ export async function generateSidebar(
     {
       text: topLevelName ?? dir,
       collapsed: false,
-      items: await generateSidebarBasic(dir, excludeDir, maxDepth),
+      items: generateSidebarBasic(dir, excludeDir, maxDepth),
     },
   ];
   return sidebar;
