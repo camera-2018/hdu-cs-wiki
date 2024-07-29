@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export function main_sidebar() {
   return [
     {
@@ -518,3 +521,56 @@ export function chapter9_old() {
     }
   ]
 }
+
+// Function to extract numeric prefix as an array of numbers
+function getNumericPrefix(fileName) {
+  const match = fileName.match(/^(\d+(\.\d+)?(?:\.\d+)*)/);
+  if (match) {
+    return match[0].split('.').map(Number); // Convert to array of numbers
+  }
+  return [];
+}
+
+// Function to compare two numeric prefixes
+function compareNumericPrefixes(a, b) {
+  const prefixA = getNumericPrefix(a);
+  const prefixB = getNumericPrefix(b);
+
+  for (let i = 0; i < Math.max(prefixA.length, prefixB.length); i++) {
+    const numA = prefixA[i] || 0;
+    const numB = prefixB[i] || 0;
+    if (numA !== numB) {
+      return numA - numB;
+    }
+  }
+  return 0;
+}
+
+// Function to generate sidebar items
+/**
+ * 
+ * @param {String} dir the start folder to scan
+ * @param {String[]} excludeDir exclude unwanted folder
+ * @returns
+ */
+export function generateSidebar(dir, excludeDir = []) {
+  const files = fs.readdirSync(dir);
+  const sortedFiles = files.sort(compareNumericPrefixes);
+
+  return sortedFiles.map((file) => {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      if (excludeDir.includes(file)) {
+        return null; // Skip excluded directories
+      }
+      return {
+        text: file,
+        collapsed: true,
+        items: generateSidebar(fullPath, excludeDir),
+      };
+    } else if (file.endsWith('.md')) {
+      return { text: file.replace('.md', ''), link: `/${fullPath.replace('.md', '')}` };
+    }
+  }).filter(Boolean);
+}
+
