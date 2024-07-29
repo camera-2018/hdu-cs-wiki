@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export function main_sidebar() {
   return [
     {
@@ -518,3 +521,94 @@ export function chapter9_old() {
     }
   ]
 }
+
+// Function to extract numeric prefix as an array of numbers
+function getNumericPrefix(fileName) {
+  const match = fileName.match(/^(\d+(\.\d+)?(?:\.\d+)*)/);
+  if (match) {
+    return match[0].split('.').map(Number); // Convert to array of numbers
+  }
+  return [];
+}
+
+// Function to compare two numeric prefixes
+function compareNumericPrefixes(a, b) {
+  const prefixA = getNumericPrefix(a);
+  const prefixB = getNumericPrefix(b);
+
+  for (let i = 0; i < Math.max(prefixA.length, prefixB.length); i++) {
+    const numA = prefixA[i] || 0;
+    const numB = prefixB[i] || 0;
+    if (numA !== numB) {
+      return numA - numB;
+    }
+  }
+  return 0;
+}
+
+
+export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
+  if (currentDepth >= maxDepth) 
+    console.warn("the file depth is beyond the maxium depth that your sidebar can show!");
+  const files = fs.readdirSync(dir);
+  const sortedFiles = files.sort(compareNumericPrefixes);
+
+  const sidebar = 
+    sortedFiles.map((file) => {
+      const fullPath = path.join(dir, file);
+      const stats = fs.statSync(fullPath);
+
+      if (stats.isDirectory()) {
+        if (excludeDir.includes(file)) return null; // Skip excluded directories
+        return {
+          text: file,
+          collapsed: true,
+          items: generateSidebarBasic(fullPath, excludeDir, maxDepth, currentDepth + 1),
+        };
+      } else if (file.endsWith('.md')) {
+        return {
+          text: file.replace('.md', ''),
+          link: `/${fullPath.replace('.md', '')}`,
+        };
+      }
+    })
+
+  return sidebar.filter(Boolean);
+}
+
+/**
+ * Generates a sidebar configuration for VitePress.
+ *
+ * @param {string} dir - The directory to generate the sidebar from.
+ * @param {Object} [options] - Optional parameters.
+ * @param {string[]} [options.excludeDir=['static']] - Directories to exclude from the sidebar.
+ * @param {string} [options.previousLevel='/'] - Link to the previous level.
+ * @param {string} [options.previousLevelDescription='返回上一层'] - Description for the previous level link.
+ * @param {string} [options.topLevelName] - Name for the top level of the sidebar.
+ * @param {number} [options.maxDepth=5] - Maximum depth of directories to include.
+ * @returns {Object[]} Sidebar configuration array.
+ */
+export function generateSidebar(
+  dir,
+  {
+    excludeDir = ['static'],
+    previousLevel = '/',
+    previousLevelDescription = '返回上一层',
+    topLevelName,
+    maxDepth = 5
+  } = {}
+) {
+  const sidebar = [
+    {
+      text: previousLevelDescription,
+      link: previousLevel,
+    },
+    {
+      text: topLevelName ?? dir,
+      collapsed: false,
+      items: generateSidebarBasic(dir, excludeDir, maxDepth),
+    },
+  ];
+  return sidebar;
+}
+
