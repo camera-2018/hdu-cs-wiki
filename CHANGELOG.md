@@ -1,3 +1,17 @@
+# [2.1.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.0.0...v2.1.0) (2024-07-29)
+
+
+### Bug Fixes
+
+* fix some issue with new generateSidebar function ([aa18da1](https://github.com/camera-2018/hdu-cs-wiki/commit/aa18da125a11ee3a7f7c5ee52fb15d5f93d4d1e5))
+* turn the generateSidebar to sync way ([d60855c](https://github.com/camera-2018/hdu-cs-wiki/commit/d60855c8e8670ef1673bb217084abeb10c7edf36))
+* when left-click the flagged block, will not trigger explosion ([6b5fd1d](https://github.com/camera-2018/hdu-cs-wiki/commit/6b5fd1de17e36de57d477f29e6642a1189a02b68))
+
+
+### Features
+
+* add sidebarGenerator function to auto generate sidebar based file structure ([eee42b8](https://github.com/camera-2018/hdu-cs-wiki/commit/eee42b867f746264a6707bc221ed24b1e1915a80))
+
 # [2.0.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.3.0...v2.0.0) (2024-07-28)
 
 
