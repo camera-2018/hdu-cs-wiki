@@ -1,12 +1,12 @@
 // import { defineConfig } from 'vitepress'
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
-import PanguPlugin from 'markdown-it-pangu';
-import { fileURLToPath, URL } from 'node:url';
-import VueMacros from 'unplugin-vue-macros/vite';
-import { VitePWA } from 'vite-plugin-pwa';
 import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
+import { VitePWA } from 'vite-plugin-pwa';
+import { main_sidebar, main_sidebar_old, chapter2_old, chapter3_old, chapter4_old, chapter5_old, chapter6_old, chapter7_old, chapter8_old, chapter9_old } from './sidebar.js';
 import { nav } from './nav.js';
-import { chapter2_old, chapter3_old, chapter4_old, chapter5_old, chapter6_old, chapter7_old, chapter8_old, chapter9_old, generateSidebar, main_sidebar, main_sidebar_old } from './sidebar.js';
+import PanguPlugin from 'markdown-it-pangu'
+import { fileURLToPath, URL } from 'node:url'
+import VueMacros from 'unplugin-vue-macros/vite'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -51,11 +51,6 @@ export default withMermaid({
 
     sidebar: {
       '/': main_sidebar(),
-      '/1.杭电生存指南/': generateSidebar('1.杭电生存指南', ['static']),
-      '/2.编程模块/': generateSidebar('2.编程模块', ['static']),
-      '/3.AI模块/': generateSidebar('3.AI模块', ['static']),
-      '/4.WEB模块/': generateSidebar('4.WEB模块', ['static']),
-      '/5.安全模块/': generateSidebar('5.安全模块', ['static']),
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
       '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),
