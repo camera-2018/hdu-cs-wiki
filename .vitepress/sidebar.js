@@ -576,6 +576,18 @@ export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDept
   return sidebar.filter(Boolean);
 }
 
+/**
+ * Generates a sidebar configuration for VitePress.
+ *
+ * @param {string} dir - The directory to generate the sidebar from.
+ * @param {Object} [options] - Optional parameters.
+ * @param {string[]} [options.excludeDir=['static']] - Directories to exclude from the sidebar.
+ * @param {string} [options.previousLevel='/'] - Link to the previous level.
+ * @param {string} [options.previousLevelDescription='返回上一层'] - Description for the previous level link.
+ * @param {string} [options.topLevelName] - Name for the top level of the sidebar.
+ * @param {number} [options.maxDepth=5] - Maximum depth of directories to include.
+ * @returns {Object[]} Sidebar configuration array.
+ */
 export function generateSidebar(
   dir,
   {
