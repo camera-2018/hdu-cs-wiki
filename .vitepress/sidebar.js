@@ -37,8 +37,6 @@ export function main_sidebar() {
       collapsed: true,
       items: [
         { text: '2.编程模块', link: '/2.编程模块/2.编程模块' },
-        { text: '2.1NekoBytes-TheMissing', link: '/2.编程模块/2.1NekoBytes-TheMissing' },
-        { text: '2.1.1Introduction', link: '/2.编程模块/2.1.1Introduction' },
       ]
     },
     {
