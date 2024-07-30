@@ -37,6 +37,8 @@ export function main_sidebar() {
       collapsed: true,
       items: [
         { text: '2.编程模块', link: '/2.编程模块/2.编程模块' },
+        { text: '2.1NekoBytes-TheMissing', link: '/2.编程模块/2.1NekoBytes-TheMissing' },
+        { text: '2.1.1Introduction', link: '/2.编程模块/2.1.1Introduction' },
       ]
     },
     {
@@ -548,12 +550,12 @@ function compareNumericPrefixes(a, b) {
 
 
 export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
-  if (currentDepth >= maxDepth) 
+  if (currentDepth >= maxDepth)
     console.warn("the file depth is beyond the maxium depth that your sidebar can show!");
   const files = fs.readdirSync(dir);
   const sortedFiles = files.sort(compareNumericPrefixes);
 
-  const sidebar = 
+  const sidebar =
     sortedFiles.map((file) => {
       const fullPath = path.join(dir, file);
       const stats = fs.statSync(fullPath);
