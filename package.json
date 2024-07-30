@@ -2,9 +2,9 @@
   "type": "module",
   "version": "2.0.0",
   "scripts": {
-    "docs:dev": "vitepress dev --host",
+    "docs:dev": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress dev --host",
     "docs:build": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "cross-env NODE_OPTIONS='--max-old-space-size=8192' vitepress preview"
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
@@ -23,6 +23,7 @@
     "@semantic-release/release-notes-generator": "^14.0.1",
     "@shikijs/vitepress-twoslash": "^1.12.0",
     "@vitejs/plugin-vue": "^5.1.1",
+    "cross-env": "^7.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.9.1",
     "semantic-release": "^24.0.0",
