@@ -1,12 +1,12 @@
 // import { defineConfig } from 'vitepress'
-import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
+import PanguPlugin from 'markdown-it-pangu';
+import { fileURLToPath, URL } from 'node:url';
+import VueMacros from 'unplugin-vue-macros/vite';
 import { VitePWA } from 'vite-plugin-pwa';
-import { main_sidebar, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './sidebar.js';
+import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
 import { nav } from './nav.js';
-import PanguPlugin from 'markdown-it-pangu'
-import { fileURLToPath, URL } from 'node:url'
-import VueMacros from 'unplugin-vue-macros/vite'
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { chapter2_old, chapter3_old, chapter4_old, chapter5_old, chapter6_old, chapter7_old, chapter8_old, chapter9_old, generateSidebar, main_sidebar, main_sidebar_old } from './sidebar.js';
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid({
@@ -22,6 +22,7 @@ export default withMermaid({
     ["meta", { "name": "viewport", "content": "width=device-width,initial-scale=1" }],
     ["meta", { "property": "og:url", "content": "https://hdu-cs.wiki/" }],
     ["meta", { "property": "og:type", "content": "website" }],
+    ["meta", { "property": "og:site_name", "content": "HDU-CS-WIKI" }],
     ["meta", { "property": "og:title", "content": "HDU-CS-WIKI | HDU-CS-WIKI" }],
     ["meta", { "property": "og:description", "content": "HDU计算机科学讲义" }],
     ["meta", { "property": "og:image", "content": "https://cdn.xyxsw.site/og-img.png" }],
@@ -41,7 +42,7 @@ export default withMermaid({
     ["link", { "rel": "dns-prefetch", "href": "https://fonts.googleapis.com" }],
     ["link", { "rel": "dns-prefetch", "href": "https://fonts.gstatic.com" }],
     ["link", { "rel": "preconnect", "href": "https://fonts.googleapis.com" }],
-    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com", "crossorigin": "anonymous"}],
+    ["link", { "rel": "preconnect", "href": "https://fonts.gstatic.com", "crossorigin": "anonymous" }],
     ["link", { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" }],
   ],
   themeConfig: {
@@ -50,14 +51,20 @@ export default withMermaid({
 
     sidebar: {
       '/': main_sidebar(),
-      '/2.高效学习/': chapter2(),
-      '/3.编程思维体系构建/': chapter3(),
-      '/4.人工智能/': chapter4(),
-      '/5.富有生命的嵌入式/': chapter5(),
-      '/6.计算机安全/': chapter6(),
-      '/7.网络应用开发/': chapter7(),
-      '/8.基础学科/': chapter8(),
-      '/9.计算机网络/': chapter9(),
+      '/1.杭电生存指南/': generateSidebar('1.杭电生存指南'),
+      '/2.编程模块/': generateSidebar('2.编程模块'),
+      '/3.AI模块/': generateSidebar('3.AI模块'),
+      '/4.WEB模块/': generateSidebar('4.WEB模块'),
+      '/5.安全模块/': generateSidebar('5.安全模块'),
+      '/2023旧版内容/': main_sidebar_old(),
+      '/2023旧版内容/2.高效学习/': chapter2_old(),
+      '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),
+      '/2023旧版内容/4.人工智能/': chapter4_old(),
+      '/2023旧版内容/5.富有生命的嵌入式/': chapter5_old(),
+      '/2023旧版内容/6.计算机安全/': chapter6_old(),
+      '/2023旧版内容/7.网络应用开发/': chapter7_old(),
+      '/2023旧版内容/8.基础学科/': chapter8_old(),
+      '/2023旧版内容/9.计算机网络/': chapter9_old(),
     },
     outline: [2, 6],
     socialLinks: [
@@ -88,7 +95,7 @@ export default withMermaid({
     },
     math: true,
     codeTransformers: [
-      transformerTwoslash() 
+      transformerTwoslash()
     ]
   },
   sitemap: {

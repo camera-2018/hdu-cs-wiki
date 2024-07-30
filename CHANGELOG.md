@@ -1,3 +1,65 @@
+# [2.1.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.0.0...v2.1.0) (2024-07-29)
+
+
+### Bug Fixes
+
+* fix some issue with new generateSidebar function ([aa18da1](https://github.com/camera-2018/hdu-cs-wiki/commit/aa18da125a11ee3a7f7c5ee52fb15d5f93d4d1e5))
+* turn the generateSidebar to sync way ([d60855c](https://github.com/camera-2018/hdu-cs-wiki/commit/d60855c8e8670ef1673bb217084abeb10c7edf36))
+* when left-click the flagged block, will not trigger explosion ([6b5fd1d](https://github.com/camera-2018/hdu-cs-wiki/commit/6b5fd1de17e36de57d477f29e6642a1189a02b68))
+
+
+### Features
+
+* add sidebarGenerator function to auto generate sidebar based file structure ([eee42b8](https://github.com/camera-2018/hdu-cs-wiki/commit/eee42b867f746264a6707bc221ed24b1e1915a80))
+
+# [2.0.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.3.0...v2.0.0) (2024-07-28)
+
+
+### Bug Fixes
+
+* wiki ([e17fb0c](https://github.com/camera-2018/hdu-cs-wiki/commit/e17fb0c3a40fc41df638c90176c4909ad5deb77e))
+
+
+### BREAKING CHANGES
+
+* release 2.0.0
+
+# [1.3.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.5...v1.3.0) (2024-07-28)
+
+
+### Features
+
+* **WIKI:** wiki 2025 BREAKING CHANGE: Older content is categorized into older folders ([4ff7c80](https://github.com/camera-2018/hdu-cs-wiki/commit/4ff7c80ebf2a3a4dd3ebbf4849ee917c83d4ffec))
+
+## [1.2.5](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.4...v1.2.5) (2024-07-28)
+
+
+### Bug Fixes
+
+* **CI:** use npm install ([37a6e88](https://github.com/camera-2018/hdu-cs-wiki/commit/37a6e881c5752e29f047a3a521d56ddef71b1cc1))
+* **deps:** add optionalDependencies ([a82c517](https://github.com/camera-2018/hdu-cs-wiki/commit/a82c51718438bf4dd7940f592c84e802cbefda22))
+
+## [1.2.4](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.3...v1.2.4) (2024-07-28)
+
+
+### Bug Fixes
+
+* **deps:** del  optionalDependencies ([c988363](https://github.com/camera-2018/hdu-cs-wiki/commit/c988363472bfb0377c76034ce97f2e4bbc1b544b))
+
+## [1.2.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.2...v1.2.3) (2024-07-28)
+
+
+### Bug Fixes
+
+* **jupyter:** fix sidebar ([03a9fde](https://github.com/camera-2018/hdu-cs-wiki/commit/03a9fde836769b7144c8e780e4a08a4d185424bc))
+
+## [1.2.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.1...v1.2.2) (2024-07-28)
+
+
+### Bug Fixes
+
+* **jupyter:** remove jupyter ([f699e34](https://github.com/camera-2018/hdu-cs-wiki/commit/f699e3486c616853a027a230e2c70309367f8ec0))
+
 ## [1.2.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v1.2.0...v1.2.1) (2024-06-23)
 
 

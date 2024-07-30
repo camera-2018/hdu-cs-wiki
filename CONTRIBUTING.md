@@ -25,10 +25,56 @@
 - 网站页面设计
 - 在各种媒体、博客文章、群内宣传 HDU-CS-WIKI
 
+## 文档命名
+
+1. 对于 md 文件，请命名为 `数字与小数点前缀+文档标题` 的格式
+
+   ```
+   1.1.2 新内容.md
+   2. 序言.md
+   ```
+
+2. 如果您需要开启新的小章节模块，请新建一个文件夹，文件夹的命名格式与 md 文件类似，为 `数字与小数点前缀+模块名`
+
+   ```
+   2.2 模块 2
+   ```
+
+3. 不论是 md 文件还是文件夹,请不要使用字母或其他特殊符号作为前缀
+
+一个合理的文档结构如下：
+
+```
+.
+└─ 1.第一章
+   ├── 1.1 模块 1
+   │   ├── 1.1.10 JavaScript.md
+   │   ├── 1.1.11 Lua.md
+   │   ├── 1.1.12 Lisp.md
+   │   ├── 1.1.1 Ruby.md
+   │   ├── 1.1.2 Java.md
+   │   ├── 1.1.3 C++.md
+   │   ├── 1.1.4 C.md
+   │   ├── 1.1.5 Math.md
+   │   ├── 1.1.6 Matlab.md
+   │   ├── 1.1.7 React.md
+   │   ├── 1.1.8 Jupyter.md
+   │   └── 1.1.9 Vue.md
+   ├── 1.2 模块 2
+   │   ├── 1.2.1 C#.md
+   │   ├── 1.2.2 Python.md
+   │   └── static
+   ├── 1.3 结语.md
+   ├── 1. 序言.md
+   └── static
+```
+
+static 文件夹用于存放您的静态资源，如图片，您也可以在模块文件夹下放置新的 static 文件夹，方便引用资源
+
 ## 文档风格
 
 1. 使用 Markdown 编写文档，文档格式参考 Markdown 语法。
-2. 一个页面只有一个1级标题（H1，一个#），其他标题从2级开始（H2，##）。
+2. 一个页面必须且只有一个1级标题（H1，一个#），其他标题从2级开始（H2，##）。
 3. 本项目自动在英文与中文、数字与中文之间添加空格。
 
    ```markdown
@@ -216,11 +262,11 @@ export type Lang =
 :::
 
 ::: tip 🤓 注意
-尽量不要使用 `typora` 因为它的渲染效果和本项目前端框架 `vitepress` 不一致。
+尽量不要使用 `typora` 等编辑器编辑完 .md文件后直接提交，因为它的渲染效果和本项目前端 md 渲染器 `vitepress markdown-it` 不一致。
 
 在 `typora` 中编辑完成后，确认一下 .md 文件源代码是否为正常 Markdown 。
 
-编辑完成后需要启动本项目在前端查看效果。
+编辑完成后请务必启动本项目在前端查看效果。
 :::
 
 ## 项目构建指南
@@ -247,11 +293,15 @@ npm run docs:preview  #预览线上环境
 ![](static/xxx.png)
 ```
 
-注意尽量不要使用 `img` 标签，因为经前端构建解析后路径会不正确。
+注意尽量不要使用 `img` 这个 HTML 标签，因为经前端构建解析后路径会不正确。
 
 后续会统一放置到 cos 存储桶中。
 
 ## 项目配置指南
+
+::: warning 🚧 注意
+如果改了文件路径却没有配置 `.vitepress/config.js`、`.vitepress/sidebar.js` 文件会导致项目构建失败。
+:::
 
 修改新添加或移动位置的 md 文件需要在 `.vitepress/config.js`、`.vitepress/sidebar.js` 中添加或修改对应的配置。
 
@@ -261,7 +311,7 @@ npm run docs:preview  #预览线上环境
 
 ## 如何使用 Git 和 Github
 
-详见 [3.5 Git和Github](./3.编程思维体系构建/3.5git与github.md)
+详见 [3.5 Git和Github](./2023旧版内容/3.编程思维体系构建/3.5git与github.md)
 
 ## Commit Message 规范
 
@@ -305,6 +355,10 @@ subject为commit概述
 ```
 
 其中详细内容可以参照 [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+
+本项目额外有使用 semantic-release 自动化版本发布，所以请务必遵循规范提交。
+
+注意：fix、feat、BREAKING CHANGE 这三种类型的提交会触发自动版本发布。
 
 ![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)
 
