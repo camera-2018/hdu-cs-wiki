@@ -4,7 +4,7 @@ import PanguPlugin from 'markdown-it-pangu';
 import { fileURLToPath, URL } from 'node:url';
 import VueMacros from 'unplugin-vue-macros/vite';
 import { VitePWA } from 'vite-plugin-pwa';
-import { withMermaid } from "vitepress-plugin-mermaid-xyxsw";
+import { withMermaid } from "vitepress-plugin-mermaid";
 import { nav } from './nav.js';
 import { chapter2_old, chapter3_old, chapter4_old, chapter5_old, chapter6_old, chapter7_old, chapter8_old, chapter9_old, generateSidebar, main_sidebar, main_sidebar_old } from './sidebar.js';
 
