@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.0...v2.1.1) (2024-07-31)
+
+
+### Bug Fixes
+
+* **mermaid:** mermaid Hydration failed ([0e2c504](https://github.com/camera-2018/hdu-cs-wiki/commit/0e2c50454b88363d4ccb49803812feed70c37a44))
+
 # [2.1.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.0.0...v2.1.0) (2024-07-29)
 
 
