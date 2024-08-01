@@ -15,9 +15,6 @@
   <a href="https://github.com/camera-2018/hdu-cs-wiki/pulls">
     <img src="https://img.shields.io/github/issues-pr/camera-2018/hdu-cs-wiki.svg?color=lightgreen" alt="pulls">
   </a>
-  <a href="https://app.netlify.com/sites/hdu-cs-wiki/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/92121c47-e608-4736-bffa-c0958e570348/deploy-status">
-  </a>
   <a href="https://vercel.com/camera-2018/hdu-cs-wiki/deployments">
     <img src="http://therealsujitk-vercel-badge.vercel.app/?app=hdu-cs-wiki&logo=true">
   </a>

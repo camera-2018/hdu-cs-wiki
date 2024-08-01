@@ -112,6 +112,6 @@ def WideNDeep(linear_feature_columns, dnn_feature_columns):
 - [推荐系统系列（六）：Wide&Deep理论与实践](https://zhuanlan.zhihu.com/p/92279796?utm_source=wechat_session&utm_medium=social&utm_oi=753565305866829824&utm_campaign=shareopn)
 - [见微知著，你真的搞懂Google的Wide&Deep模型了吗?](https://zhuanlan.zhihu.com/p/142958834)
 - [用NumPy手工打造 Wide & Deep](https://zhuanlan.zhihu.com/p/53110408)
-- [tensorflow官网的WideDeepModel](https://www.tensorflow.org/api_docs/python/tf/keras/experimental/WideDeepModel)
+- [tensorflow官网的WideDeepModel](https://www.tensorflow.org/versions/r1.15/api_docs/python/tf/keras/experimental/WideDeepModel)
 - [详解 Wide & Deep 结构背后的动机](https://zhuanlan.zhihu.com/p/53361519)
 
