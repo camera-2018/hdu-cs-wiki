@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.2...v2.1.3) (2024-08-01)
+
+
+### Bug Fixes
+
+* **CI:** link checker ([6c57042](https://github.com/camera-2018/hdu-cs-wiki/commit/6c5704214a046024f2ad664ebf3c2638ecf96cad))
+
 ## [2.1.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.1...v2.1.2) (2024-08-01)
 
 
