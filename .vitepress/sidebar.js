@@ -58,18 +58,6 @@ export function main_sidebar() {
       collapsed: true,
       items: [
         { text: '5.安全模块', link: '/5.安全模块/5.安全模块' },
-        { text: '5.1 从CTF入门计算机安全', link: '/5.安全模块/5.1 从CTF入门计算机安全' },
-        { text: '5.2 循序渐进的CTF知识树', link: '/5.安全模块/5.2 循序渐进的CTF知识树' },
-        { text: '5.3 CTF入门文档',
-          collapsed: true, 
-          link:'/5.安全模块/5.3 CTF入门文档',
-          items:[
-            {text:"5.3.1 Web安全入门",link:"/5.安全模块/5.3.1 Web安全入门"},
-            {text:"5.3.2 二进制安全入门",link:"/5.安全模块/5.3.2 二进制安全入门"},
-            {text:"5.3.3 密码学安全入门",link:"/5.安全模块/5.3.3 密码学安全入门"},
-            {text:"5.3.4 安全杂项入门",link:"/5.安全模块/5.3.4 安全杂项入门"},
-          ] },
-        { text: '5.4 Vidar-Team 招新手册', link: '/5.安全模块/5.4 Vidar-Team 招新手册' },
       ]
     },
     {
