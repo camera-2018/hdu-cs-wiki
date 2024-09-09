@@ -203,9 +203,9 @@ mjx-container {
   background-color: rgba(100, 108, 255, 0.14);
 }
 
-mjx-container > svg {
+/* mjx-container > svg {
   display: inline-block;
-}
+} */
 
 .medium-zoom-overlay {
   z-index: 99;
@@ -213,4 +213,8 @@ mjx-container > svg {
 
 .medium-zoom-image {
   z-index: 99;
+}
+
+mjx-container {
+  overflow-x: visible !important;
 }
