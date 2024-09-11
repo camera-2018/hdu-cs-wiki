@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.3...v2.2.0) (2024-09-11)
+
+
+### Features
+
+* **web模块:** 添加引言 ([2d5f03c](https://github.com/camera-2018/hdu-cs-wiki/commit/2d5f03c4f422e333831b6884cde3a8a2f3951bb4))
+
 ## [2.1.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.2...v2.1.3) (2024-08-01)
 
 
