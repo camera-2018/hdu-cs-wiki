@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.2.0...v2.3.0) (2024-09-11)
+
+
+### Features
+
+* **components&2.编程模块:** 添加课程主页:-( ([#286](https://github.com/camera-2018/hdu-cs-wiki/issues/286)) ([03422d7](https://github.com/camera-2018/hdu-cs-wiki/commit/03422d7d565dc6df2f4cd634d7ceaae2d4b3e210))
+
 # [2.2.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.1.3...v2.2.0) (2024-09-11)
 
 
