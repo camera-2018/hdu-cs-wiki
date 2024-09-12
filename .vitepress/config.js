@@ -1,6 +1,7 @@
 // import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 import PanguPlugin from 'markdown-it-pangu';
+import FootnotePlugin from 'markdown-it-footnote'
 import { fileURLToPath, URL } from 'node:url';
 import VueMacros from 'unplugin-vue-macros/vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -92,6 +93,7 @@ export default withMermaid({
     lineNumbers: true,
     config: (md) => {
       md.use(PanguPlugin);
+      md.use(FootnotePlugin)
     },
     math: true,
     codeTransformers: [
