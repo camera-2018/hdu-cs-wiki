@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.3.0...v2.4.0) (2024-09-12)
+
+
+### Features
+
+* **编程模块:** 添加Python模块内容 ([#283](https://github.com/camera-2018/hdu-cs-wiki/issues/283)) ([c0d13e4](https://github.com/camera-2018/hdu-cs-wiki/commit/c0d13e42d7a1490e723725e28185e15c2db4409c))
+
 # [2.3.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.2.0...v2.3.0) (2024-09-11)
 
 
