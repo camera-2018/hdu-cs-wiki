@@ -62,9 +62,9 @@ const courses = [
         lecture: {
           title: "0. 编程环境搭建",
           links: {
-            slide: "/2.编程模块/2.1NekoBytes-TheMissing",
+            slide: "",
             recording: "",
-            note: "/2.编程模块/2.1.1Introduction",
+            note: "/2.编程模块/2.1%20NekoBytes-TheMissing/2.1.1%20Book/2.1.2%20开发环境配置",
           },
         },
         lab: "No Lab",
