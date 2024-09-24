@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.0...v2.5.1) (2024-09-24)
+
+
+### Bug Fixes
+
+* **PyModule:ProjPersp:** 修正部分内容 ([#291](https://github.com/camera-2018/hdu-cs-wiki/issues/291)) ([d9a6712](https://github.com/camera-2018/hdu-cs-wiki/commit/d9a67124b7f27c287c290510875a7ca93a3e2d9c))
+
 # [2.5.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.4.0...v2.5.0) (2024-09-18)
 
 
