@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.1...v2.6.0) (2024-09-25)
+
+
+### Features
+
+* **NekoBytes-TheMissing:** 添加了week1的内容 ([#292](https://github.com/camera-2018/hdu-cs-wiki/issues/292)) ([97fa5bf](https://github.com/camera-2018/hdu-cs-wiki/commit/97fa5bf1dd14dfa84be033255d932f8a36189cb9))
+
 ## [2.5.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.0...v2.5.1) (2024-09-24)
 
 
