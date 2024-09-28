@@ -584,6 +584,6 @@ def youtubednn_recall(data, topk=200, embedding_dim=8, his_seq_maxlen=50, negsam
 * [YouTube深度学习推荐系统的十大工程问题](https://zhuanlan.zhihu.com/p/52169807)
 * [你真的读懂了Youtube DNN推荐论文吗](https://zhuanlan.zhihu.com/p/372238343)
 * [推荐系统经典论文(二)】YouTube DNN](https://zhuanlan.zhihu.com/p/128597084)
-* [张俊林-推荐技术发展趋势与召回模型](https://www.icode9.com/content-4-764359.html)
+* 张俊林-推荐技术发展趋势与召回模型
 * [揭开YouTube深度推荐系统模型Serving之谜](https://zhuanlan.zhihu.com/p/61827629)
 * [Deep Neural Networks for YouTube Recommendations YouTubeDNN推荐召回与排序](https://www.pianshen.com/article/82351182400/)
