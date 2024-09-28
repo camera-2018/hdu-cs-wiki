@@ -56,7 +56,7 @@ Vim 有着悠久历史，它始于 1976 年的 Vi 编辑器，到现在还在不
 - [vim Golf](http://www.vimgolf.com/) 是用 vim 的用户界面作为程序语言的 [code golf](https://en.wikipedia.org/wiki/Code_golf)
 - [Vi/vim Stack Exchange](https://vi.stackexchange.com/)
 - [vim Screencasts](http://vimcasts.org/)
-- [Practical Vim](https://pragprog.com/titles/dnVim2/)（书籍）
+- [Practical Vim](https://pragprog.com/titles/dnvim2/practical-vim-second-edition/)（书籍）
 
 ## Git
 

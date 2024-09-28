@@ -16,7 +16,7 @@
           <td v-if="eIndex === 0">{{ entry.date }}</td>
           <td v-if="eIndex === 0">
             {{ entry.lecture.title }}<br />
-            <a v-if="entry.lecture.links.slide" :href="entry.lecture.links.slide">Slide</a>
+            <a v-if="entry.lecture.links.slide" :href="entry.lecture.links.slide" target="_blank">Slide</a>
             <span v-if="
               entry.lecture.links.slide &&
               (entry.lecture.links.recording || entry.lecture.links.note)
@@ -54,7 +54,7 @@ const courses = [
         lecture: {
           title: "0. 编程环境搭建",
           links: {
-            slide: "",
+            slide: "/reveal/Lecture0/index.html",
             recording: "",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/2.开发环境配置",
           },
@@ -78,7 +78,7 @@ const courses = [
         lecture: {
           title: "1. Unix 与 C",
           links: {
-            slide: "",
+            slide: "/reveal/Lecture1/index.html",
             recording: "",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/3.Unix与C",
           },

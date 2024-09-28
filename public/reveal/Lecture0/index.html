@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Source+Serif+Pro%7CLato%7CInconsolata" rel="stylesheet"
+        type="text/css">
+    <title> Lecture0 </title>
+    <!-- browser favicon -->
+    <link rel="shortcut icon" href="./static/img/favicon.ico">
+    <style>
+        .font-sans {
+            font-family: 'Lato', 'SimHei', 'STHeiti', 'SimHei', 'Serif';
+        }
+
+        .font-serif {
+            font-family: 'Source Serif Pro', 'Songti SC', 'SimSun', 'Serif', serif;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="https://jyywiki.cn/static/katex/katex.min.css">
+    <script defer src="https://jyywiki.cn/static/katex/katex.min.js"></script> -->
+    <link rel="stylesheet" href="./static/katex/katex.min.css">
+    <script defer src="./static/katex/katex.min.js"></script>
+    <!-- <script defer src="https://jyywiki.cn/static/katex/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script> -->
+    <script defer src="./static/katex/auto-render.min.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // &#8226; auto-render specific keys, e.g.:
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true }
+                ],
+                // &#8226; rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="./static/reveal/reveal.css">
+    <link rel="stylesheet" href="./static/reveal/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="./static/jyy/jyy.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <div class="reveal">
+        <div class="slides">
+            <section><section><div class="center middle"><div style="width:100%"><div><h1 id="nekobytes-themissing" class="text-2xl mt-2 font-sans">NekoBytes-TheMissing</h1><p class="font-serif my-1">
+    <include src="Slides_Author">
+        <div class="py-16">
+            <p class="font-serif my-1">
+                <a href="https://github.com/E1PsyCongroo" class=" text-amber-900">
+                    讲师-晓阳
+                </a>
+            </p>
+        </div>
+        <div class="row">
+            <p class="font-serif my-1"/>
+
+            <div class="author-affiliation">
+                <a href="https://wiki.xyxsw.site/" class=" text-amber-900">
+                    <p class="font-serif my-1">
+                        HDU-计算机科学与技术协会
+                    </p>
+                    <img class="inline-img h-24" src="./static/img/fabb6e98118f4ed9b8c0e6f95b5ef150.svg" style="display: inline-block;"/>
+                </a>
+            </div>
+
+        </div>
+    </include>
+</p></div></div></div></section></section><section><section><div><h2 id="overview" class="text-xl mt-2 pb-2 font-sans">OverView</h2>
+<h3 id="_1">课程将带给你什么</h3>
+<ul class="list-disc font-serif">
+<li class="ml-8">尽可能广的介绍计算机领域</li>
+<li class="ml-8">介绍计算机领域的核心思想：抽象</li>
+<li class="ml-8">高效的使用基础设施（工具）</li>
+<li class="ml-8">得到编码的锻炼（四个 Project）</li>
+</ul><div class="fragment" data-fragment-index="1"><h3 id="_1">你无法得到什么</h3>
+<ul class="list-disc font-serif">
+<li class="ml-8">功利的分数, etc</li>
+<li class="ml-8">宝宝巴士一样的知识灌输</li>
+<li class="ml-8"><del>成为一名学究</del></li>
+</ul></div></div></section><section data-auto-animate><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">课程内容</h2>
+<blockquote>
+<p class="font-serif my-1">课程还在建设中，具体内容可能会有改动</p>
+<p class="font-serif my-1">请关注<a href="https://wiki.xyxsw.site/2.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9D%97/2.1%20NekoBytes-TheMissing/2.1%20NekoBytes-TheMissing">课程主页</a></p>
+</blockquote>
+<ul class="list-disc font-serif">
+<li class="ml-8">Unix环境(CLI的使用、POSIX)</li>
+<li class="ml-8">什么是计算机(寄存器、内存、状态机视角)</li>
+<li class="ml-8">C 语言(基础语法、指针、动态内存管理)</li>
+<li class="ml-8">算法导论(递归、分治、数据结构)</li>
+<li class="ml-8">嵌入式编程(端口IO、内存IO、GPIO)</li>
+<li class="ml-8">系统编程(进程、线程、网络通讯)</li>
+<li class="ml-8">人工智能导论(机器学习、回归、分类)</li>
+<li class="ml-8">编程语言导论(OOP、函数式、声明式、命令式)</li>
+</ul></div></section><section data-auto-animate><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">课程内容</h2>
+<p class="font-serif my-1">每节课都会上传对应的讲座录屏与课程讲义</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">请你认真对待讲义附上的链接，里面的内容（除了可选）都非常适合现在的你阅读并学习（即使你需要花费大量的时间）</li>
+</ul>
+<p class="font-serif my-1">每节课都会有对应的课后实验</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">请认真对待课后实验，这是你获取学习反馈的重要方式</li>
+<li class="ml-8">也是得到及时知识巩固的能力锻炼</li>
+<li class="ml-8">每个实验预计耗时2~3h（对于有独立解决问题的同学来说）</li>
+</ul>
+<p class="font-serif my-1">四个课程大作业</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">你将得到具体项目的训练</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">独立思考</h2>
+<table>
+<thead>
+<tr>
+<th>基本原理</th>
+<th>做事方案</th>
+<th>正确性风险</th>
+<th>代表例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><green>阐述</green></td>
+<td><green>明确</green></td>
+<td><green>基本正确</green></td>
+<td>高中物理实验</td>
+</tr>
+<tr>
+<td><green>阐述</green></td>
+<td><green>明确</green></td>
+<td><red>可能出错</red></td>
+<td>程序设计作业</td>
+</tr>
+<tr>
+<td><green>阐述</green></td>
+<td><red>需要思考</red></td>
+<td><green>基本正确</green></td>
+<td>数学/算法题</td>
+</tr>
+<tr>
+<td><green>阐述</green></td>
+<td><red>需要思考</red></td>
+<td><red>可能出错</red></td>
+<td>练手项目</td>
+</tr>
+<tr>
+<td><red>需要探索</red></td>
+<td><red>需要思考</red></td>
+<td><red>可能出错</red></td>
+<td>业界和科研的真实问题</td>
+</tr>
+</tbody>
+</table>
+<p class="font-serif my-1">学会独立思考</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">摒弃高中错误的学习姿态</li>
+<li class="ml-8">week0，其实是对你能力的一种锻炼，而“部分同学”已经开始“满头大汗”了</li>
+<li class="ml-8"><a href="http://integrity.mit.edu/">MIT对学术诚信的诠释</a>, 尤其是<a href="https://integrity.mit.edu/handbook/writing-code">关于写代码的学术诚信</a></li>
+</ul><div class="fragment" data-fragment-index="1"><p class="font-serif my-1"><blue>试着去成为一个有 CS 梦想的人</blue></p></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">学会提问</h2>
+<p class="font-serif my-1">学会提问=学会不提问</p>
+<p class="font-serif my-1">《<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md">提问的智慧</a>》/《<a href="https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md">别像弱智一样提问</a>》</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">提问能反映出你的学习态度: 主动尝试 vs. 被动依赖</li>
+</ul>
+<p class="font-serif my-1"><red>不是所有问题都值得问</red></p><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">你以为自己热爱学习? 不, 别人只觉得你是伸手党</li>
+</ul>
+<p class="font-serif my-1"><a href="https://www.bilibili.com/video/BV1om4y1H71S">都成年了，要学会提问了</a></p></div><div class="fragment" data-fragment-index="2"><ul class="list-disc font-serif">
+<li class="ml-8"><red>任何直接获得答案的做法都是在放弃训练的机会</red></li>
+</ul>
+<p class="font-serif my-1"><red>你不应该剥夺自己“训练的权利”，当然也不应该让别人剥夺</red></p></div><div class="fragment" data-fragment-index="3"><ul class="list-disc font-serif">
+<li class="ml-8"><red>向助教提问，请遵守群内的提问模板</red></li>
+</ul>
+<p class="font-serif my-1">我们是公益性质的活动，请对助教好一些 :)</p>
+<p class="font-serif my-1">躺平容易坚持难, 但如果你能坚持下来, 你就可以得到脱胎换骨的提升</p></div></div></section></section><section><section data-auto-animate><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">如何活下来？</h2>
+<p class="font-serif my-1"><red>STFW - Search The Friendly Web</red></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">只要我用的工具是大众的, 我几乎不可能是世界上第一个遇到问题的</li>
+<li class="ml-8">网上一定有人遇到过相同/类似问题, 我应该搜一下看看他们怎么解决</li>
+</ul>
+<p class="font-serif my-1"><red>RTFM - Read The Friendly Manual</red></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">只要我用的工具是大众的, 应该有手册记录这个工具的所有细节</li>
+<li class="ml-8">如果我想了解它的某个问题, 我应该去搜索手册的描述</li>
+</ul>
+<p class="font-serif my-1"><red>RTFSC - Read The Friendly Source Code</red></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">只要我获得了项目代码, 理论上我就可以知晓它的一切行为</li>
+<li class="ml-8">如果我想了解它具体是如何工作的, 我应该去读一下(关键)代码</li>
+</ul></div></section><section data-auto-animate><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">如何活下来？</h2>
+<p class="font-serif my-1"><red>ATFAI - Ask The Friendly AI</red></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">“学习”从未如此高效；“因材施教” 终得以实现</li>
+<li class="ml-8">现在真有一个像你父母一样耐心的角色</li>
+<li class="ml-8">前提是你有能力分辨“善意的谎言”</li>
+</ul>
+<p class="font-serif my-1"><img class="center" src="./static/img/d904f069b70a4e4b8780c39756febb60.png" width="90%"/></p></div></section></section><section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">拒绝成为“学究”</h2>
+<blockquote>
+<p class="font-serif my-1">计算机是需要“终生学习”的领域</p>
+<p class="font-serif my-1">没有人可以完全记住所有的计算机知识</p>
+<p class="font-serif my-1">知识的学习固然重要，但解决问题的能力才是更为本质的内容</p>
+</blockquote>
+<p class="font-serif my-1">我们不希望你成为“学究”</p><div class="fragment" data-fragment-index="1"><p class="font-serif my-1">“在宿舍对室友写出的<code>scanf("%d", a)</code>，指指点点”并没有多少意义</p></div><div class="fragment" data-fragment-index="2"><p class="font-serif my-1">事实上人类并不擅长找错误</p>
+<p class="font-serif my-1">但是工具擅长：<code>gcc -Wall -Werror</code></p>
+<p class="font-serif my-1">事实上对于找错误，人类已经不如LLM了</p></div><div class="fragment" data-fragment-index="3"><p class="font-serif my-1">综合利用工具和AI，才是人类的强项</p></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">功利主义</h2>
+<p class="font-serif my-1">“独立“完成Proj1，理论上顺手绩点5.0已经不是问题了</p><div class="fragment" data-fragment-index="1"><blockquote>
+<p class="font-serif my-1">吾侪小人，朝不及夕，相时射利，皇恤厥德？庶几侥幸，不种而获。</p>
+</blockquote>
+<p class="font-serif my-1"><red>但我们不欢迎纯粹的功利主义</red></p></div><div class="fragment" data-fragment-index="2"><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">协会招新</h2>
+<p class="font-serif my-1">请阅读<a href="https://b1n8kiruzw2.feishu.cn/docx/ZtYodltERooI6DxKEGVcHJ49ntd">协会介绍</a></p>
+<p class="font-serif my-1">我们欢迎任何与我们理念一致的同学加入。</p>
+<p class="font-serif my-1">独立完成Proj2，这能够证明你能够进行独立的思考。</p></div></div></section></section>
+        </div>
+    </div>
+
+    <script src="./static/reveal/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+
+            width: 1024, height: 768,
+
+            slideNumber: 'c/t',
+            controlsTutorial: false,
+            progress: false,
+            hash: true,
+            center: false,
+            autoAnimateUnmatched: true,
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.3,
+            transitionSpeed: 'fast'
+        });
+    </script>
+</body>
+
+</html>
