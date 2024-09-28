@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.6.0...v2.7.0) (2024-09-28)
+
+
+### Features
+
+* **reval:** 添加reval ppt ([#299](https://github.com/camera-2018/hdu-cs-wiki/issues/299)) ([8ed4b79](https://github.com/camera-2018/hdu-cs-wiki/commit/8ed4b79c3866e35a1c23887ac071e1a8d7b34d36))
+
 # [2.6.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.1...v2.6.0) (2024-09-25)
 
 
