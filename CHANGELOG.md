@@ -1,3 +1,31 @@
+## [2.7.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.7.0...v2.7.1) (2024-09-28)
+
+
+### Bug Fixes
+
+* disable clean_url ([ab6eebf](https://github.com/camera-2018/hdu-cs-wiki/commit/ab6eebf0496bf93e28522d5eb634c1fc089c8523))
+
+# [2.7.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.6.0...v2.7.0) (2024-09-28)
+
+
+### Features
+
+* **reval:** 添加reval ppt ([#299](https://github.com/camera-2018/hdu-cs-wiki/issues/299)) ([8ed4b79](https://github.com/camera-2018/hdu-cs-wiki/commit/8ed4b79c3866e35a1c23887ac071e1a8d7b34d36))
+
+# [2.6.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.1...v2.6.0) (2024-09-25)
+
+
+### Features
+
+* **NekoBytes-TheMissing:** 添加了week1的内容 ([#292](https://github.com/camera-2018/hdu-cs-wiki/issues/292)) ([97fa5bf](https://github.com/camera-2018/hdu-cs-wiki/commit/97fa5bf1dd14dfa84be033255d932f8a36189cb9))
+
+## [2.5.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.5.0...v2.5.1) (2024-09-24)
+
+
+### Bug Fixes
+
+* **PyModule:ProjPersp:** 修正部分内容 ([#291](https://github.com/camera-2018/hdu-cs-wiki/issues/291)) ([d9a6712](https://github.com/camera-2018/hdu-cs-wiki/commit/d9a67124b7f27c287c290510875a7ca93a3e2d9c))
+
 # [2.5.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.4.0...v2.5.0) (2024-09-18)
 
 
