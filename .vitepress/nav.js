@@ -8,7 +8,7 @@ export function nav() {
         { text: '3.AI模块', link: '/3.AI模块/3.AI模块' },
         { text: '4.WEB模块', link: '/4.WEB模块/4.WEB模块' },
         { text: '5.安全模块', link: '/5.安全模块/5.安全模块' },
-        { text: '6.课程合集', link: 'https://hdu-cs.wiki/2.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9D%97/2.1%20NekoBytes-TheMissing/2.1%20NekoBytes-TheMissing' },
+        { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
       ]
     },
     {
