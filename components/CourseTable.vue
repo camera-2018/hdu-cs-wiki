@@ -54,7 +54,7 @@ const courses = [
         lecture: {
           title: "0. 编程环境搭建",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lecture1/Lecture1/index.html",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lecture0/Lecture0/index.html",
             recording: "",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/2.开发环境配置",
           },
