@@ -8,6 +8,7 @@ export function nav() {
         { text: '3.AI模块', link: '/3.AI模块/3.AI模块' },
         { text: '4.WEB模块', link: '/4.WEB模块/4.WEB模块' },
         { text: '5.安全模块', link: '/5.安全模块/5.安全模块' },
+        { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
       ]
     },
     {

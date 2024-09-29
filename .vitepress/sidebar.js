@@ -61,8 +61,15 @@ export function main_sidebar() {
       ]
     },
     {
-      text:'更改日志',
-      link:'/CHANGELOG'
+      text: '6.课程合集',
+      collapsed: true,
+      items: [
+        { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
+      ]
+    },
+    {
+      text: '更改日志',
+      link: '/CHANGELOG'
     }
     ,
     {
@@ -595,7 +602,7 @@ export function generateSidebar(
     previousLevel = '/',
     previousLevelDescription = '返回上一层',
     topLevelName,
-    maxDepth = 5
+    maxDepth = 5,
   } = {}
 ) {
   const sidebar = [
