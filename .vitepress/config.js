@@ -57,6 +57,10 @@ export default withMermaid({
       '/3.AI模块/': generateSidebar('3.AI模块'),
       '/4.WEB模块/': generateSidebar('4.WEB模块'),
       '/5.安全模块/': generateSidebar('5.安全模块'),
+      '/6.课程集合/': {
+        text: '6.课程合集',
+        link: 'https://hdu-cs.wiki/2.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9D%97/2.1%20NekoBytes-TheMissing/2.1%20NekoBytes-TheMissing'
+      },
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
       '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),

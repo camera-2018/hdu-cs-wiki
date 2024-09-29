@@ -61,8 +61,12 @@ export function main_sidebar() {
       ]
     },
     {
-      text:'更改日志',
-      link:'/CHANGELOG'
+      text: '6.课程合集',
+      link: 'https://hdu-cs.wiki/2.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9D%97/2.1%20NekoBytes-TheMissing/2.1%20NekoBytes-TheMissing'
+    },
+    {
+      text: '更改日志',
+      link: '/CHANGELOG'
     }
     ,
     {
@@ -595,7 +599,7 @@ export function generateSidebar(
     previousLevel = '/',
     previousLevelDescription = '返回上一层',
     topLevelName,
-    maxDepth = 5
+    maxDepth = 5,
   } = {}
 ) {
   const sidebar = [
