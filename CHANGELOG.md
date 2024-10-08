@@ -1,3 +1,10 @@
+## [2.7.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.7.1...v2.7.2) (2024-10-08)
+
+
+### Bug Fixes
+
+* **3.Unix与C:** 修复makefile缩进问题 ([#305](https://github.com/camera-2018/hdu-cs-wiki/issues/305)) ([61b4218](https://github.com/camera-2018/hdu-cs-wiki/commit/61b4218f31dde47b8acdc3b9af4e177f4d2b458d))
+
 ## [2.7.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.7.0...v2.7.1) (2024-09-28)
 
 
