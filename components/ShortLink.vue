@@ -13,12 +13,13 @@
 <script setup>
 import { ref } from 'vue';
 
+// 短链状态
 const shortUrl = ref('');
-const isLoading = ref(false); // 控制加载状态
+const isLoading = ref(false);
 
 // 生成短链的函数
 const generateShortUrl = async () => {
-  isLoading.value = true; // 开始生成，进入加载状态
+  isLoading.value = true;
   const currentUrl = window.location.href;
   const uniqueKey = hashString(currentUrl).substring(0, 8); // 生成8位固定hash
   
@@ -30,17 +31,17 @@ const generateShortUrl = async () => {
   } catch (error) {
     console.error('Error generating short URL:', error);
   } finally {
-    isLoading.value = false; // 完成生成，退出加载状态
+    isLoading.value = false;
   }
 };
 
-// 自定义的简易哈希函数（DJB2 改进版）
+// 自定义的简易哈希函数
 const hashString = (str) => {
   let hash = 5381;
   for (let i = 0; i < str.length; i++) {
     hash = (hash * 33) ^ str.charCodeAt(i);
   }
-  return (hash >>> 0).toString(16);  // 确保结果为正数，转为16进制
+  return (hash >>> 0).toString(16); // 保证为正数并转为16进制
 };
 
 // 存储短链

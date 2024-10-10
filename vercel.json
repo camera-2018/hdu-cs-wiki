@@ -4,7 +4,12 @@
   "rewrites": [
     {
       "source": "/s/:shortKey",
-      "destination": "/api/redirect/:shortKey"
+      "destination": "/api/redirect"
     }
-  ]
+  ],
+  "kv": {
+    "binding": "KV",
+    "connectionString": "@vercel/kv"
+  }
 }
+

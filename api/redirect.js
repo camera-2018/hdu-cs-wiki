@@ -1,15 +1,20 @@
-// api/redirect.js
-export default function handler(req, res) {
-  const { shortKey } = req.query || req.params; // 支持 req.params 解析路径参数
+import { kv } from '@vercel/kv';
 
-  // 模拟从数据库中查找
-  const urlDatabase = {}; // 这里需要根据实际情况使用持久化存储
-  const longUrl = urlDatabase[shortKey];
+export default async function handler(req, res) {
+  const { shortKey } = req.query;
 
-  if (longUrl) {
-    // 进行重定向
-    res.redirect(longUrl);
-  } else {
-    res.status(404).json({ error: 'Short URL not found' });
+  try {
+    // 从 Vercel KV 数据库中查找 longUrl
+    const longUrl = await kv.get(shortKey);
+
+    if (longUrl) {
+      // 如果找到对应的长网址，进行重定向
+      res.redirect(longUrl);
+    } else {
+      res.status(404).json({ error: 'Short URL not found' });
+    }
+  } catch (error) {
+    console.error('Error querying KV:', error);
+    res.status(500).json({ error: 'Failed to fetch short URL' });
   }
 }
