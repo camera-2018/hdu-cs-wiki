@@ -15,7 +15,7 @@ export default withMermaid({
   title: "HDU-CS-WIKI",
   description: "HDU 计算机科学讲义",
   lastUpdated: true,
-  cleanUrls: true,
+  cleanUrls: false,
   rewrites: {
     source: '/s/:shortKey',
     destination: '/api/redirect/:shortKey',

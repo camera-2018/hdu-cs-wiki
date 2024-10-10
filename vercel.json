@@ -1,4 +1,4 @@
 {
   "framework": "vitepress",
-  "cleanUrls": true
+  "cleanUrls": false
 }
