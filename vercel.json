@@ -1,4 +1,10 @@
 {
   "framework": "vitepress",
-  "cleanUrls": false
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/s/:shortKey",
+      "destination": "/api/redirect/:shortKey"
+    }
+  ]
 }
