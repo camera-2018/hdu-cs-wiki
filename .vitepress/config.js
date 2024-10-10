@@ -16,6 +16,9 @@ export default withMermaid({
   description: "HDU 计算机科学讲义",
   lastUpdated: true,
   cleanUrls: true,
+  rewrites: {
+    '/s/:shortKey':'/api/redirect?shortKey=:shortKey',
+  },
   head: [
     ['script', { async: "async", src: 'https://umami.hdu-cs.wiki/script.js', "data-website-id": "3f11687a-faae-463a-b863-6127a8c28301", "data-domains": "wiki.xyxsw.site,hdu-cs.wiki" }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
