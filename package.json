@@ -7,6 +7,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
+    "@vercel/kv": "^3.0.0",
     "@vueuse/core": "^10.11.0",
     "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
