@@ -1,7 +1,9 @@
 <template>
   <div>
-    <button @click="generateShortUrl">Generate Short URL for this page</button>
-    <div v-if="shortUrl">
+    <button @click="generateShortUrl" :disabled="isLoading">
+      {{ isLoading ? 'Generating...' : 'Generate Short URL for this page' }}
+    </button>
+    <div v-if="shortUrl && !isLoading">
       Short URL: <a :href="shortUrl" target="_blank">{{ shortUrl }}</a>
       <button @click="copyToClipboard">Copy URL</button>
     </div>
@@ -11,27 +13,34 @@
 <script setup>
 import { ref } from 'vue';
 
-// 短链状态
 const shortUrl = ref('');
+const isLoading = ref(false); // 控制加载状态
 
 // 生成短链的函数
-const generateShortUrl = () => {
+const generateShortUrl = async () => {
+  isLoading.value = true; // 开始生成，进入加载状态
   const currentUrl = window.location.href;
   const uniqueKey = hashString(currentUrl).substring(0, 8); // 生成8位固定hash
-  shortUrl.value = `${window.location.origin}/s/${uniqueKey}`;
-
-  // 调用API保存长网址和短链
-  storeShortUrl(currentUrl, uniqueKey);
+  
+  try {
+    const response = await storeShortUrl(currentUrl, uniqueKey);
+    if (response.success) {
+      shortUrl.value = `${window.location.origin}/s/${uniqueKey}`;
+    }
+  } catch (error) {
+    console.error('Error generating short URL:', error);
+  } finally {
+    isLoading.value = false; // 完成生成，退出加载状态
+  }
 };
 
-// 自定义的简易哈希函数（DJB2）
+// 自定义的简易哈希函数（DJB2 改进版）
 const hashString = (str) => {
   let hash = 5381;
   for (let i = 0; i < str.length; i++) {
-    // 位运算确保哈希值不会溢出
     hash = (hash * 33) ^ str.charCodeAt(i);
   }
-  return (hash >>> 0).toString(16); // 右移确保是正数，再转为16进制
+  return (hash >>> 0).toString(16);  // 确保结果为正数，转为16进制
 };
 
 // 存储短链
