@@ -140,6 +140,7 @@ export default withMermaid({
         workbox: {
           navigateFallback: '/',
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+          maximumFileSizeToCacheInBytes: 5000000,
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
