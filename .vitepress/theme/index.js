@@ -8,6 +8,7 @@ import Download from '../../components/Download.vue'
 import Bilibili from '../../components/Bilibili.vue'
 import Parallax from '../../components/Parallax.vue'
 import CourseTable from '../../components/CourseTable.vue'
+import ShortLink from '../../components/ShortLink.vue'
 import './style.css'
 import './rainbow.css'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
@@ -25,6 +26,7 @@ export default {
     ctx.app.component('Bilibili', Bilibili)
     ctx.app.component('Parallax', Parallax)
     ctx.app.component('CourseTable', CourseTable)
+    ctx.app.component('ShortLink', ShortLink)
     ctx.app.use(TwoslashFloatingVue)
     if (typeof window === 'undefined')
       return

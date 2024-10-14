@@ -1,5 +1,6 @@
 export function nav() {
   return [
+    { component: 'ShortLink', },
     { text: '首页', link: '/' },
     {
       text: '新版章节', items: [
