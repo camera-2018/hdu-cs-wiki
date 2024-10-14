@@ -99,11 +99,13 @@ const copyToClipboard = () => {
 .short-link-generator:hover {
   color: #3dd68c;
 }
-
 .loading-icon {
   display: inline-block;
-  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
   vertical-align: middle;
 }
+
 
 </style>
