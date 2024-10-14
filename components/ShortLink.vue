@@ -1,6 +1,6 @@
 <template>
-  <a class="short-link-generator">
-    <span @click="handleButtonClick" class="">
+  <a class="short-link-generator" v-if="!is_cdn_wiki">
+    <span @click="handleButtonClick">
       {{ buttonText }}
     </span>
   </a>
@@ -11,6 +11,7 @@ import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vitepress';
 
 const shortUrl = ref('');
+const is_cdn_wiki = window.location.hostname === 'xyxsw.site';
 const isCopied = ref(false);
 const buttonText = ref('生成页面短链');
 const route = useRoute();
