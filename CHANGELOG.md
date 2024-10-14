@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.8.0...v2.8.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* 允许最大缓存5M ([eb2ae27](https://github.com/camera-2018/hdu-cs-wiki/commit/eb2ae271a8cd98be46762c76f7e7dd095b553e33))
+
 # [2.8.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.7.2...v2.8.0) (2024-10-14)
 
 
