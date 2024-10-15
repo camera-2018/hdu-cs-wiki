@@ -19,15 +19,19 @@
             <a v-if="entry.lecture.links.slide" :href="entry.lecture.links.slide" target="_blank">Slide</a>
             <span v-if="
               entry.lecture.links.slide &&
-              (entry.lecture.links.recording || entry.lecture.links.note)
+              (entry.lecture.links.recording || entry.lecture.links.note || entry.lecture.links.code)
             ">
               /
             </span>
             <a v-if="entry.lecture.links.recording" :href="entry.lecture.links.recording">Recording</a>
-            <span v-if="entry.lecture.links.recording && entry.lecture.links.note">
+            <span v-if="entry.lecture.links.recording && (entry.lecture.links.note || entry.lecture.links.code)">
               /
             </span>
             <a v-if="entry.lecture.links.note" :href="entry.lecture.links.note">Note</a>
+            <span v-if="entry.lecture.links.note && entry.lecture.links.code">
+              /
+            </span>
+            <a v-if="entry.lecture.links.code" :href="entry.lecture.links.code">Code</a>
           </td>
           <td v-if="eIndex === 0">
             <a v-if="entry.lab.link" :href="entry.lab.link">{{ entry.lab.title }}</a>
@@ -54,9 +58,10 @@ const courses = [
         lecture: {
           title: "0. 编程环境搭建",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lecture0/Lecture0/index.html",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture0/Lecture0/index.html",
             recording: "https://www.bilibili.com/video/BV1rgxae2Eio/",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/2.开发环境配置",
+            code: "",
           },
         },
         lab: {
@@ -78,9 +83,10 @@ const courses = [
         lecture: {
           title: "1. Unix 与 C",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lecture1/Lecture1/index.html",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture1/Lecture1/index.html",
             recording: "https://www.bilibili.com/video/BV1rgxae2Eio/",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/3.Unix与C",
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture1/Codes/"
           },
         },
         lab: {
@@ -105,6 +111,7 @@ const courses = [
             slide: "",
             recording: "",
             note: "",
+            code: "",
           },
         },
         lab: {
@@ -124,16 +131,17 @@ const courses = [
       {
         date: "10/12",
         lecture: {
-          title: "2. 计算机的硬件视角",
+          title: "2. C 语言基础语法",
           links: {
-            slide: "",
-            recording: "",
-            note: "",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture2/Lecture2/index.html",
+            recording: "https://www.bilibili.com/video/BV1ri2dYUEG8/",
+            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/4.C语言基础语法",
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture2/Codes/"
           },
         },
         lab: {
-          title: "No lab",
-          link: "",
+          title: "Lab2: C 语言基础语法",
+          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/2.Lab2",
         },
         project: {
           title: "No Project",
@@ -148,7 +156,7 @@ const courses = [
       {
         date: "10/19",
         lecture: {
-          title: "3. C 语言基础语法",
+          title: "3. 计算机的硬件视角",
           links: {
             slide: "",
             recording: "",
