@@ -9,6 +9,7 @@
   "dependencies": {
     "@vercel/kv": "^3.0.0",
     "@vueuse/core": "^11.1.0",
+    "animejs": "^3.2.2",
     "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",

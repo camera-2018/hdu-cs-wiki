@@ -218,3 +218,15 @@ mjx-container {
 mjx-container {
   overflow-x: visible !important;
 }
+
+@media (min-width: 960px) {
+  .image-container {
+    transform: translate(0px, 0px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .wiki-logo-img > svg {
+    transform: translate(-36px, 32px) !important;
+  }
+}
