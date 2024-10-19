@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import anime from 'animejs/lib/anime.es.js'
+import anime from 'animejs'
 import { onMounted } from 'vue'
 
 onMounted(() => {
