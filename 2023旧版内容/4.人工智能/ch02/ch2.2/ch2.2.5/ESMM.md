@@ -138,7 +138,7 @@ def ESSM(dnn_feature_columns, task_type='binary', task_names=['ctr', 'ctcvr'],
 
 测试数据集：
 
-adult：[https://archive.ics.uci.edu/ml/datasets/census+income](https://archive.ics.uci.edu/dataset/20/census+income)
+adult：census+income
 
 将里面两个特征转为label，完成两个任务的预测：
 
