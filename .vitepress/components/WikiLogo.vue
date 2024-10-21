@@ -34,7 +34,7 @@ onMounted(() => {
 
 <template>
   <div class="wiki-logo-img">
-    <svg width="400" height="300" viewBox="200 100 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="364" height="300" viewBox="200 100 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip1_1_2)">
         <g clip-path="url(#clip2_1_2)">
           <path

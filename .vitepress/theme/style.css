@@ -227,6 +227,6 @@ mjx-container {
 
 @media (max-width: 640px) {
   .wiki-logo-img > svg {
-    transform: translate(-36px, 32px) !important;
+    transform: translate(-20px, 32px) !important;
   }
 }

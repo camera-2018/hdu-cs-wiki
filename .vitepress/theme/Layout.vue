@@ -4,7 +4,6 @@ import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import { useMediumZoom } from './useMediumZoom';
 const { isDark } = useData()
-
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
@@ -189,4 +188,11 @@ useMediumZoom()
 .animate.jumbo:after {
   animation: jumbo-5f0d2d0c 90s linear infinite
 }
+
+@media (max-width: 768px) {
+  .animate.jumbo:after {
+    animation: none;
+  }
+}
+
 </style>
