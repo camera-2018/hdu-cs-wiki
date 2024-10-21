@@ -158,14 +158,15 @@ const courses = [
         lecture: {
           title: "3. 计算机的硬件视角",
           links: {
-            slide: "",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture3/Lecture3/index.html",
             recording: "",
-            note: "",
+            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/5.计算机的硬件视角",
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture3/Codes/"
           },
         },
         lab: {
-          title: "No lab",
-          link: "",
+          title: "Lab3: 体验嵌入式",
+          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/3.Lab3",
         },
         project: {
           title: "No Project",
