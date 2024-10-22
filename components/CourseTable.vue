@@ -59,7 +59,7 @@ const courses = [
           title: "0. 编程环境搭建",
           links: {
             slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture0/Lecture0/index.html",
-            recording: "https://www.bilibili.com/video/BV1rgxae2Eio/",
+            recording: "https://www.bilibili.com/video/BV1rgxae2Eio",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/2.开发环境配置",
             code: "",
           },
@@ -84,9 +84,9 @@ const courses = [
           title: "1. Unix 与 C",
           links: {
             slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture1/Lecture1/index.html",
-            recording: "https://www.bilibili.com/video/BV1rgxae2Eio/",
+            recording: "https://www.bilibili.com/video/BV1rgxae2Eio",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/3.Unix与C",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture1/Codes/"
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture1/Codes"
           },
         },
         lab: {
@@ -134,9 +134,9 @@ const courses = [
           title: "2. C 语言基础语法",
           links: {
             slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture2/Lecture2/index.html",
-            recording: "https://www.bilibili.com/video/BV1ri2dYUEG8/",
+            recording: "https://www.bilibili.com/video/BV1ri2dYUEG8",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/4.C语言基础语法",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture2/Codes/"
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture2/Codes"
           },
         },
         lab: {
@@ -159,9 +159,9 @@ const courses = [
           title: "3. 计算机的硬件视角",
           links: {
             slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture3/Lecture3/index.html",
-            recording: "",
+            recording: "https://www.bilibili.com/video/BV1DJypYeEfN",
             note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/5.计算机的硬件视角",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture3/Codes/"
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture3/Codes"
           },
         },
         lab: {
