@@ -183,14 +183,15 @@ const courses = [
         lecture: {
           title: "4. 算法导论",
           links: {
-            slide: "",
+            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture4/Lecture4/index.html",
             recording: "",
-            note: "",
+            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/6.算法导论",
+            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture4/Codes"
           },
         },
         lab: {
-          title: "No lab",
-          link: "",
+          title: "Lab4: 算法入门",
+          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/4.Lab4",
         },
         project: {
           title: "No Project",
