@@ -58,9 +58,9 @@ const courses = [
         lecture: {
           title: "0. 编程环境搭建",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture0/Lecture0/index.html",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture0/Lecture0/index.html",
             recording: "https://www.bilibili.com/video/BV1rgxae2Eio",
-            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/2.开发环境配置",
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/2.开发环境配置",
             code: "",
           },
         },
@@ -83,15 +83,15 @@ const courses = [
         lecture: {
           title: "1. Unix 与 C",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture1/Lecture1/index.html",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture1/Lecture1/index.html",
             recording: "https://www.bilibili.com/video/BV1rgxae2Eio",
-            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/3.Unix与C",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture1/Codes"
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/3.Unix与C",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture1/Codes"
           },
         },
         lab: {
           title: "Lab1: Unix 与 C",
-          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/1.Lab1",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/1.Lab1",
         },
         project: {
           title: "No Project",
@@ -133,15 +133,15 @@ const courses = [
         lecture: {
           title: "2. C 语言基础语法",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture2/Lecture2/index.html",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture2/Lecture2/index.html",
             recording: "https://www.bilibili.com/video/BV1ri2dYUEG8",
-            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/4.C语言基础语法",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture2/Codes"
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/4.C语言基础语法",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture2/Codes"
           },
         },
         lab: {
           title: "Lab2: C 语言基础语法",
-          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/2.Lab2",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/2.Lab2",
         },
         project: {
           title: "No Project",
@@ -158,15 +158,15 @@ const courses = [
         lecture: {
           title: "3. 计算机的硬件视角",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture3/Lecture3/index.html",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture3/Lecture3/index.html",
             recording: "https://www.bilibili.com/video/BV1DJypYeEfN",
-            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/5.计算机的硬件视角",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture3/Codes"
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/5.计算机的硬件视角",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture3/Codes"
           },
         },
         lab: {
           title: "Lab3: 体验嵌入式",
-          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/3.Lab3",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/3.Lab3",
         },
         project: {
           title: "No Project",
@@ -183,15 +183,15 @@ const courses = [
         lecture: {
           title: "4. 算法导论",
           links: {
-            slide: "https://e1psycongroo.github.io/NekoBytes-TheMissing/Lectures/Lecture4/Lecture4/index.html",
-            recording: "",
-            note: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.1 Book/6.算法导论",
-            code: "https://e1psycongroo.github.io/NekoBytes-TheMissing/_site/resources/Lecture4/Codes"
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture4/Lecture4/index.html",
+            recording: "https://www.bilibili.com/video/BV1X9SJYGEme",
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/6.算法导论",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture4/Codes"
           },
         },
         lab: {
           title: "Lab4: 算法入门",
-          link: "/2.编程模块/2.1 NekoBytes-TheMissing/2.1.2 Lab/4.Lab4",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/4.Lab4",
         },
         project: {
           title: "No Project",
