@@ -208,18 +208,19 @@ const courses = [
         lecture: {
           title: "5. 指针与动态分配",
           links: {
-            slide: "",
-            recording: "",
-            note: "",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture5/Lecture5/index.html",
+            recording: "https://www.bilibili.com/video/BV1hMDHYyEm2",
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/7.指针与动态分配",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture5/Codes"
           },
         },
         lab: {
-          title: "No lab",
-          link: "",
+          title: "Lab5: 祖玛",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/5.Lab5",
         },
         project: {
-          title: "No Project",
-          link: "",
+          title: "Proj1: MyMalloc",
+          link: "/2.编程模块/2.1 CStart/2.1.3 Project/1.Proj1",
         }
       },
     ],
@@ -242,8 +243,8 @@ const courses = [
           link: "",
         },
         project: {
-          title: "No Project",
-          link: "",
+          title: "Proj2: Snake",
+          link: "/2.编程模块/2.1 CStart/2.1.3 Project/2.Proj2",
         }
       },
     ],
