@@ -20,19 +20,25 @@ interface Router {
     path: string;
   };
 }
-  const zoom = mediumZoom() as ZoomWithRefresh
+
 export function createMediumZoomProvider(app: App, router: Router): void {
-  if (import.meta.env.SSR)
-    return
-  const zoom = mediumZoom() as ZoomWithRefresh
-  zoom.refresh = () => {
-    zoom.detach()
-    zoom.attach(':not(a) > img:not(.no-zoom)')
-    zoom.update({ background: 'var(--vp-c-bg)' })
+  // 检查是否是 SSR 环境，如果是则返回，不执行
+  if (import.meta.env.SSR || typeof window === "undefined") {
+    return;
   }
-  app.provide(mediumZoomSymbol, zoom)
+
+  // 在客户端环境中执行 mediumZoom
+  const zoom = mediumZoom() as ZoomWithRefresh;
+  zoom.refresh = () => {
+    zoom.detach();
+    zoom.attach(':not(a) > img:not(.no-zoom)');
+    zoom.update({ background: 'var(--vp-c-bg)' });
+  };
+
+  app.provide(mediumZoomSymbol, zoom);
+
   watch(
     () => router.route.path,
     () => nextTick(() => zoom.refresh()),
-  )
+  );
 }

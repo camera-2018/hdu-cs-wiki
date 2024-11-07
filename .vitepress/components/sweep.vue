@@ -7,11 +7,7 @@ import Confetti from './Confetti.vue'
 const play = new GamePlay(9, 9, 10)
 
 const now = useNow()
-const timerMS = computed(() => {
-  const endMS = play.state.value?.endMS ?? now.value;
-  const startMS = play.state.value?.startMS ?? now.value;
-  return Math.round((Number(endMS) - Number(startMS)) / 1000);
-});
+const timerMS = computed(() => Math.round((((play.state.value?.endMS ?? +now) - (play.state.value?.startMS ?? +now)) / 1000)))
 
 useStorage('vuesweeper-state', play.state)
 const state = computed(() => play.board)

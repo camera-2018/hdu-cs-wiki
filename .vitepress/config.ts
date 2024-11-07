@@ -184,6 +184,9 @@ export default withMermaid({
           )
         }
       ]
+    },
+    ssr: {
+      noExternal: ["medium-zoom"]
     }
   }
 })
