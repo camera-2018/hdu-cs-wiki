@@ -1,55 +1,41 @@
-<template>
-  <table>
-    <thead>
-      <tr>
-        <th>周次</th>
-        <th>日期</th>
-        <th>讲座</th>
-        <th>实验</th>
-        <th>项目</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(course, cIndex) in courses" :key="cIndex">
-        <td :rowspan="totalRowSpan(course.entries)">{{ course.week }}</td>
-        <template v-for="(entry, eIndex) in course.entries">
-          <td v-if="eIndex === 0">{{ entry.date }}</td>
-          <td v-if="eIndex === 0">
-            {{ entry.lecture.title }}<br />
-            <a v-if="entry.lecture.links.slide" :href="entry.lecture.links.slide" target="_blank">Slide</a>
-            <span v-if="
-              entry.lecture.links.slide &&
-              (entry.lecture.links.recording || entry.lecture.links.note || entry.lecture.links.code)
-            ">
-              /
-            </span>
-            <a v-if="entry.lecture.links.recording" :href="entry.lecture.links.recording">Recording</a>
-            <span v-if="entry.lecture.links.recording && (entry.lecture.links.note || entry.lecture.links.code)">
-              /
-            </span>
-            <a v-if="entry.lecture.links.note" :href="entry.lecture.links.note">Note</a>
-            <span v-if="entry.lecture.links.note && entry.lecture.links.code">
-              /
-            </span>
-            <a v-if="entry.lecture.links.code" :href="entry.lecture.links.code">Code</a>
-          </td>
-          <td v-if="eIndex === 0">
-            <a v-if="entry.lab.link" :href="entry.lab.link">{{ entry.lab.title }}</a>
-            <span v-else>{{ entry.lab.title }}</span>
-          </td>
-          <td v-if="eIndex === 0">
-            <a v-if="entry.project.link" :href="entry.project.link">{{ entry.project.title }}</a>
-            <span v-else>{{ entry.project.title }}</span>
-          </td>
-      <tr v-if="eIndex < course.entries.length - 1"></tr>
-</template>
-</tr>
-</tbody>
-</table>
-</template>
+<script setup lang="ts">
+import { ref } from 'vue';
 
-<script>
-const courses = [
+interface LectureLinks {
+  slide?: string;
+  recording?: string;
+  note?: string;
+  code?: string;
+}
+
+interface Lecture {
+  title: string;
+  links: LectureLinks;
+}
+
+interface Lab {
+  title: string;
+  link?: string;
+}
+
+interface Project {
+  title: string;
+  link?: string;
+}
+
+interface Entry {
+  date: string;
+  lecture: Lecture;
+  lab: Lab;
+  project: Project;
+}
+
+interface Course {
+  week: string;
+  entries: Entry[];
+}
+
+const courses = ref < Course[] > ([
   {
     week: "0",
     entries: [
@@ -368,45 +354,81 @@ const courses = [
         }
       },
     ],
-  },
-];
-export default {
-  props: {
-    courses: {
-      type: Array,
-      default: courses,
-    },
-  },
-  methods: {
-    totalRowSpan(entries) {
-      return entries.length;
-    },
-  },
+  }]);
+
+const totalRowSpan = (entries: Entry[]): number => {
+  return entries.length;
+};
+
+const goUrl = (url: string) => {
+  window.open(url, "_blank");
 };
 </script>
+
+<template>
+  <table>
+    <thead>
+      <tr>
+        <th>周次</th>
+        <th>日期</th>
+        <th>讲座</th>
+        <th>实验</th>
+        <th>项目</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(course, cIndex) in courses" :key="cIndex">
+        <td :rowspan="totalRowSpan(course.entries)">{{ course.week }}</td>
+        <template v-for="(entry, eIndex) in course.entries" :key="eIndex">
+          <td v-if="eIndex === 0">{{ entry.date }}</td>
+          <td v-if="eIndex === 0">
+            {{ entry.lecture.title }}<br />
+            <a v-if="entry.lecture.links.slide" :href="entry.lecture.links.slide" target="_blank">Slide</a>
+            <span
+              v-if="entry.lecture.links.slide && (entry.lecture.links.recording || entry.lecture.links.note || entry.lecture.links.code)">
+              /
+            </span>
+            <a v-if="entry.lecture.links.recording" :href="entry.lecture.links.recording">Recording</a>
+            <span v-if="entry.lecture.links.recording && (entry.lecture.links.note || entry.lecture.links.code)">
+              /
+            </span>
+            <a v-if="entry.lecture.links.note" :href="entry.lecture.links.note">Note</a>
+            <span v-if="entry.lecture.links.note && entry.lecture.links.code">
+              /
+            </span>
+            <a v-if="entry.lecture.links.code" :href="entry.lecture.links.code">Code</a>
+          </td>
+          <td v-if="eIndex === 0">
+            <a v-if="entry.lab.link" :href="entry.lab.link">{{ entry.lab.title }}</a>
+            <span v-else>{{ entry.lab.title }}</span>
+          </td>
+          <td v-if="eIndex === 0">
+            <a v-if="entry.project.link" :href="entry.project.link">{{ entry.project.title }}</a>
+            <span v-else>{{ entry.project.title }}</span>
+          </td>
+        </template>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
 <style scoped>
 table {
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* 添加阴影 */
   margin: 20px 0;
-  /* 增加上下边距 */
 }
 
 th,
 td {
   border: 1px solid #ddd;
-  /* 边框颜色更淡 */
   padding: 12px 15px;
-  /* 增加填充 */
   min-width: 75px;
-  /* 最小宽度设置 */
 }
 
 th {
   font-size: 16px;
-  /* 字体大小 */
   text-align: center;
 }
 
@@ -432,13 +454,10 @@ th:nth-child(5) {
 
 td a {
   color: #007bff;
-  /* 链接颜色 */
   text-decoration: none;
-  /* 去除下划线 */
 }
 
 td a:hover {
   text-decoration: underline;
-  /* 鼠标悬停时添加下划线 */
 }
 </style>

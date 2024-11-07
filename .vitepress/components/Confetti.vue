@@ -1,16 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import confetti from 'canvas-confetti'
 import { watch } from 'vue'
 
-const props = defineProps(
-  {
-    passed: {
-      type: Boolean,
-      required: true,
-    },
+const props = defineProps({
+  passed: {
+    type: Boolean,
+    required: true,
   },
-  ['passed'],
-)
+})
 
 function congrats() {
   const defaults = {

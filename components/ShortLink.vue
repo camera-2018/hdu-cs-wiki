@@ -6,7 +6,7 @@
   </a>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vitepress';
 

@@ -23,14 +23,14 @@ const cardWindowStyle: CSSProperties = {
   width: "2em",
   margin: "auto",
 };
-const layerBase: CSSProperties = {
+const layerBase = {
   position: "absolute",
   userSelect: "none",
   "-webkit-user-drag": "none",
   height: "100%",
   width: "100%",
   transition: ".3s ease-out all",
-};
+} as CSSProperties;
 const containerStyle: CSSProperties = {
   margin: "3em auto",
   perspective: "300px",
@@ -46,16 +46,16 @@ const layer0 = computed(() => ({
 
 const layer1 = computed(() => ({
   content: "url(https://cdn.xyxsw.site/sparkles.gif)",
-  userSelect: "none",
+  userSelect: "none" as CSSProperties['userSelect'],
   "-webkit-user-drag": "none",
   transform: `translateX(${parallax.tilt * 20}px) translateY(${
     parallax.roll * 20
   }px) scale(1.33)`,
   "background-blend-mode": "overlay",
   filter: "brightness(1) contrast(1)",
-  "mix-blend-mode": "color-dodge",
+  "mix-blend-mode": "color-dodge" as CSSProperties['mixBlendMode'],
   opacity: "1",
-  position: "absolute",
+  position: "absolute" as CSSProperties['position'],
 }));
 
 const layer2 = computed(() => ({
@@ -68,7 +68,7 @@ const layer2 = computed(() => ({
   filter: "brightness(.5) contrast(1)",
   width: "100%",
   height: "100%",
-  position: "absolute",
+  position: "absolute" as CSSProperties['position'],
 }));
 
 const layer3 = computed(() => ({

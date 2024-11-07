@@ -1,20 +1,24 @@
-<script setup>
+<script setup lang="ts">
 import { GamePlay } from '../composables/logic.js'
 import { useNow, useStorage } from '@vueuse/core'
-import { watchEffect } from 'vue'
+import { watchEffect, computed } from 'vue'
 import MineBlock from './MineBlock.vue'
 import Confetti from './Confetti.vue'
 const play = new GamePlay(9, 9, 10)
 
-const now = $(useNow())
-const timerMS = $computed(() => Math.round(((play.state.value.endMS || +now) - play.state.value.startMS) / 1000))
+const now = useNow()
+const timerMS = computed(() => {
+  const endMS = play.state.value?.endMS ?? now.value;
+  const startMS = play.state.value?.startMS ?? now.value;
+  return Math.round((Number(endMS) - Number(startMS)) / 1000);
+});
 
 useStorage('vuesweeper-state', play.state)
-const state = $computed(() => play.board)
+const state = computed(() => play.board)
 
-const mineRest = $computed(() => {
-  if (!play.state.value.mineGenerated)
-    return play.mines
+const mineRest = computed(() => {
+  if (!(play.state.value?.mineGenerated ?? false))
+    return play.mines as number
   return play.blocks.reduce((a, b) => a + (b.mine ? 1 : 0) - (b.flagged ? 1 : 0), 0)
 })
 
