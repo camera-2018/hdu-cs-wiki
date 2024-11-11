@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.8.1...v2.9.0) (2024-11-11)
+
+
+### Features
+
+* all in ts ([#336](https://github.com/camera-2018/hdu-cs-wiki/issues/336)) ([9498b3b](https://github.com/camera-2018/hdu-cs-wiki/commit/9498b3b14f6254ac4a6a2b2b632671bbdb8d525c))
+
 ## [2.8.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.8.0...v2.8.1) (2024-10-14)
 
 
