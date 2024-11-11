@@ -530,7 +530,7 @@ export function chapter9_old() {
 }
 
 // Function to extract numeric prefix as an array of numbers
-function getNumericPrefix(fileName) {
+function getNumericPrefix(fileName: string): number[] {
   const match = fileName.match(/^(\d+(\.\d+)?(?:\.\d+)*)/);
   if (match) {
     return match[0].split('.').map(Number); // Convert to array of numbers
@@ -539,13 +539,17 @@ function getNumericPrefix(fileName) {
 }
 
 // Function to compare two numeric prefixes
-function compareNumericPrefixes(a, b) {
-  const prefixA = getNumericPrefix(a);
-  const prefixB = getNumericPrefix(b);
+interface NumericPrefix {
+  prefix: number[];
+}
 
-  for (let i = 0; i < Math.max(prefixA.length, prefixB.length); i++) {
-    const numA = prefixA[i] || 0;
-    const numB = prefixB[i] || 0;
+function compareNumericPrefixes(a: string, b: string): number {
+  const prefixA: NumericPrefix = { prefix: getNumericPrefix(a) };
+  const prefixB: NumericPrefix = { prefix: getNumericPrefix(b) };
+
+  for (let i = 0; i < Math.max(prefixA.prefix.length, prefixB.prefix.length); i++) {
+    const numA: number = prefixA.prefix[i] || 0;
+    const numB: number = prefixB.prefix[i] || 0;
     if (numA !== numB) {
       return numA - numB;
     }
@@ -553,34 +557,50 @@ function compareNumericPrefixes(a, b) {
   return 0;
 }
 
+/**
+ * Generate sidebar structure for a directory.
+ * 
+ * @param dir - Directory path to read.
+ * @param excludeDir - Array of directory names to exclude.
+ * @param maxDepth - Maximum depth of recursion.
+ * @param currentDepth - Current depth in recursion.
+ * @returns Array of sidebar items.
+ */
 
-export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDepth = 0) {
-  if (currentDepth >= maxDepth)
-    console.warn("the file depth is beyond the maxium depth that your sidebar can show!");
+export function generateSidebarBasic(
+  dir: string,
+  excludeDir: string[] = [],
+  maxDepth: number,
+  currentDepth: number = 0
+): SidebarItem[] {
+  if (currentDepth >= maxDepth) {
+    console.warn("The file depth is beyond the maximum depth that your sidebar can show!");
+  }
+
   const files = fs.readdirSync(dir);
   const sortedFiles = files.sort(compareNumericPrefixes);
 
-  const sidebar =
-    sortedFiles.map((file) => {
-      const fullPath = path.join(dir, file);
-      const stats = fs.statSync(fullPath);
+  const sidebar: (SidebarItem | null)[] = sortedFiles.map((file) => {
+    const fullPath = path.join(dir, file);
+    const stats = fs.statSync(fullPath);
 
-      if (stats.isDirectory()) {
-        if (excludeDir.includes(file)) return null; // Skip excluded directories
-        return {
-          text: file,
-          collapsed: true,
-          items: generateSidebarBasic(fullPath, excludeDir, maxDepth, currentDepth + 1),
-        };
-      } else if (file.endsWith('.md')) {
-        return {
-          text: file.replace('.md', ''),
-          link: `/${fullPath.replace('.md', '')}`,
-        };
-      }
-    })
+    if (stats.isDirectory()) {
+      if (excludeDir.includes(file)) return null; // Skip excluded directories
+      return {
+        text: file,
+        collapsed: true,
+        items: generateSidebarBasic(fullPath, excludeDir, maxDepth, currentDepth + 1),
+      };
+    } else if (file.endsWith('.md')) {
+      return {
+        text: file.replace('.md', ''),
+        link: `/${fullPath.replace('.md', '')}`,
+      };
+    }
+    return null;
+  });
 
-  return sidebar.filter(Boolean);
+  return sidebar.filter(Boolean) as SidebarItem[];
 }
 
 /**
@@ -595,17 +615,32 @@ export function generateSidebarBasic(dir, excludeDir = [], maxDepth, currentDept
  * @param {number} [options.maxDepth=5] - Maximum depth of directories to include.
  * @returns {Object[]} Sidebar configuration array.
  */
+interface SidebarOptions {
+  excludeDir?: string[];
+  previousLevel?: string;
+  previousLevelDescription?: string;
+  topLevelName?: string;
+  maxDepth?: number;
+}
+
+interface SidebarItem {
+  text: string;
+  link?: string;
+  collapsed?: boolean;
+  items?: SidebarItem[];
+}
+
 export function generateSidebar(
-  dir,
+  dir: string,
   {
     excludeDir = ['static'],
     previousLevel = '/',
     previousLevelDescription = '返回上一层',
-    topLevelName,
+    topLevelName = '',
     maxDepth = 5,
-  } = {}
-) {
-  const sidebar = [
+  }: SidebarOptions = {}
+): SidebarItem[] {
+  const sidebar: SidebarItem[] = [
     {
       text: previousLevelDescription,
       link: previousLevel,

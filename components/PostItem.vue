@@ -11,7 +11,7 @@
           <a
             class="split"
             v-if="Author"
-            :href="withBase(AuthorURL)"
+            :href="withBase(AuthorURL || '')"
             @click.stop
             target="_blank"
             >{{ Author }}</a
@@ -30,7 +30,7 @@
       <a
         class="split"
         v-if="Author"
-        :href="withBase(AuthorURL)"
+        :href="withBase(AuthorURL || '')"
         @click.stop
         target="_blank"
         >{{ Author }}</a
@@ -41,7 +41,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { withBase } from "vitepress";
 import { computed } from "vue";
 import { useWindowSize } from "@vueuse/core";

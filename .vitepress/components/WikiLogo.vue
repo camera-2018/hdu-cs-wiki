@@ -8,7 +8,7 @@ onMounted(() => {
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutCubic',
     duration: 1500,
-    delay(el, i) {
+    delay(_el: any, i: any) {
       return i * 300
     },
     direction: 'alternate',
