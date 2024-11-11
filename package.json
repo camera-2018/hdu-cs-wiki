@@ -32,7 +32,8 @@
     "unplugin-vue-macros": "^2.13.3",
     "vite-plugin-pwa": "^0.20.5",
     "vitepress": "^1.5.0",
-    "vitepress-plugin-mermaid": "^2.0.17"
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-plugin-nprogress": "^0.0.4"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.24.4",

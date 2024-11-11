@@ -186,7 +186,7 @@ export default withMermaid({
       ]
     },
     ssr: {
-      noExternal: ["medium-zoom"]
+      noExternal: ["medium-zoom",'vitepress-plugin-nprogress']
     }
   }
 })
