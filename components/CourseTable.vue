@@ -219,14 +219,15 @@ const courses = ref < Course[] > ([
         lecture: {
           title: "6. C 语言项目实现",
           links: {
-            slide: "",
-            recording: "",
-            note: "",
+            slide: "https://datawhalechina.github.io/cstart/Lectures/Lecture6/Lecture6/index.html",
+            recording: "https://www.bilibili.com/video/BV1PtmtYLEoo",
+            note: "/2.编程模块/2.1 CStart/2.1.1 Book/8.C语言项目实现",
+            code: "https://datawhalechina.github.io/cstart/_site/resources/Lecture6/Codes"
           },
         },
         lab: {
-          title: "No lab",
-          link: "",
+          title: "Lab6: 使用工具",
+          link: "/2.编程模块/2.1 CStart/2.1.2 Lab/6.Lab6",
         },
         project: {
           title: "Proj2: Snake",
