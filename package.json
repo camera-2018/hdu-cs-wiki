@@ -13,7 +13,7 @@
     "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
-    "markdown-it-pangu": "^1.0.2",
+    "markdown-it-pangu": "^1.0.0",
     "medium-zoom": "^1.1.0",
     "sitemap": "^8.0.0"
   },

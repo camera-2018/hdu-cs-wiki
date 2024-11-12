@@ -1,0 +1,109 @@
+# Lab 1: 创建调查问卷的外观
+
+## 目标：
+在本次Lab中，我们将学习如何使用 **HTML** 创建一个简单的调查问卷界面。这个调查问卷将包括：
+- 输入框（如：姓名）
+- 单选按钮（如：性别选择）
+- 复选框（如：兴趣爱好）
+- 提交按钮
+
+你将学会如何用基本的HTML标签搭建网页的表单结构，CSS会保持简洁，仅用来稍微美化一下外观。
+
+---
+
+## 第一步：创建一个HTML文件
+
+1. 创建一个新的文件，命名为 `survey.html`。
+2. 打开文件并将以下基础HTML代码复制粘贴到文件中：
+
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>调查问卷</title>
+  <style>
+    /* 基础的样式设置 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h1>调查问卷</h1>
+
+    <!-- 姓名输入框 -->
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" placeholder="请输入您的姓名">
+
+    <!-- 年龄输入框 -->
+    <label for="age">年龄：</label>
+    <input type="number" id="age" name="age" placeholder="请输入您的年龄">
+
+    <!-- 性别选择（单选按钮） -->
+    <label>性别：</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">男</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">女</label>
+
+    <!-- 兴趣选择（复选框） -->
+    <label>兴趣爱好：</label>
+    <input type="checkbox" id="sports" name="hobby" value="sports">
+    <label for="sports">运动</label>
+    <input type="checkbox" id="reading" name="hobby" value="reading">
+    <label for="reading">阅读</label>
+
+    <!-- 提交按钮 -->
+    <button type="submit">提交</button>
+  </form>
+
+</body>
+</html>
+```
+
+---
+
+### 代码解释：
+
+1. **`<form>`** 标签：用于定义一个表单，表单中包含输入字段和按钮。
+2. **输入框**：
+    - **`<input type="text">`**：创建一个文本输入框，供用户输入姓名。
+    - **`<input type="number">`**：创建一个数字输入框，供用户输入年龄。
+3. **单选按钮**（性别选择）：
+    - **`<input type="radio">`**：单选按钮，允许用户在多个选项中选择一个性别。
+4. **复选框**（兴趣爱好）：
+    - **`<input type="checkbox">`**：复选框，允许用户选择多个兴趣爱好。
+5. **提交按钮**：
+    - **`<button type="submit">`**：提交按钮，用户填写完表单后点击提交。
+
+## 第二步：运行HTML文件
+
+根据Doc里的讲解，在你的浏览器里显示你做的页面，然后截图保存。
+
+---
+
+## 总结
+通过本次Lab，你学习了如何使用HTML标签创建基本的表单界面，包括输入框、单选按钮、复选框和提交按钮。虽然这次没有添加JavaScript功能，但你已经为将来实现交互功能打下了基础。
+
