@@ -61,7 +61,7 @@
     * ​`Math.floor(Math.random() * fruits.length)`​：使用随机数从 `fruits`​ 数组中选取一个水果。
     * ​`res.end(\`​<html>...</html>\`)`：返回包含随机水果名称的 HTML 页面。在这里，我们用模板字符串（\`​...\`）来插入随机选取的水果名称。
 5. 监听端口并启动服务器
-    `server.listen(3000, '127.0.0.1', () => {...})`​：让服务器监听 3000 端口，并在启动成功后打印“Server is running at http://localhost:3000”。
+    `server.listen(3000, '127.0.0.1', () => {...})`​：让服务器监听 3000 端口，并在启动成功后打印“Server is running at `http://localhost:3000`”。
 
 ## 第二步：运行服务器并查看 HTML 页面
 
