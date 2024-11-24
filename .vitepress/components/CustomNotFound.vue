@@ -6,7 +6,11 @@ import { useLangs } from 'vitepress/dist/client/theme-default/composables/langs'
 import Sweep from './sweep.vue';
 
 const { site, theme } = useData()
-const { localeLinks } = useLangs({ removeCurrent: false })
+interface LocaleLink {
+  link: string;
+}
+
+const localeLinks = useLangs({ removeCurrent: false }) as { value: LocaleLink[] }
 
 const root = ref('/')
 onMounted(() => {

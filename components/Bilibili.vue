@@ -10,14 +10,14 @@
   />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineProps } from "vue";
 const { bvid } = defineProps({
   bvid: {
     type: String,
     default: "BV1GJ411x7h7",
     required: true,
-    validator: (value) => {
+    validator: (value: string) => {
       return value.trim() !== "";
     },
   },

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 const props = defineProps(["modelValue", "pageTotal"]);
 const emit = defineEmits(["update:modelValue"]);
@@ -18,7 +18,7 @@ const setPageNum = (pageNum) => {
 };
 
 const genPageArray = (current, total, size) => {
-  let arr = [];
+  let arr: (number | string)[] = [];
   if (total < size + 2) {
     arr = Array.from({ length: total }, (v, k) => k + 1);
   } else if (current < size - 2) {

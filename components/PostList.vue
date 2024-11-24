@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from "vue";
 import Pagination from "./Pagination.vue";
 import PostItem from "./PostItem.vue";

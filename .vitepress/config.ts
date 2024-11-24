@@ -68,6 +68,7 @@ export default withMermaid({
       '/2023旧版内容/8.基础学科/': chapter8_old(),
       '/2023旧版内容/9.计算机网络/': chapter9_old(),
     },
+    aside: true,
     outline: [2, 6],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/camera-2018/hdu-cs-wiki' }
@@ -140,7 +141,7 @@ export default withMermaid({
         workbox: {
           navigateFallback: '/',
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-          maximumFileSizeToCacheInBytes: 5000000,
+          maximumFileSizeToCacheInBytes: 10000000,
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -183,6 +184,9 @@ export default withMermaid({
           )
         }
       ]
+    },
+    ssr: {
+      noExternal: ["medium-zoom",'vitepress-plugin-nprogress']
     }
   }
 })

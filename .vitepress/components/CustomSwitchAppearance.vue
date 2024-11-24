@@ -14,7 +14,6 @@ onMounted(() => {
   checked.value = document.documentElement.classList.contains('dark')
 })
 
-// @ts-expect-error: Transition API
 const isAppearanceTransition = document.startViewTransition &&
   !window.matchMedia(`(prefers-reduced-motion: reduce)`).matches 
 
@@ -56,7 +55,6 @@ function useAppearance() {
       Math.max(y, innerHeight - y),
     )
 
-    // @ts-expect-error: Transition API
     const transition = document.startViewTransition(() => {
       setClass((isDark = !isDark))
 

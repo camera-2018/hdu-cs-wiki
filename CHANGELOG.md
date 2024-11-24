@@ -1,3 +1,24 @@
+# [2.11.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.10.0...v2.11.0) (2024-11-19)
+
+
+### Features
+
+* **Web_module:** Add Vue & Express Intro Courses in Chapter 4 ([#340](https://github.com/camera-2018/hdu-cs-wiki/issues/340)) ([37c520e](https://github.com/camera-2018/hdu-cs-wiki/commit/37c520eaf3f305f242ae44731b7150734d1b7d16))
+
+# [2.10.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.9.0...v2.10.0) (2024-11-11)
+
+
+### Features
+
+* nprogress ([da2d22d](https://github.com/camera-2018/hdu-cs-wiki/commit/da2d22d5400dd0c9bfae27bccd1c2f6513a9c0f5))
+
+# [2.9.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.8.1...v2.9.0) (2024-11-11)
+
+
+### Features
+
+* all in ts ([#336](https://github.com/camera-2018/hdu-cs-wiki/issues/336)) ([9498b3b](https://github.com/camera-2018/hdu-cs-wiki/commit/9498b3b14f6254ac4a6a2b2b632671bbdb8d525c))
+
 ## [2.8.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.8.0...v2.8.1) (2024-10-14)
 
 

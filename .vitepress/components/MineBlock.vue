@@ -1,13 +1,10 @@
-<script setup>
-defineProps(
-  {
-    block: {
-      type: Object,
-      required: true,
-    },
+<script setup lang="ts">
+defineProps({
+  block: {
+    type: Object,
+    required: true,
   },
-  ['block']
-)
+})
 
 const numberColors = [
   'text-transparent',
@@ -21,7 +18,14 @@ const numberColors = [
   'text-teal-500',
 ]
 
-function getBlockClass(block) {
+interface Block {
+  flagged: boolean;
+  revealed: boolean;
+  mine: boolean;
+  adjacentMines: number;
+}
+
+function getBlockClass(block: Block): string {
   if (block.flagged)
     return 'bg-gray-500-10'
   if (!block.revealed)
@@ -54,7 +58,7 @@ function getBlockClass(block) {
 <template>
   <button
     style="display: flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2rem; margin: 1px; border: 0.5px solid rgba(166, 166, 166, 0.1);"
-    :class="getBlockClass(block)"
+    :class="getBlockClass(block as Block)"
   >
     <template v-if="block.flagged">
       <div class="text-red button-block">

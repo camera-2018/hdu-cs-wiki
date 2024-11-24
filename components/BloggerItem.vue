@@ -1,38 +1,40 @@
-<script setup>
+<script setup lang="ts">
+import { defineProps } from 'vue';
+
 defineProps({
   size: String,
   member: Object,
   blank: Boolean,
 });
 
-const goUrl = (url) => {
+const goUrl = (url: string) => {
   window.open(url, "_blank");
 };
 </script>
 
 <template>
   <article class="VPTeamMembersItem" :class="[size ?? 'medium']">
-    <div class="profile" @click="goUrl(member.url)" v-if="!blank">
+    <div class="profile" @click="goUrl((member as any).url)" v-if="!blank">
       <figure class="avatar">
-        <img class="avatar-img" :src="member.avatar" :alt="member.name" />
+        <img class="avatar-img" :src="(member as any).avatar" :alt="(member as any).name" />
       </figure>
       <div class="data">
         <div class="author_name">
-          {{ member.name }}
+          {{ (member as any).name }}
         </div>
-        <p v-if="member.title || member.org" class="affiliation">
-          <span v-if="member.title" class="title">
-            {{ member.title }}
+        <p v-if="(member as any).title || (member as any).org" class="affiliation">
+          <span v-if="(member as any).title" class="title">
+            {{ (member as any).title }}
           </span>
-          <span v-if="member.title && member.org" class="at"> @ </span>
+          <span v-if="(member as any).title && (member as any).org" class="at"> @ </span>
         </p>
-        <p v-if="member.description" class="desc" @click.stop>
-          {{ member.description }}
+        <p v-if="(member as any).description" class="desc" @click.stop>
+          {{ (member as any).description }}
         </p>
-        <div v-if="member.url" class="links">
+        <div v-if="(member as any).url" class="links">
           <svg
-            v-if="member.rss"
-            @click="goUrl(member.rss)"
+            v-if="(member as any).rss"
+            @click="goUrl((member as any).rss)"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -179,7 +181,7 @@ const goUrl = (url) => {
   color: var(--vp-c-brand-lighter);
 }
 
-.affiliation {
+affiliation {
   margin: 0;
   font-weight: 500;
   color: var(--vp-c-text-2);
