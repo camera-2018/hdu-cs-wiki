@@ -6,6 +6,7 @@ import { useMediumZoom } from './useMediumZoom'
 import { useRoute } from 'vitepress/dist/client/app/router'
 
 const { isDark } = useData()
+const route = useRoute()
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
