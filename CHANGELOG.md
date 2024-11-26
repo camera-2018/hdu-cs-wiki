@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.12.0...v2.13.0) (2024-11-26)
+
+
+### Features
+
+* add anime when route switch ([4ff5d01](https://github.com/camera-2018/hdu-cs-wiki/commit/4ff5d0193eb6d6d9e1b6d16146a1946ae4d26446))
+
 # [2.12.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.11.0...v2.12.0) (2024-11-26)
 
 
