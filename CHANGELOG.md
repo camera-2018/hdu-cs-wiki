@@ -1,3 +1,10 @@
+## [2.13.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.0...v2.13.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* 生成页面短链接暗色样式 ([7d0ce38](https://github.com/camera-2018/hdu-cs-wiki/commit/7d0ce38e395fc41dddd2a47fc4a5a9909d4a9326))
+
 # [2.13.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.12.0...v2.13.0) (2024-11-26)
 
 
