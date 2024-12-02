@@ -31,7 +31,8 @@ export function nav() {
     {
       text: '友链', items:
         [
-          { text: '杭电导航', link: 'https://wiki.hduhelp.com' },
+          { text: '杭电导航（生活类）', link: 'https://wiki.hduhelp.com' },
+          { text: '西邮 Wiki（生活类）', link: 'https://wiki.cooo.site' },
         ]
     },
   ]
