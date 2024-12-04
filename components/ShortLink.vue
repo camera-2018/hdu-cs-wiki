@@ -91,7 +91,7 @@ onMounted(() => {
   line-height: 64px;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 245, 0.86);
+  color: rgba(0, 0, 0, 0.86);
   transition: color 0.25s;
   pointer-events: auto;
   cursor: pointer;
@@ -99,6 +99,10 @@ onMounted(() => {
 
 .short-link-generator:hover {
   color: #3dd68c;
+}
+
+.dark .short-link-generator {
+  color: rgba(255, 255, 245, 0.86);
 }
 
 @media (max-width: 768px) {
