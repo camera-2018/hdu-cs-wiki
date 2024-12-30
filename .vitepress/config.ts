@@ -8,9 +8,10 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { nav } from './nav.js';
 import { chapter2_old, chapter3_old, chapter4_old, chapter5_old, chapter6_old, chapter7_old, chapter8_old, chapter9_old, generateSidebar, main_sidebar, main_sidebar_old } from './sidebar.js';
+import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
-export default withMermaid({
+export default withMermaid(defineConfig({
   lang: 'zh-CN',
   title: "HDU-CS-WIKI",
   description: "HDU 计算机科学讲义",
@@ -186,8 +187,8 @@ export default withMermaid({
       ]
     },
     ssr: {
-      noExternal: ["medium-zoom",'vitepress-plugin-nprogress']
+      noExternal: ["medium-zoom", 'vitepress-plugin-nprogress']
     }
   }
-})
+}))
 

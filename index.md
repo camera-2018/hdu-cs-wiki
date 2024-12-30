@@ -5,7 +5,7 @@ layout: home
 hero:
   name: HDU-CS-WIKI
   text: HDU计算机科学讲义
-  tagline: 如果你有一些建议或者想要完善此 WIKI ，请点击下方的 GitHub 按钮查看我们的仓库提交 issue 或者 PR ！
+  tagline: 如果你有一些建议或者想要完善此 WIKI ，请点击右上角 GitHub 按钮查看我们的仓库提交 issue 或者 PR ！
   # actions:
   #   - theme: brand
   #     text: 开始
