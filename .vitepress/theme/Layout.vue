@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import { nextTick, provide, onMounted, watch } from 'vue'
 import { useMediumZoom } from './useMediumZoom'
-import { useRoute } from 'vitepress/dist/client/app/router'
+import { useRoute } from 'vitepress'
 
 const { isDark } = useData()
 const route = useRoute()
