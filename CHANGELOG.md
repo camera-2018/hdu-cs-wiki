@@ -1,3 +1,10 @@
+## [2.13.3](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.2...v2.13.3) (2025-01-11)
+
+
+### Bug Fixes
+
+* update ci lock py39 ([1694399](https://github.com/camera-2018/hdu-cs-wiki/commit/1694399cf96bd2b6befe433661fbd8b42b6f24a4))
+
 ## [2.13.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.1...v2.13.2) (2025-01-11)
 
 
