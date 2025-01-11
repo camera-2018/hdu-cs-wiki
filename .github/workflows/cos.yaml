@@ -19,17 +19,22 @@ jobs:
       with:
         node-version: '20.13.1'
       
+    - name: Setup Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
     - name: install doc dependencies
       run: sudo npm i
-    
-    - name: build
-      run: |
-        npm run docs:build
     
     - name: install coscmd and tccli
       run: |
         sudo pip3 install coscmd
         sudo pip3 install tccli
+    
+    - name: build
+      run: |
+        npm run docs:build
 
     - name: confirgure coscmd and tccli
       env:
