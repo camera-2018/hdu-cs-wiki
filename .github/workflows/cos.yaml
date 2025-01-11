@@ -29,8 +29,8 @@ jobs:
     
     - name: install coscmd and tccli
       run: |
-        sudo pip3 install coscmd
-        sudo pip3 install tccli
+        python3.9 -m pip install coscmd
+        python3.9 -m pip install tccli
     
     - name: build
       run: |
