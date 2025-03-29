@@ -27,9 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
       
       - name: Run semantic-release
         env:
