@@ -1,3 +1,10 @@
+# [2.14.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.4...v2.14.0) (2025-05-18)
+
+
+### Features
+
+* ci ghcr ([9524dcb](https://github.com/camera-2018/hdu-cs-wiki/commit/9524dcb42206a0a311ec67472185124e07aa4815))
+
 ## [2.13.4](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.3...v2.13.4) (2025-03-29)
 
 
