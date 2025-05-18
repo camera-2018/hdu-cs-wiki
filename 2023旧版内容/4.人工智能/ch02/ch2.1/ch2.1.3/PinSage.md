@@ -250,7 +250,7 @@ class ItemToItemBatchSampler(IterableDataset):
 
 ### 邻居节点采样
 
-再得到训练样本之后，接下来主要是在训练图上，为heads节点采用其邻居节点。在DGL中主要是通过sampler_module.NeighborSampler来实现，具体地，通过**sample_blocks**方法回溯生成各层卷积需要的block，即所有的邻居集合。其中需要注意的几个地方，基于随机游走的重要邻居采样，DGL已经实现，具体参考**[dgl.sampling.PinSAGESampler](https://docs.dgl.ai/generated/dgl.sampling.PinSAGESampler.html)**，其次避免信息泄漏，代码中，先将head → tails,head → neg_tails从frontier中先删除，再生成block。
+再得到训练样本之后，接下来主要是在训练图上，为heads节点采用其邻居节点。在DGL中主要是通过sampler_module.NeighborSampler来实现，具体地，通过**sample_blocks**方法回溯生成各层卷积需要的block，即所有的邻居集合。其中需要注意的几个地方，基于随机游走的重要邻居采样，DGL已经实现，具体参考dgl.sampling.PinSAGESampler，其次避免信息泄漏，代码中，先将head → tails,head → neg_tails从frontier中先删除，再生成block。
 
 ```python
 class NeighborSampler(object):  # 图卷积的邻居采样
