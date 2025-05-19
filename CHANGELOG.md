@@ -1,3 +1,10 @@
+# [2.15.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.14.0...v2.15.0) (2025-05-19)
+
+
+### Features
+
+* ci add arm64 ([0269720](https://github.com/camera-2018/hdu-cs-wiki/commit/026972057d67dbf7c17f44b77f1a40f6e9c6a4ae))
+
 # [2.14.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.13.4...v2.14.0) (2025-05-18)
 
 
