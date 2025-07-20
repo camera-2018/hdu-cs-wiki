@@ -34,13 +34,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.11.0'
+          node-version: '22.17.1'
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: bun i 
 
       - name: Build static files
-        run: npm run docs:build
+        run: bun run docs:build
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
