@@ -1,3 +1,10 @@
+# [2.18.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.17.0...v2.18.0) (2025-07-20)
+
+
+### Features
+
+* use edgeone ([589cd12](https://github.com/camera-2018/hdu-cs-wiki/commit/589cd12c21b2e6101df9cbe85593832a9bbb8f18))
+
 # [2.17.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.16.0...v2.17.0) (2025-07-20)
 
 
