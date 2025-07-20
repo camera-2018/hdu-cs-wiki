@@ -1,3 +1,10 @@
+# [2.19.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.18.0...v2.19.0) (2025-07-20)
+
+
+### Features
+
+* rm cos ([f7edde8](https://github.com/camera-2018/hdu-cs-wiki/commit/f7edde8878dcbc351aa22ba8d54064f6dbfdfe51))
+
 # [2.18.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.17.0...v2.18.0) (2025-07-20)
 
 
