@@ -1,3 +1,10 @@
+# [2.17.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.16.0...v2.17.0) (2025-07-20)
+
+
+### Features
+
+* switch to bun update cos ([ddda3fe](https://github.com/camera-2018/hdu-cs-wiki/commit/ddda3fe94dad1722804a28c6aed37a909e954520))
+
 # [2.16.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.15.0...v2.16.0) (2025-07-20)
 
 
