@@ -1,34 +1,172 @@
 <script setup lang="ts">
-import anime from 'animejs'
+import { animate, stagger } from 'animejs'
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  const t = anime.timeline({
-    targets: '.wiki-logo-path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutCubic',
-    duration: 1500,
-    delay(_el: any, i: any) {
-      return i * 300
-    },
-    direction: 'alternate',
-    loop: true,
-    endDelay: 2000,
+  console.log('WikiLogo mounted')
+  
+  // 初始化SVG路径
+  const paths = document.querySelectorAll('.wiki-logo-path') as NodeListOf<SVGPathElement>
+  console.log('Found paths:', paths.length)
+  
+  paths.forEach((path, index) => {
+    const length = path.getTotalLength()
+    const strokeColor = path.getAttribute('stroke')
+    
+    // 设置初始状态
+    path.style.strokeDasharray = `${length}`
+    path.style.strokeDashoffset = `${length}`
+    path.style.fill = 'transparent'
+    
+    // 设置CSS变量供动画使用
+    path.style.setProperty('--fill-color', strokeColor || '#000')
+    path.style.setProperty('--fill-opacity', '0')
+    
+    console.log(`Path ${index}: length=${length}, stroke=${strokeColor}`)
   })
 
-  t.add(
-    {
-      targets: '.wiki-logo-path',
-      fill(el: HTMLElement) {
-        return el.getAttribute('stroke')
+  // 创建描边动画
+  function createStrokeAnimation() {
+    console.log('Starting stroke animation')
+    
+    return animate('.wiki-logo-path', {
+      strokeDashoffset: { to: 0 },
+      duration: 1500,
+      delay: stagger(300),
+      ease: 'inOutCubic',
+      onComplete: () => {
+        console.log('Stroke animation completed')
+        setTimeout(() => {
+          createFillAnimation()
+        }, 100)
+      }
+    })
+  }
+
+  // 创建填充动画（使用CSS动画）
+  function createFillAnimation() {
+    console.log('Starting fill animation with CSS')
+    
+    paths.forEach((path, index) => {
+      const strokeColor = path.getAttribute('stroke')
+      
+      setTimeout(() => {
+        console.log(`Path ${index}: starting CSS fill animation`)
+        
+        // 直接设置fill属性
+        path.style.fill = strokeColor || '#000'
+        
+        // 添加CSS动画类
+        path.classList.add('fill-animation')
+        
+      }, index * 300)
+    })
+    
+    // 填充完成后，等待2秒开始消失填充
+    setTimeout(() => {
+      console.log('All fill animations completed, starting fade out')
+      setTimeout(() => {
+        createFillFadeAnimation()
+      }, 2000)
+    }, 800 + (paths.length - 1) * 300)
+  }
+
+  // 创建填充消失动画
+  function createFillFadeAnimation() {
+    console.log('Starting fill fade out animation')
+    
+    paths.forEach((path, index) => {
+      setTimeout(() => {
+        console.log(`Path ${index}: starting fill fade out`)
+        
+        // 移除填充动画，添加消失动画
+        path.classList.remove('fill-animation')
+        path.classList.add('fill-fade-out')
+        
+      }, index * 300)
+    })
+    
+    // 填充消失完成后，开始线段缩回
+    setTimeout(() => {
+      console.log('All fill fade animations completed, starting stroke shrink')
+      createStrokeShrinkAnimation()
+    }, 800 + (paths.length - 1) * 300)
+  }
+
+  // 创建线段缩回动画
+  function createStrokeShrinkAnimation() {
+    console.log('Starting stroke shrink animation')
+    
+    animate('.wiki-logo-path', {
+      strokeDashoffset(el: SVGPathElement) {
+        return el.getTotalLength()
       },
       duration: 1500,
-      easing: 'easeInSine',
-    },
-    1,
-  )
+      delay: stagger(300),
+      ease: 'inOutCubic',
+      onComplete: () => {
+        console.log('Stroke shrink animation completed, restarting cycle')
+        // 缩回完成后，立即开始下一个循环
+        resetAndRestart()
+      }
+    })
+  }
+
+  // 重置并重新开始动画
+  function resetAndRestart() {
+    console.log('Resetting animation')
+    
+    paths.forEach(path => {
+      const length = path.getTotalLength()
+      path.style.strokeDashoffset = `${length}`
+      path.style.fill = 'transparent'
+      path.classList.remove('fill-animation', 'fill-fade-out')
+    })
+    
+    // 立即开始下一个循环，不添加延迟
+    createStrokeAnimation()
+  }
+
+  // 开始动画
+  createStrokeAnimation()
 })
 </script>
+
+<style scoped>
+/* CSS动画用于填充效果 */
+@keyframes fillIn {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fillOut {
+  from {
+    fill-opacity: 1;
+  }
+  to {
+    fill-opacity: 0;
+  }
+}
+
+.fill-animation {
+  animation: fillIn 0.8s ease-in-out forwards;
+}
+
+.fill-fade-out {
+  animation: fillOut 0.8s ease-in-out forwards;
+}
+
+/* 确保SVG路径初始状态 */
+.wiki-logo-path {
+  fill: transparent;
+  fill-opacity: 0;
+  transition: fill-opacity 0.3s ease;
+}
+</style>
 
 
 

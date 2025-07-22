@@ -1,14 +1,17 @@
 name: Build and Push Docker Image to GHCR
 
 on:
-  push:
-    branches:
-      - master
+  workflow_run:
+    workflows: ["Release"]
+    types:
+      - completed
   workflow_dispatch:  # 允许手动触发
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    # 只有当 release 工作流成功完成时才执行
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     permissions:
       contents: read
@@ -17,6 +20,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整的 git 历史，包括标签
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -34,13 +39,29 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.11.0'
+          node-version: '22.17.1'
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: bun i 
 
       - name: Build static files
-        run: npm run docs:build
+        run: bun run docs:build
+
+      - name: Get version
+        id: get_version
+        run: |
+          # 获取最新的 semantic-release 标签作为版本号
+          VERSION=$(git describe --tags --abbrev=0 2>/dev/null)
+          if [ -z "$VERSION" ]; then
+            echo "No version tag found, using 'latest'"
+            VERSION="latest"
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Found version: $VERSION"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -51,6 +72,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.version }}
             ghcr.io/${{ github.repository }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max 

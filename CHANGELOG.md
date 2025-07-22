@@ -1,3 +1,38 @@
+# [2.20.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.19.0...v2.20.0) (2025-07-20)
+
+
+### Features
+
+* new ghcr tags ([ad97c06](https://github.com/camera-2018/hdu-cs-wiki/commit/ad97c062d87a6bc590190220cc6b1fe59f380d26))
+
+# [2.19.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.18.0...v2.19.0) (2025-07-20)
+
+
+### Features
+
+* rm cos ([f7edde8](https://github.com/camera-2018/hdu-cs-wiki/commit/f7edde8878dcbc351aa22ba8d54064f6dbfdfe51))
+
+# [2.18.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.17.0...v2.18.0) (2025-07-20)
+
+
+### Features
+
+* use edgeone ([589cd12](https://github.com/camera-2018/hdu-cs-wiki/commit/589cd12c21b2e6101df9cbe85593832a9bbb8f18))
+
+# [2.17.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.16.0...v2.17.0) (2025-07-20)
+
+
+### Features
+
+* switch to bun update cos ([ddda3fe](https://github.com/camera-2018/hdu-cs-wiki/commit/ddda3fe94dad1722804a28c6aed37a909e954520))
+
+# [2.16.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.15.0...v2.16.0) (2025-07-20)
+
+
+### Features
+
+* switch to bun ([d207dd4](https://github.com/camera-2018/hdu-cs-wiki/commit/d207dd47a96824a3b41b6d27ad2ae620debc8743))
+
 # [2.15.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.14.0...v2.15.0) (2025-05-19)
 
 

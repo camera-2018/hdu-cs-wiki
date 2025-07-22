@@ -6,3 +6,9 @@ cache
 dev-dist
 package-lock.json
 .DS_Store
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+!.edgeone/project.json
+.tef_dist/*
+  
