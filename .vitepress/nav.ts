@@ -64,13 +64,14 @@ export function nav() {
           { text: '9.计算机网络', link: '9.计算机网络/9.计算机网络' },
         ]
     },
-    { text: '博客', link: '/blog/' },
+    { text: '博客', link: '/blog/' },https://cs-survive-henu.github.io/
     { text: 'Wiki史', link: '/wiki史' },
     {
       text: '友链', items:
         [
           { text: '杭电导航（生活类）', link: 'https://wiki.hduhelp.com' },
           { text: '西邮 Wiki（生活类）', link: 'https://wiki.cooo.site' },
+          { text: '河南大学计算机生存指北（技术类）', link: 'https://cs-survive-henu.github.io/' },
         ]
     },
   ] as NavItem[]
