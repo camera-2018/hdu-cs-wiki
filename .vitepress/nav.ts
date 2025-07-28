@@ -71,6 +71,7 @@ export function nav() {
         [
           { text: '杭电导航（生活类）', link: 'https://wiki.hduhelp.com' },
           { text: '西邮 Wiki（生活类）', link: 'https://wiki.cooo.site' },
+          { text: '河南大学计算机生存指北（技术类）', link: 'https://cs-survive-henu.github.io/' },
         ]
     },
   ] as NavItem[]
