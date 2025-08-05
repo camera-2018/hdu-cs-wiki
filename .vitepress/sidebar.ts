@@ -61,17 +61,17 @@ export function main_sidebar() {
       ]
     },
     {
-      text: '7.底层模块',
-      collapsed: true,
-      items: [
-        { text: '7.底层模块', link: '/7.底层模块/7.底层模块' },
-      ]
-    },
-    {
       text: '6.课程合集',
       collapsed: true,
       items: [
         { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
+      ]
+    },
+    {
+      text: '7.底层模块',
+      collapsed: true,
+      items: [
+        { text: '7.底层模块', link: '/7.底层模块/7.底层模块' },
       ]
     },
     {
