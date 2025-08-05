@@ -58,6 +58,7 @@ export default withMermaid(defineConfig({
       '/3.AI模块/': generateSidebar('3.AI模块'),
       '/4.WEB模块/': generateSidebar('4.WEB模块'),
       '/5.安全模块/': generateSidebar('5.安全模块'),
+      '/7.底层模块/': generateSidebar('7.底层模块'),
       '/6.课程合集/': generateSidebar('6.课程合集'),
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
