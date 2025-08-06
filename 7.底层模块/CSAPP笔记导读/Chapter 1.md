@@ -1,19 +1,3 @@
-<style>
-.highlight-box {
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  background-color: #ff9800; /* 浅色模式默认橙色 */
-  color: black;
-}
-@media (prefers-color-scheme: dark) {
-  .highlight-box {
-    background-color: #cc8400; /* 深色模式使用深橙色 */
-    color: white;
-  }
-}
-</style>
-
 # Chapter 1: A Tour of Computer Systems 计算机系统之旅
 
 ##
@@ -23,17 +7,17 @@ A computer system consists of hardware and systems software that work together t
 在本章中，我们围绕大多数的第一个C语言程序——helloworld展开，从一个简单程序的生命周期去观察计算机系统所参与的方方面面
 
 ```c
-1 /*
-2 hello.c
-3 */
-4
-5 #include<stdio.h>
-6
-7 int main()
-8 {
-9   printf("hello world\n");
-10  return 0;
-11 }
+/*
+hello.c
+*/
+
+#include<stdio.h>
+
+int main()
+{
+printf("hello world\n");
+return 0;
+}
 ```
 
 ![示例图片](../static/static1\image.png)
@@ -42,7 +26,7 @@ A computer system consists of hardware and systems software that work together t
 当我们在linux shell中敲下
 
 ```shell
-1  linux> gcc -o hello hello.c
+linux> gcc -o hello hello.c
 ```
 
 计算机系统便执行了上图的流程，我们会在之后的章节中详细地学习每一步。
@@ -129,8 +113,7 @@ A computer system consists of hardware and systems software that work together t
 
 相信看到这里，你已经做好开启一场有趣的计算机之旅的准备。
 
-  <h2 style="margin-top: 0;  display: flex; align-items: center;">
-    💡思考题</h2><div class="highlight-box">
-- 计算机中的一切数据都以二进制的方式存储，那么对于计算机系统而言，它有哪些方法确认数据的格式和解读方式。<br><br>
+::: tip 💡思考题
+- 计算机中的一切数据都以二进制的方式存储，那么对于计算机系统而言，它有哪些方法确认数据的格式和解读方式。
 - 为什么计算机的存储结构一定是由少量高速与大量低速的存储单元组成的
-</div>
+:::

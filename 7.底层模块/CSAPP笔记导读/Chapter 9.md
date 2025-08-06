@@ -16,52 +16,52 @@
 
 ![示例图片](../static/static9/image1.png)
 
-<center><i>笑点解析：这张牌英文原版名称就是Stack</i></center>
+笑点解析：这张牌英文原版名称就是Stack
 
 除了编译时就已经确定的空间大小（静态初始化），对于剩余的堆空间以及程序随机运行给出的不同需求，我们需要一个分配器，大致分为两种：显式分配器与隐式分配器。这二者都需要显式地去分配块，但对分配内存这一事情的行为主体有所区别。
 显式分配器的典型便是C语言中用于申请空间的malloc和用于释放空间的free。这一行为的主体是用户，因为申请的空间的大小是用户决定的，申请来的空间如何使用也是由用户决定的（malloc的返回值是void*，这意味着用户可以将这片连续的空间转换为想要的类型），最后这片空间什么时候消亡也是用户决定的，如果你一直不使用free释放空间，那么在程序结束之前，这片空间将一直处于占用状态，哪怕实际上已经没有任何存在使用它。如果这是一个长期运行的程序，这将带来严重的内存泄露问题，将大大降低机器的效率（可用的空间越来越少，能够同时运行的程序也越来越少）
 
 ```c
-1 #include <stdio.h>
-2 #include <stdlib.h>
-3 int main() {
-4 // 1. 整型数组
-5 int *intArray;
-6 int size = 5;
-7 intArray = (int *)malloc(size * sizeof(int)); // 分配5个整数组大小的内存空间
-8 free(intArray); // 释放整型数组内存空间
-9 // 2. 字符串数组（字符串指针数组）
-10 char **stringArray;
-11 size = 3;
-12 stringArray = (char **)malloc(size * sizeof(char *)); // 分配3个字符串指针大小的内存空间
-13 free(stringArray); // 释放字符串指针数组空间
-14 // 3. 结构体数组
-15 struct Student {
-16 char name[20];
-17 int age;
-18 };
-19 struct Student *studentArray;
-20 size = 2;
-21 studentArray = (struct Student *)malloc(size * sizeof(struct Student)); // 分配2个结构体大小的内
-22 free(studentArray); // 释放结构体数组空间
-23 return 0;
-24 }
-25 /*
-26 可以发现, malloc的空间大小是用户根据所需大小手动申请，最终的类型也是用户强类型转换得到的。
-27 */
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+// 1. 整型数组
+int *intArray;
+int size = 5;
+intArray = (int *)malloc(size * sizeof(int)); // 分配5个整数组大小的内存空间
+free(intArray); // 释放整型数组内存空间
+// 2. 字符串数组（字符串指针数组）
+char **stringArray;
+size = 3;
+stringArray = (char **)malloc(size * sizeof(char *)); // 分配3个字符串指针大小的内存空间
+free(stringArray); // 释放字符串指针数组空间
+// 3. 结构体数组
+struct Student {
+char name[20];
+int age;
+};
+struct Student *studentArray;
+size = 2;
+studentArray = (struct Student *)malloc(size * sizeof(struct Student)); // 分配2个结构体大小的内
+free(studentArray); // 释放结构体数组空间
+return 0;
+}
+/*
+可以发现, malloc的空间大小是用户根据所需大小手动申请，最终的类型也是用户强类型转换得到的。
+*/
 ```
 
 隐式分配器的典型便是Java，他将内存分配的行为主体交给了程序，用户只要描述自己的需求，便能得到一片动态申请的空间（当然出于静态类型语言的要求，你依旧要指定指向这片内存区域的指针类型，出于面向对象的特性，你往往会比C拥有更多的选择类型），并且Java中的数组如果是通过new关键字来申请，其大小随时可以改变。程序会自动侦测不再被使用的内存块，并将其回收，这一过程被称作垃圾回收。
 
 ```c
-1 public class ArrayDemo {
-2 public static void main(String[] args) {
-3 // 动态分配：使用 new 关键字创建数组，在堆内存中分配空间
-4 int[] arr1 = new int[5]; // 初始化大小为 5 的数组
-5 // 大小可变：使用 Arrays.copyOf() 方法将数组扩容到 10
-6 arr1 = Arrays.copyOf(arr1, 10);
-7 }
-8 }
+public class ArrayDemo {
+public static void main(String[] args) {
+// 动态分配：使用 new 关键字创建数组，在堆内存中分配空间
+int[] arr1 = new int[5]; // 初始化大小为 5 的数组
+// 大小可变：使用 Arrays.copyOf() 方法将数组扩容到 10
+arr1 = Arrays.copyOf(arr1, 10);
+}
+}
 ```
 
 在不同的系统上，对分配器有看不同的要求，下文中，我们假设内存分配器需要对双字对齐。字大小采用x86-64定义，为16bit。
