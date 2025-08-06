@@ -1,3 +1,19 @@
+<style>
+.highlight-box {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #ff9800; /* 浅色模式默认橙色 */
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  .highlight-box {
+    background-color: #cc8400; /* 深色模式使用深橙色 */
+    color: white;
+  }
+}
+</style>
+
 # Chapter 1: A Tour of Computer Systems 计算机系统之旅
 
 ##
@@ -113,10 +129,8 @@ A computer system consists of hardware and systems software that work together t
 
 相信看到这里，你已经做好开启一场有趣的计算机之旅的准备。
 
-<div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
   <h2 style="margin-top: 0;  display: flex; align-items: center;">
-    💡思考题</h2><div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
+    💡思考题</h2><div class="highlight-box">
 - 计算机中的一切数据都以二进制的方式存储，那么对于计算机系统而言，它有哪些方法确认数据的格式和解读方式。<br><br>
 - 为什么计算机的存储结构一定是由少量高速与大量低速的存储单元组成的
-</div>
 </div>
