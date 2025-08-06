@@ -46,7 +46,7 @@
 
 ![示例图片](../static/static0/image.png)
 
-<center><small>对,对吗?</small></center>
+对,对吗?
 
 原文摘抄
 
