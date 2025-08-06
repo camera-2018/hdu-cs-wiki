@@ -8,7 +8,7 @@
 
 一般而言，计算机并不能单独地访问某一位，所以一般以八位大小块字节（byts）作为最小寻址单位，即八位二进制数或两位十六进制数（开头带有0x来表示）学过C语言指针的同学应该知道，指针指向的是计算机中的虚拟地址。（不知道的话，你现在知道了）显然，虚拟地址也是用二进制表示的。不同类型的计算机有着不同的字（wod）的大小，虚拟地址是由字来表示的，也就是说字的大小决定了虚拟地址的范围。
 
-<div style="background-color: #FFA500; padding: 10px; border-radius: 5px; display: inline-block;">
+<div class="highlight-box">
 思考题<br>
 对于32位系统与64位系统而言，求系统虚拟地址的范围。
 </div>
@@ -63,7 +63,7 @@ C语言中的字符串由一系列字符串组成，也就是连续分布的ASCI
 
 当然，忽视这个性质会带来灾难性的后果，例如被跳过的参数时一个函数，该函数具有不应该被跳过的功能性。
 
-<div style="background-color: #fff8e1; border-left: 4px solid #ffb300; padding: 8px 12px; margin: 10px 0;">
+<div class="highlight-box">
 <strong>⚠️ 注意</strong><br>
 此处介绍的仅是C语言中的逻辑运算，不同语言的逻辑运算有着不同的逻辑与返回值，请勿想当然
 </div>
@@ -127,18 +127,16 @@ C标准并没有明确规定什么类型对应什么样的右移，虽然对于�
 
 ![示例图片](../static/static2/image10.png)
 
-<div style="background-color: #fff8e1; border-left: 4px solid #ffb300; padding: 8px 12px; margin: 10px 0; display: inline-block;">
 <h2>💡思考题</h2>
+<div class="highlight-box">
 假设符号位代表的是正号与负号，请以此为基础设计一套编码体系，为其设计加减乘的数学运算方式，你发现了什么，这说明了补码体系的哪些优点。
 </div>
 
 像C语言这样的静态类型语言，强制类型转换及其带来的错误是不得不品尝的一环。
 
 在C语言中无符号数转有符号数的过程中，位值并不会发生变化，只是解释值的方式发生了变化
-
 unsigned[1010]=10
 signed[1010]=-6
-
 同样，在有符号数转无符号数的过程中，位值并不会发生变化，只是解释值的方式发生了变化
 
 这意味着，数据类型只是解释二进制位值的一种方式，我们会在之后学习指针与结构体的本质中深入了解这一点
@@ -223,7 +221,7 @@ signed[1010]=-6
 
 但这种表示法存在问题，首先是对表示的数的范围十分有限，如果想表示更精确的小数，留给整数的位数就会变少，反之同理。同时在精度上这种方法也不尽如人意，书中练习题2.46给出了一个值得探究的例子，这个例子相当的精妙且具体（以至于被扒拉到杭电“自编”教材里）
 
-<div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
+<div class="highlight-box">
   <h2 style="margin-top: 0;  display: flex; align-items: center;">
     ⚠️ 定点浮点数的致命误差</h2>
 <p>在海湾战争中，美国爱国者导弹系统未能拦截来袭的伊拉克飞毛腿导弹，造成了士兵的伤亡。</p>
@@ -304,15 +302,13 @@ f=[0.101000...000]=0.625
 
 ![示例图片](../static/static2/image22.png)
 
-<div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
   <h2 style="margin-top: 0;  display: flex; align-items: center;">
-    💡思考题</h2><div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
+    💡思考题</h2><div class="highlight-box">
 规格化小数在数轴上的间隔似乎每隔几个数便乘以二<br><br>
 非规格化小数之间的间隔似乎是均匀的<br><br>
 这是否正确的吗，你能解释这是为什么吗
 </div>
 
-</div>
 
 以4位阶码3位尾数的IEEE小数举例（事实上，面对抽象的新事物，举出一些小例子总是利于你的学习），得到下表
 
@@ -326,7 +322,7 @@ f=[0.101000...000]=0.625
 
 从数据分布上，这个规则仍然保证我们在统计数据偏差时、舍入带来的偏差是平均分布的。同时，有效位末尾为0 的小数在之后的运算中具有更高的精度，例如尾数右移1位，原有效位末尾为1，则会产生精度损失。
 
-<div style="background-color: #fff5eb; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
+<div class="highlight-box">
   <h2 style="margin-top: 0;  display: flex; align-items: center;">
     🎉 再战"海湾战争"
   </h2>
