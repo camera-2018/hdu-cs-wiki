@@ -45,6 +45,11 @@ features:
     details: 本模块包括了一些关于安全的基础知识，希望能够帮助大家更好的了解安全的重要性。
     link: /5.安全模块/5.安全模块
 
+  - title: 底层模块
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="20" height="20" rx="3" ry="3" /><rect x="12" y="12" width="8" height="8" rx="1" ry="1" fill="currentColor"/><path d="M16 2v4M16 26v4M2 16h4M26 16h4M7 7l3 3M22 22l3 3M7 25l3-3M22 10l3-3"/></svg>
+    details: 本模块介绍计算机底层原理、系统结构、汇编语言、操作系统等内容。
+    link: /7.底层模块/7.底层模块
+
   - title: 课程合集
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M18 23h-2v-2a3.003 3.003 0 0 0-3-3H9a3.003 3.003 0 0 0-3 3v2H4v-2a5.006 5.006 0 0 1 5-5h4a5.006 5.006 0 0 1 5 5zM11 6a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0-2a5 5 0 1 0 5 5a5 5 0 0 0-5-5M2 26h28v2H2zM30 8h-2V6h-2V4h4zM19 4h4v2h-2v2h-2zm9 9h2v2h-2zm-2-2h2v2h-2zm-7 0h2v2h2v2h-4z"/></svg>
     details: 本合集将陆续收入各个模块的相关课程，希望帮助大家更好的学习每个模块。当前主要为C语言学习课程。
@@ -59,5 +64,7 @@ features:
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M21.49 13.115l-9-5a1 1 0 0 0-1 0l-9 5A1.008 1.008 0 0 0 2 14v9.995a1 1 0 0 0 .52.87l9 5A1.004 1.004 0 0 0 12 30a1.056 1.056 0 0 0 .49-.135l9-5A.992.992 0 0 0 22 24V14a1.008 1.008 0 0 0-.51-.885zM11 27.295l-7-3.89v-7.72l7 3.89zm1-9.45L5.06 14L12 10.135l6.94 3.86zm8 5.56l-7 3.89v-7.72l7-3.89z" fill="currentColor"/><path d="M30 6h-4V2h-2v4h-4v2h4v4h2V8h4V6z" fill="currentColor"/></svg>
     details: 本 WIKI 仍在建设中，我们期待着你的加入，希望你能够帮助我们完善这个 WIKI ！
     link: /CONTRIBUTING
+
+
 
 ---
