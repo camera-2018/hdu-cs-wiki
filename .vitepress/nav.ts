@@ -50,6 +50,7 @@ export function nav() {
         { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
 
         { text: '8.游戏模块', link: '/8.游戏模块/8.游戏模块' },
+        { text: '9.Web3模块', link: '/9.Web3模块/9.Web3模块' },
       ]
     },
     {
