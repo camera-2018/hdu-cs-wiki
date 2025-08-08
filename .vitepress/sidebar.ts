@@ -68,6 +68,13 @@ export function main_sidebar() {
       ]
     },
     {
+      text: '7.硬件模块',
+      collapsed: true,
+      items: [
+        { text: '7.硬件模块', link: '/7.硬件模块/0.前言' },
+      ]
+    },
+    {
       text: '更改日志',
       link: '/CHANGELOG'
     }
