@@ -60,6 +60,7 @@ export default withMermaid(defineConfig({
       '/5.安全模块/': generateSidebar('5.安全模块'),
       '/6.课程合集/': generateSidebar('6.课程合集'),
       '/7.硬件模块/': generateSidebar('7.硬件模块'),
+      '/8.游戏模块/': generateSidebar('8.游戏模块'),
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
       '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),

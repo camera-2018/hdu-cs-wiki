@@ -68,6 +68,14 @@ export function main_sidebar() {
       ]
     },
     {
+      text: '8.游戏模块',
+      collapsed: true,
+      items: [
+        { text: '8.游戏模块', link: '/8.游戏模块/8.游戏模块' },
+      ]
+    },
+    {
+      
       text: '7.硬件模块',
       collapsed: true,
       items: [
