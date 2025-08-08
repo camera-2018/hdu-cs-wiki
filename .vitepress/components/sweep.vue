@@ -135,7 +135,7 @@ watchEffect(() => {
     border-color: var(--vp-c-brand-light);
     transition: all 0.1s ease-in-out;
   }
-  .btn:dark {
+  .btn.dark {
     background-color: var(--vp-c-brand-dark);
     border-color: var(--vp-c-brand-light);
     transition: all 0.1s ease-in-out;
