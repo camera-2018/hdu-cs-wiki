@@ -82,6 +82,13 @@ export function main_sidebar() {
       ]
     },
     {
+      text: '9.Web3模块',
+      collapsed: true,
+      items: [
+        { text: '9.Web3模块', link: '/9.Web3模块/9.Web3模块' },
+      ]
+    },
+    {
       text: '10.硬件模块',
       collapsed: true,
       items: [
