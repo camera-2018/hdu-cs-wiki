@@ -104,8 +104,9 @@ export default withMermaid(defineConfig({
     math: true,
     codeTransformers: [
       transformerTwoslash()
-    ]
-
+    ],
+    // Explicitly load these languages for types hightlighting
+    languages: ['js', 'jsx', 'ts', 'tsx']
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
@@ -191,7 +192,7 @@ export default withMermaid(defineConfig({
       ]
     },
     ssr: {
-      noExternal: ["medium-zoom", 'vitepress-plugin-nprogress']
+      noExternal: ["medium-zoom", 'vitepress-plugin-bprogress']
     }
   }
 }))

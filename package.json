@@ -8,13 +8,14 @@
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",
-    "@vueuse/core": "^13.5.0",
-    "animejs": "^4.0.2",
+    "@vueuse/core": "^13.6.0",
+    "animejs": "^4.1.2",
     "canvas-confetti": "^1.9.3",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-pangu": "^1.0.2",
     "medium-zoom": "^1.1.0",
+    "oxc-minify": "^0.81.0",
     "sitemap": "^8.0.0"
   },
   "devDependencies": {
@@ -24,17 +25,18 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "@shikijs/vitepress-twoslash": "^3.8.1",
-    "@vitejs/plugin-vue": "^6.0.0",
+    "@shikijs/types": "^3.9.2",
+    "@shikijs/vitepress-twoslash": "^3.9.2",
+    "@vitejs/plugin-vue": "^6.0.1",
     "esbuild": "^0.25.8",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^11.9.0",
     "semantic-release": "^24.2.7",
     "unplugin-vue-macros": "^2.14.5",
-    "vite-plugin-pwa": "^1.0.1",
-    "vitepress": "^1.6.3",
+    "vite-plugin-pwa": "^1.0.2",
+    "vitepress": "^v2.0.0-alpha.9",
     "vitepress-plugin-mermaid": "^2.0.17",
-    "vitepress-plugin-nprogress": "^0.0.4"
+    "vitepress-plugin-bprogress": "^1.0.2"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@latest"
