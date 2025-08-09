@@ -68,6 +68,15 @@ export function main_sidebar() {
       ]
     },
     {
+      text: '7.底层模块',
+      collapsed: true,
+      items: [
+        { text: '7.底层模块', link: '/7.底层模块/7.底层模块' },
+
+      ]
+    },
+    {
+
       text: '8.游戏模块',
       collapsed: true,
       items: [
@@ -566,7 +575,7 @@ function compareNumericPrefixes(a: string, b: string): number {
 
 /**
  * Generate sidebar structure for a directory.
- * 
+ *
  * @param dir - Directory path to read.
  * @param excludeDir - Array of directory names to exclude.
  * @param maxDepth - Maximum depth of recursion.
