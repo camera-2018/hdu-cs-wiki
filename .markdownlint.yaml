@@ -1,11 +1,11 @@
 # MD013/line-length : Line length : https://github.com/DavidAnson/markdownlint/blob/v0.38.0/doc/md013.md
 MD013:
   # Number of characters
-  line_length: 100
+  line_length: 1000
   # Number of characters for headings
-  heading_line_length: 100
+  heading_line_length: 1000
   # Number of characters for code blocks
-  code_block_line_length: 100
+  code_block_line_length: 1000
   # Include code blocks
   code_blocks: true
   # Include tables
@@ -17,6 +17,29 @@ MD013:
   # Stern length checking
   stern: false
 
+MD024:
+  siblings_only: true
+
 MD033:
   # Allowed elements
-  allowed_elements: [script, code, pre, img, table, th, td, tr, tbody, thead, tfoot, ul, ol, li, p]
+  allowed_elements:
+    [
+      sub,
+      script,
+      code,
+      pre,
+      img,
+      table,
+      th,
+      td,
+      tr,
+      tbody,
+      thead,
+      tfoot,
+      ul,
+      ol,
+      li,
+      p,
+      Bilibili,
+      Download
+    ]
