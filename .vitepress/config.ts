@@ -59,7 +59,9 @@ export default withMermaid(defineConfig({
       '/4.WEB模块/': generateSidebar('4.WEB模块'),
       '/5.安全模块/': generateSidebar('5.安全模块'),
       '/6.课程合集/': generateSidebar('6.课程合集'),
+      '/7.底层模块/': generateSidebar('7.底层模块'),
       '/8.游戏模块/': generateSidebar('8.游戏模块'),
+
       '/2023旧版内容/': main_sidebar_old(),
       '/2023旧版内容/2.高效学习/': chapter2_old(),
       '/2023旧版内容/3.编程思维体系构建/': chapter3_old(),
@@ -102,7 +104,9 @@ export default withMermaid(defineConfig({
     math: true,
     codeTransformers: [
       transformerTwoslash()
-    ]
+    ],
+    // Explicitly load these languages for types hightlighting
+    languages: ['js', 'jsx', 'ts', 'tsx']
   },
   sitemap: {
     hostname: 'https://hdu-cs.wiki'
@@ -188,7 +192,7 @@ export default withMermaid(defineConfig({
       ]
     },
     ssr: {
-      noExternal: ["medium-zoom", 'vitepress-plugin-nprogress']
+      noExternal: ["medium-zoom", 'vitepress-plugin-bprogress']
     }
   }
 }))

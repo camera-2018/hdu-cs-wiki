@@ -45,6 +45,16 @@ features:
     details: 本模块包括了一些关于安全的基础知识，希望能够帮助大家更好的了解安全的重要性。
     link: /5.安全模块/5.安全模块
 
+  - title: 底层模块
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="20" height="20" rx="3" ry="3" /><rect x="12" y="12" width="8" height="8" rx="1" ry="1" fill="currentColor"/><path d="M16 2v4M16 26v4M2 16h4M26 16h4M7 7l3 3M22 22l3 3M7 25l3-3M22 10l3-3"/></svg>
+    details: 本模块介绍计算机底层原理、系统结构、汇编语言、操作系统等内容。
+    link: /7.底层模块/7.底层模块
+
+  - title: 游戏模块
+    icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.825 0-1.412-.587T2 16V8q0-.825.588-1.412T4 6h16q.825 0 1.413.588T22 8v8q0 .825-.587 1.413T20 18zm3-3h2v-2h2v-2H9V9H7v2H5v2h2zm7.5 0q.625 0 1.063-.437T16 13.5t-.437-1.062T14.5 12t-1.062.438T13 13.5t.438 1.063T14.5 15m3-3q.625 0 1.063-.437T19 10.5t-.437-1.062T17.5 9t-1.062.438T16 10.5t.438 1.063T17.5 12"/></svg>
+    details: 本模块介绍游戏开发的相关知识，包括游戏引擎、游戏设计等内容。
+    link: /8.游戏模块/8.游戏模块
+
   - title: 课程合集
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M18 23h-2v-2a3.003 3.003 0 0 0-3-3H9a3.003 3.003 0 0 0-3 3v2H4v-2a5.006 5.006 0 0 1 5-5h4a5.006 5.006 0 0 1 5 5zM11 6a3 3 0 1 1-3 3a3 3 0 0 1 3-3m0-2a5 5 0 1 0 5 5a5 5 0 0 0-5-5M2 26h28v2H2zM30 8h-2V6h-2V4h4zM19 4h4v2h-2v2h-2zm9 9h2v2h-2zm-2-2h2v2h-2zm-7 0h2v2h2v2h-4z"/></svg>
     details: 本合集将陆续收入各个模块的相关课程，希望帮助大家更好的学习每个模块。当前主要为C语言学习课程。

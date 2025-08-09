@@ -14,8 +14,8 @@ import './style.css'
 import './rainbow.css'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import '@shikijs/vitepress-twoslash/style.css'
-import vitepressNprogress from 'vitepress-plugin-nprogress'
-import 'vitepress-plugin-nprogress/lib/css/index.css'
+import vitepressBprogress from 'vitepress-plugin-bprogress'
+import 'vitepress-plugin-bprogress/style.css'
 
 let homePageStyle: HTMLStyleElement | undefined = undefined
 
@@ -32,7 +32,7 @@ export default {
     ctx.app.component('ShortLink', ShortLink)
     ctx.app.component('WikiLogo', WikiLogo)
     ctx.app.use(TwoslashFloatingVue)
-    vitepressNprogress(ctx)
+    vitepressBprogress(ctx)
     if (typeof window === 'undefined')
       return
     watch(
