@@ -50,6 +50,7 @@ export function nav() {
         { text: '6.课程合集', link: '/6.课程合集/6.课程合集' },
         { text: '7.底层模块', link: '/7.底层模块/7.底层模块' },
         { text: '8.游戏模块', link: '/8.游戏模块/8.游戏模块' },
+        { text: '10.硬件模块', link: '/10.硬件模块/10.硬件模块' },
       ]
     },
     {
@@ -73,7 +74,7 @@ export function nav() {
         [
           { text: '杭电导航（生活类）', link: 'https://wiki.hduhelp.com' },
           { text: '西邮 Wiki（生活类）', link: 'https://wiki.cooo.site' },
-          { text: '河南大学计算机生存指北（技术类）', link: 'https://cs-survive-henu.github.io/' },
+          { text: '河南大学计算机生存指北（技术类）', link: 'https://cs-survive-henu.github.io' },
         ]
     },
   ] as NavItem[]
