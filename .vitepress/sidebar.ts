@@ -72,15 +72,20 @@ export function main_sidebar() {
       collapsed: true,
       items: [
         { text: '7.底层模块', link: '/7.底层模块/7.底层模块' },
-
       ]
     },
     {
-
       text: '8.游戏模块',
       collapsed: true,
       items: [
         { text: '8.游戏模块', link: '/8.游戏模块/8.游戏模块' },
+      ]
+    },
+    {
+      text: '10.硬件模块',
+      collapsed: true,
+      items: [
+        { text: '10.硬件模块', link: '/10.硬件模块/10.硬件模块' },
       ]
     },
     {
