@@ -42,6 +42,12 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: { clientX: numbe
 })
 
 onMounted(() => {
+  // Set initial theme based on system preference if not already set
+  if (localStorage.getItem('vitepress-theme-appearance') === null) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    isDark.value = prefersDark
+  }
+
   watch(() => route.path, async () => {
     if (!enableTransitions()) return
 
