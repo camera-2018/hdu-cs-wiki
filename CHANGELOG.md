@@ -1,3 +1,10 @@
+## [2.20.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.20.0...v2.20.1) (2025-08-17)
+
+
+### Bug Fixes
+
+* 修正简介中的wiki交流群图片，更新到2025年群聊 ([#463](https://github.com/camera-2018/hdu-cs-wiki/issues/463)) ([2ae1dc3](https://github.com/camera-2018/hdu-cs-wiki/commit/2ae1dc3adf121693384706a9b8adfe8db56701f0))
+
 # [2.20.0](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.19.0...v2.20.0) (2025-07-20)
 
 
