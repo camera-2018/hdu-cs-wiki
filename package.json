@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",
+    "@vercel/speed-insights": "^1.2.0",
     "@vueuse/core": "^13.6.0",
     "animejs": "^4.1.2",
     "canvas-confetti": "^1.9.3",
@@ -16,7 +17,8 @@
     "markdown-it-pangu": "^1.0.2",
     "medium-zoom": "^1.1.0",
     "oxc-minify": "^0.81.0",
-    "sitemap": "^8.0.0"
+    "sitemap": "^8.0.0",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-mindmap": "^9.3.0",

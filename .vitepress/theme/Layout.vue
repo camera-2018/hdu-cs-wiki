@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { nextTick, provide, onMounted, watch } from 'vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 import { useMediumZoom } from './useMediumZoom'
 import { useRoute } from 'vitepress'
 
@@ -77,6 +78,7 @@ useMediumZoom()
       <WikiLogo />
     </template>
   </DefaultTheme.Layout>
+  <SpeedInsights />
 </template>
 
 <style>
