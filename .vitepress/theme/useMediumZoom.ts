@@ -28,11 +28,15 @@ export function createMediumZoomProvider(app: App, router: Router): void {
   }
 
   // 在客户端环境中执行 mediumZoom
-  const zoom = mediumZoom() as ZoomWithRefresh;
+  const zoom = mediumZoom({ 
+    background: 'var(--vp-c-bg)'
+  }) as ZoomWithRefresh;
   zoom.refresh = () => {
     zoom.detach();
     zoom.attach(':not(a) > img:not(.no-zoom)');
-    zoom.update({ background: 'var(--vp-c-bg)' });
+    zoom.update({ 
+      background: 'var(--vp-c-bg)'
+    });
   };
 
   app.provide(mediumZoomSymbol, zoom);

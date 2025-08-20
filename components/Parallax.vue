@@ -133,7 +133,7 @@ const layer4 = layerBase;
 const cardStyle = computed(() => ({
   background: "",
   height: "12rem",
-  width: "28rem",
+  width: "23rem",
   borderRadius: "16px",
   border: "1px solid #000000",
   overflow: "hidden",

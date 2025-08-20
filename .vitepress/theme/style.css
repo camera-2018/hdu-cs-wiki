@@ -208,11 +208,11 @@ mjx-container {
 } */
 
 .medium-zoom-overlay {
-  z-index: 99;
+  z-index: 49 !important;
 }
 
-.medium-zoom-image {
-  z-index: 99;
+.medium-zoom-image--opened {
+  z-index: 49 !important;
 }
 
 mjx-container {
