@@ -1,3 +1,10 @@
+## [2.20.2](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.20.1...v2.20.2) (2025-08-20)
+
+
+### Bug Fixes
+
+* ci ([d932a54](https://github.com/camera-2018/hdu-cs-wiki/commit/d932a548bd13e254d487014146c0efffa7c9c235))
+
 ## [2.20.1](https://github.com/camera-2018/hdu-cs-wiki/compare/v2.20.0...v2.20.1) (2025-08-17)
 
 
