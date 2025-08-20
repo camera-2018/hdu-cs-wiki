@@ -61,11 +61,11 @@ jobs:
           # 从环境变量中读取贡献者数据并生成 TypeScript 数组
           echo '${{ steps.fetch-contributors.outputs.contributors }}' | jq -r '.[] | 
             "  {" +
-            "\n    avatar: \"https://avatars.hdu-cs.wiki/" + .login + "\"," +
-            "\n    name: \"" + .login + "\"," +
-            "\n    title: \"" + (if .contributions >= 50 then "Maintainer" elif .contributions >= 10 then "Active Contributor" else "Contributor" end) + "\"," +
+            "\n    avatar: '\''https://avatars.hdu-cs.wiki/" + .login + "'\''," +
+            "\n    name: '\''" + .login + "'\''," +
+            "\n    title: '\''" + (if .contributions >= 50 then "Maintainer" elif .contributions >= 10 then "Active Contributor" else "Contributor" end) + "'\''," +
             "\n    links: [" +
-            "\n      { icon: \"github\", link: \"https://github.com/" + .login + "\" }," +
+            "\n      { icon: '\''github'\'', link: '\''https://github.com/" + .login + "'\'' }," +
             "\n    ]" +
             "\n  },"' >> members.ts
           
@@ -108,7 +108,6 @@ jobs:
             ```
             GET https://api.github.com/repos/${{ github.repository }}/contributors
             ```
-            **Updated at**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
             
             请检查更新内容是否正确，确认无误后合并此 PR。
             
