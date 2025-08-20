@@ -82,37 +82,21 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Pull Request
+      - name: Commit and push changes
         if: steps.verify-changed-files.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update contributors list"
-          title: "🤖 Auto-update contributors list"
-          body: |
-            ## 📝 自动更新贡献者列表
-            
-            此 PR 由 GitHub Actions 自动生成，用于同步最新的贡献者信息。
-            
-            ### 📊 更新内容
-            - 从 GitHub API 获取最新贡献者数据
-            - 自动分类贡献者等级：
-              - **Maintainer**: >= 50 贡献
-              - **Active Contributor**: >= 10 贡献  
-              - **Contributor**: >= 1 贡献
-            - 过滤掉机器人账户
-            
-            ### 🔧 数据来源
-            ```
-            GET https://api.github.com/repos/${{ github.repository }}/contributors
-            ```
-            
-            请检查更新内容是否正确，确认无误后合并此 PR。
-            
-            ---
-            *此 PR 由 [update-contributors.yaml](.github/workflows/update-contributors.yaml) 工作流自动创建*
-          branch: auto-update-contributors
-          delete-branch: true
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add members.ts
+          git commit -m "chore: update contributors list
+
+          Auto-updated contributors list based on GitHub API data.
+          
+          - Total contributors: $(echo '${{ steps.fetch-contributors.outputs.contributors }}' | jq '. | length')
+          - Updated at: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          - Data source: GitHub API"
+          
+          git push
 
       - name: Summary
         run: |
@@ -123,7 +107,8 @@ jobs:
           echo "- **Updated At**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
           
           if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
-            echo "- **Action**: Created/Updated Pull Request" >> $GITHUB_STEP_SUMMARY
+            echo "- **Action**: Direct commit to master branch" >> $GITHUB_STEP_SUMMARY
+            echo "- **Commit**: Updated members.ts with latest contributors" >> $GITHUB_STEP_SUMMARY
           else
             echo "- **Action**: No changes detected" >> $GITHUB_STEP_SUMMARY
           fi
