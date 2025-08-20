@@ -1,0 +1,129 @@
+name: Update Contributors
+
+on:
+  schedule:
+    # 每周日 00:00 UTC 自动运行
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch contributors from GitHub API
+        id: fetch-contributors
+        run: |
+          # 获取贡献者数据
+          contributors_json=$(curl -s "https://api.github.com/repos/${{ github.repository }}/contributors?per_page=100")
+          
+          # 过滤掉机器人账户，只保留贡献数 >= 1 的用户
+          filtered_contributors=$(echo "$contributors_json" | jq '[.[] | select(.type == "User" and .contributions >= 1) | {login, contributions, avatar_url}]')
+          
+          echo "contributors<<EOF" >> $GITHUB_OUTPUT
+          echo "$filtered_contributors" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Generate members.ts file
+        run: |
+          cat > members.ts << 'EOF'
+          type Member = {
+            avatar: string
+            name: string
+            title: string
+            links: {
+              icon: string
+              link: string
+            }[]
+          }[]
+
+          // 写了个走 CF 的代理，为了让头像加载快点儿
+          // 格式暂时为：https://avatars.hdu-cs.wiki/ + github 用户名（不是昵称）（不加png）
+          // https://avatars.hdu-cs.wiki/camera-2018
+
+          export const members: Member = [
+          EOF
+          
+          # 从环境变量中读取贡献者数据并生成 TypeScript 数组
+          echo '${{ steps.fetch-contributors.outputs.contributors }}' | jq -r '.[] | 
+            "  {" +
+            "\n    avatar: \"https://avatars.hdu-cs.wiki/" + .login + "\"," +
+            "\n    name: \"" + .login + "\"," +
+            "\n    title: \"" + (if .contributions >= 50 then "Maintainer" elif .contributions >= 10 then "Active Contributor" else "Contributor" end) + "\"," +
+            "\n    links: [" +
+            "\n      { icon: \"github\", link: \"https://github.com/" + .login + "\" }," +
+            "\n    ]" +
+            "\n  },"' >> members.ts
+          
+          echo "]" >> members.ts
+          
+          # 移除最后一个逗号
+          sed -i '$s/,$//' members.ts
+
+      - name: Check if there are changes
+        id: verify-changed-files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update contributors list"
+          title: "🤖 Auto-update contributors list"
+          body: |
+            ## 📝 自动更新贡献者列表
+            
+            此 PR 由 GitHub Actions 自动生成，用于同步最新的贡献者信息。
+            
+            ### 📊 更新内容
+            - 从 GitHub API 获取最新贡献者数据
+            - 自动分类贡献者等级：
+              - **Maintainer**: >= 50 贡献
+              - **Active Contributor**: >= 10 贡献  
+              - **Contributor**: >= 1 贡献
+            - 过滤掉机器人账户
+            
+            ### 🔧 数据来源
+            ```
+            GET https://api.github.com/repos/${{ github.repository }}/contributors
+            ```
+            
+            请检查更新内容是否正确，确认无误后合并此 PR。
+            
+            ---
+            *此 PR 由 [update-contributors.yaml](.github/workflows/update-contributors.yaml) 工作流自动创建*
+          branch: auto-update-contributors
+          delete-branch: true
+
+      - name: Summary
+        run: |
+          total_contributors=$(echo '${{ steps.fetch-contributors.outputs.contributors }}' | jq '. | length')
+          echo "## 📊 Contributors Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total Contributors**: $total_contributors" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changed**: ${{ steps.verify-changed-files.outputs.changed }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Updated At**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+            echo "- **Action**: Created/Updated Pull Request" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Action**: No changes detected" >> $GITHUB_STEP_SUMMARY
+          fi
