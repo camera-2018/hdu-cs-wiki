@@ -108,14 +108,12 @@ jobs:
             ```
             GET https://api.github.com/repos/${{ github.repository }}/contributors
             ```
-            
-            **Total contributors**: $(echo '${{ steps.fetch-contributors.outputs.contributors }}' | jq '. | length')
             **Updated at**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
             
             请检查更新内容是否正确，确认无误后合并此 PR。
             
             ---
-            *此 PR 由 [update-contributors.yaml](.github/workflows/update-contributors.yaml) 工作流自动创建*
+            *此 PR 由 update-contributors.yaml 工作流自动创建*
           branch: auto-update-contributors
           delete-branch: true
 
