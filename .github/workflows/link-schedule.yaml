@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Link Checker
         id: lychee
@@ -37,12 +37,15 @@ jobs:
           # --max-retries              最大重试次数
           # --max-concurrency          降低并发以减少 429 限流与超时误报
           # -a, --accept               合法状态码（包含 2xx 以及常见的反爬/登录/限流状态码）
+          # --root-dir / --fallback-extensions  支持解析 VitePress 省略 .md 的站内绝对路径
           # --exclude-path             排除归档旧版内容和构建产物目录
           args: >-
-            -E -i -n -v
+            -E -i -n
             -t 30 -r 3 --max-retries 3 --max-concurrency 16
             -a "200..=299,401,403,429"
             -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            --root-dir "$(pwd)"
+            --fallback-extensions md
             --exclude-path "2023旧版内容"
             --exclude-path "node_modules"
             --exclude-path ".vitepress"
