@@ -134,19 +134,19 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/ganbabamaster',
-    name: 'ganbabamaster',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/ganbabamaster' },
-    ]
-  },
-  {
     avatar: 'https://avatars.hdu-cs.wiki/ChengNanFlower',
     name: 'ChengNanFlower',
     title: 'Contributor',
     links: [
       { icon: 'github', link: 'https://github.com/ChengNanFlower' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/ganbabamaster',
+    name: 'ganbabamaster',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/ganbabamaster' },
     ]
   },
   {
@@ -166,19 +166,11 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/Bian-Mu',
-    name: 'Bian-Mu',
+    avatar: 'https://avatars.hdu-cs.wiki/w31r4',
+    name: 'w31r4',
     title: 'Contributor',
     links: [
-      { icon: 'github', link: 'https://github.com/Bian-Mu' },
-    ]
-  },
-  {
-    avatar: 'https://avatars.hdu-cs.wiki/LittleFish0403',
-    name: 'LittleFish0403',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/LittleFish0403' },
+      { icon: 'github', link: 'https://github.com/w31r4' },
     ]
   },
   {
@@ -190,11 +182,19 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/w31r4',
-    name: 'w31r4',
+    avatar: 'https://avatars.hdu-cs.wiki/LittleFish0403',
+    name: 'LittleFish0403',
     title: 'Contributor',
     links: [
-      { icon: 'github', link: 'https://github.com/w31r4' },
+      { icon: 'github', link: 'https://github.com/LittleFish0403' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/Bian-Mu',
+    name: 'Bian-Mu',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/Bian-Mu' },
     ]
   },
   {
@@ -262,14 +262,6 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/KAFUUC',
-    name: 'KAFUUC',
-    title: 'Contributor',
-    links: [
-      { icon: 'github', link: 'https://github.com/KAFUUC' },
-    ]
-  },
-  {
     avatar: 'https://avatars.hdu-cs.wiki/kiramyby',
     name: 'kiramyby',
     title: 'Contributor',
@@ -286,11 +278,11 @@ export const members: Member = [
     ]
   },
   {
-    avatar: 'https://avatars.hdu-cs.wiki/Ec3o',
-    name: 'Ec3o',
+    avatar: 'https://avatars.hdu-cs.wiki/KAFUUC',
+    name: 'KAFUUC',
     title: 'Contributor',
     links: [
-      { icon: 'github', link: 'https://github.com/Ec3o' },
+      { icon: 'github', link: 'https://github.com/KAFUUC' },
     ]
   },
   {
@@ -307,6 +299,14 @@ export const members: Member = [
     title: 'Contributor',
     links: [
       { icon: 'github', link: 'https://github.com/Tongasq' },
+    ]
+  },
+  {
+    avatar: 'https://avatars.hdu-cs.wiki/Ec3o',
+    name: 'Ec3o',
+    title: 'Contributor',
+    links: [
+      { icon: 'github', link: 'https://github.com/Ec3o' },
     ]
   },
   {
