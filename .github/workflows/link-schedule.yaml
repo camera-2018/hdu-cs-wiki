@@ -1,54 +1,108 @@
 name: links schedule
 
 on:
-  # repository_dispatch:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 */3 * *"
+    # 每周一 UTC 00:00 运行一次
+    - cron: "0 0 * * 1"
 
 permissions:
+  contents: read
   issues: write
+
+concurrency:
+  group: link-schedule
+  cancel-in-progress: true
 
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '22.17.1'
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          output: lychee/out.md
+          # 参数说明：https://lychee.cli.rs/guides/cli/
+          # -E, --exclude-all-private  忽略内网地址
+          # -i, --insecure             允许不安全的 TLS
+          # -n, --no-progress          关闭进度条
+          # -t, --timeout              单请求超时（秒）
+          # -r, --retry-wait-time      重试等待时间（秒）
+          # --max-retries              最大重试次数
+          # --max-concurrency          降低并发以减少 429 限流与超时误报
+          # -a, --accept               合法状态码（包含 2xx 以及常见的反爬/登录/限流状态码）
+          # --exclude-path             排除归档旧版内容和构建产物目录
+          args: >-
+            -E -i -n -v
+            -t 30 -r 3 --max-retries 3 --max-concurrency 16
+            -a "200..=299,401,403,429"
+            -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+            --exclude-path "2023旧版内容"
+            --exclude-path "node_modules"
+            --exclude-path ".vitepress"
+            --exclude-path "dist"
+            --exclude-path "cache"
+            --exclude-path "CHANGELOG.md"
+            -- '**/*.md'
 
-    - uses: oven-sh/setup-bun@v2
-      with:
-        bun-version: latest
+      - name: Fail on lychee internal error
+        if: steps.lychee.outputs.exit_code == '1'
+        run: |
+          echo "::error::lychee exited with unexpected error (exit code 1)"
+          exit 1
 
-    - name: install doc dependencies
-      run: bun i
+      - name: Upsert or Close Broken Link Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+        run: |
+          ISSUE_TITLE="Broken Link Detected"
+          EXISTING_ISSUE=$(gh issue list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state open \
+            --limit 100 \
+            --json number,title \
+            --jq '[.[] | select(.title == "'"$ISSUE_TITLE"'") | .number] | first // ""')
 
-    - name: Link Checker
-      uses: lycheeverse/lychee-action@v1.8.0
-      with:
-          # For parameter description, see https://github.com/lycheeverse/lychee#commandline-parameters
-          # -E, --exclude-all-private    Exclude all private IPs from checking.
-          # -i, --insecure               Proceed for server connections considered insecure (invalid TLS)
-          # -n, --no-progress            Do not show progress bar.
-          # -t, --timeout <timeout>      Website timeout in seconds from connect to response finished [default:20]
-          # --max-concurrency <max-concurrency>      Maximum number of concurrent network requests [default: 128]
-          # -a --accept <accept>                     Comma-separated list of accepted status codes for valid links
-          # --max-retries <MAX_RETRIES>              Maximum number of retries per request
-          # -r, --retry-wait-time <RETRY_WAIT_TIME>  Minimum wait time in seconds between retries of failed requests
-          # -u, --user-agent <USER_AGENT>            User agent
-          # *.md all markdown files in the root directory
-        args: -E -i -n -t 45 -r 3 --max-retries 5 --max-concurrency 64 -a 401,403 -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" -v --exclude-path "node_modules" --exclude-path "dist" --exclude-path "cache" -- '**/*.md'
-        output: out.md
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: Create Issue From File
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: Broken Link Detected
-        content-filepath: out.md
-        assignees: camera-2018
+          if [ "$EXIT_CODE" = "0" ]; then
+            if [ -n "$EXISTING_ISSUE" ]; then
+              gh issue close "$EXISTING_ISSUE" \
+                --repo "$GITHUB_REPOSITORY" \
+                --comment "本次定时链接检查全部通过，自动关闭本 Issue。"
+            fi
+            exit 0
+          fi
+
+          REPORT_FILE="lychee/out.md"
+          # GitHub Issue 正文上限为 65536 字符，超长时截断并保留 Actions 链接
+          python3 -c '
+          from pathlib import Path
+          import os
+          p = Path("lychee/out.md")
+          text = p.read_text(encoding="utf-8") if p.exists() else "No report generated."
+          limit = 60000
+          if len(text) > limit:
+              repo = os.environ.get("GITHUB_REPOSITORY", "")
+              run_id = os.environ.get("GITHUB_RUN_ID", "")
+              run_url = f"https://github.com/{repo}/actions/runs/{run_id}"
+              text = text[:limit] + f"\n\n---\n⚠️ 报告内容过长已截断，完整结果请查看 [GitHub Actions 运行日志]({run_url})。"
+              p.write_text(text, encoding="utf-8")
+          '
+
+          if [ -n "$EXISTING_ISSUE" ]; then
+            gh issue edit "$EXISTING_ISSUE" \
+              --repo "$GITHUB_REPOSITORY" \
+              --body-file "$REPORT_FILE"
+          else
+            gh issue create \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$ISSUE_TITLE" \
+              --body-file "$REPORT_FILE" \
+              --assignee camera-2018
+          fi

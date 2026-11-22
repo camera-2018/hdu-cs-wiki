@@ -26,3 +26,12 @@ https://info.cern.ch/
 https://vidar.club/
 https://reg-hgame-mini.vidar.club/
 https://hgame2025-mini.vidar.club/
+
+# 反爬 / CI 云端 IP 拦截 / 无头重定向循环（人工复核链接正常）
+^https?://(.*\.)?bilibili\.com/
+^https?://(www\.)?virtualbox\.org/
+^https?://valgrind\.org/
+^https?://unity\.com/download
+^https?://vim-adventures\.com/
+^https?://exiftool\.org/
+^https?://www\.gnu\.org/software/make/manual/
